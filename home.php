@@ -612,7 +612,7 @@ get_header();
 				<div class="swiper-wrapper">
 
 
-
+<!-- 
 <?php if ( have_rows( 'reviews_block' ) ) : ?>
 	<?php while ( have_rows( 'reviews_block' ) ) : the_row(); ?>
 		<?php if ( have_rows( 'reviews' ) ) : ?>
@@ -636,7 +636,42 @@ get_header();
 	<?php endwhile; ?>
 <?php else : ?>
 	<?php // no rows found ?>
-<?php endif; ?>
+<?php endif; ?> -->
+
+					<div class="item swiper-slide">
+						<div class="logo"><img src="img/logo_1.png" alt=""></div>
+						<p class="addReadMore showlesscontent">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis Ut enim ad minim veniam, quis sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis labore et dolore magna aliqua. Ut enim ad minim veniam, quis Ut enim ad minim veniam, quis sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis </p>
+						<ul class="foot">
+							<li><a href="#">Alan Jones</a></li>
+							<li>CEO&FOUNDER</li>
+						</ul>
+					</div>
+					<div class="item swiper-slide">
+						<div class="logo"><img src="img/logo_2.png" alt=""></div>
+						<p class="addReadMore showlesscontent">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis Ut enim ad minim veniam, quis sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis labore et dolore magna aliqua. Ut enim ad minim veniam, quis Ut enim ad minim veniam, quis sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis </p>
+						<ul class="foot">
+							<li><a href="#">Alan Jones</a></li>
+							<li>CEO&FOUNDER</li>
+						</ul>
+					</div>
+					<div class="item swiper-slide">
+						<div class="logo"><img src="img/logo_4.png" alt=""></div>
+						<p class="addReadMore showlesscontent">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis Ut enim ad minim veniam, quis sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis labore et dolore magna aliqua. Ut enim ad minim veniam, quis Ut enim ad minim veniam, quis sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis </p>
+						<ul class="foot">
+							<li><a href="#">Alan Jones</a></li>
+							<li>CEO&FOUNDER</li>
+						</ul>
+					</div>
+					<div class="item swiper-slide">
+						<div class="logo"><img src="img/logo_3.png" alt=""></div>
+						<p class="addReadMore showlesscontent">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis Ut enim ad minim veniam, quis sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis labore et dolore magna aliqua. Ut enim ad minim veniam, quis Ut enim ad minim veniam, quis sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis </p>
+						<ul class="foot">
+							<li><a href="#">Alan Jones</a></li>
+							<li>CEO&FOUNDER</li>
+						</ul>
+					</div>
+
+
 
 				</div>
 			</div>
