@@ -7,7 +7,7 @@ get_header();
 ?>
 
 
-	<section id="home_slider">
+	<section id="home_slider" class="slider">
 		<div class="home_slider">
 		<div class="swiper-wrapper">
 
