@@ -395,9 +395,9 @@ get_header();
 				<p><?php the_sub_field( 'description' ); ?></p>
 
 				<?php if ( have_rows( 'list' ) ) : ?>
-				<ul class="square">
+				<ul class="grid-links">
 					<?php while ( have_rows( 'list' ) ) : the_row(); ?>
-						<li><?php the_sub_field( 'item' ); ?></li>
+						<li><a href="<?php the_sub_field( 'link' ); ?>"><?php the_sub_field( 'item' ); ?></li></a>
 					<?php endwhile; ?>
 				</ul>
 				<?php else : ?>
@@ -410,16 +410,16 @@ get_header();
 		<div class="content last">
 
 
-<?php if ( have_rows( 'munich_drinks' ) ) : ?>
-	<?php while ( have_rows( 'munich_drinks' ) ) : the_row(); ?>
+<?php if ( have_rows( 'munich_textile_drinks' ) ) : ?>
+	<?php while ( have_rows( 'munich_textile_drinks' ) ) : the_row(); ?>
 			<div class="text">
 				<h3 class="line"><?php the_sub_field( 'sectipn_title' ); ?>e</h3>
 				<p><?php the_sub_field( 'description' ); ?></p>
 
 				<?php if ( have_rows( 'list' ) ) : ?>
-				<ul class="square">
+				<ul class="grid-links">
 					<?php while ( have_rows( 'list' ) ) : the_row(); ?>
-						<li><?php the_sub_field( 'item' ); ?></li>
+						<li><a href="<?php the_sub_field( 'link' ); ?>"><?php the_sub_field( 'item' ); ?></li></a>
 					<?php endwhile; ?>
 				</ul>
 				<?php else : ?>
