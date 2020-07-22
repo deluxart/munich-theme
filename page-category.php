@@ -7,111 +7,83 @@ get_header();
 ?>
 
 
+
+<?php if ( have_rows( 'slide_for_category' ) ) : ?>
+	<?php while ( have_rows( 'slide_for_category' ) ) : the_row(); ?>
 	<section id="home_slider">
 		<div class="home_slider">
-		<div class="swiper-wrapper">
-
-
-
-
-
-
-<?php if ( have_rows( 'slide' ) ) : $count = 0; ?>
-	<?php while ( have_rows( 'slide' ) ) : the_row(); ?>
-	<div class="content swiper-slide" data-name="textile">
-
-
-		<div class="text">
-			<?php if (!$count) { ?>
-				<h1><?php the_sub_field( 'slide_title' ); ?></h1>
-			<?php } else { ?>
-				<h1><?php the_sub_field( 'slide_title' ); ?></h1>
-			<?php } ?>
-				<p class="description"><?php the_sub_field( 'slide_descriptio' ); ?></p>
-			<?php if ( have_rows( 'slide_list' ) ) : ?>
-				<ul class="square">
-				<?php while ( have_rows( 'slide_list' ) ) : the_row(); ?>
-					<li><?php the_sub_field( 'item' ); ?></li>
-				<?php endwhile; ?>
-				</ul>
-			<?php else : ?>
-				<?php // no rows found ?>
-			<?php endif; ?>
-			<?php if ( have_rows( 'slide_button' ) ) : ?>
-				<?php while ( have_rows( 'slide_button' ) ) : the_row(); ?>
-					<a href="<?php the_sub_field( 'link_for_button' ); ?>" class="btn black border"><?php the_sub_field( 'button_title' ); ?></a>
-				<?php endwhile; ?>
-			<?php endif; ?>
+			<div class="content category">
+				<div class="text">
+					<h1><?php the_sub_field( 'slide_title' ); ?></h1>
+					<p class="description simple"><?php the_sub_field( 'slide_descriptio' ); ?></p>
+					<?php if ( have_rows( 'slide_list' ) ) : ?>
+						<ul class="square">
+						<?php while ( have_rows( 'slide_list' ) ) : the_row(); ?>
+							<li><?php the_sub_field( 'item' ); ?></li>
+						<?php endwhile; ?>
+						</ul>
+					<?php else : ?>
+						<?php // no rows found ?>
+					<?php endif; ?>
+					<?php if ( have_rows( 'slide_button' ) ) : ?>
+						<?php while ( have_rows( 'slide_button' ) ) : the_row(); ?>
+							<a href="<?php the_sub_field( 'link_for_button' ); ?>" class="btn black"><?php the_sub_field( 'button_title' ); ?></a>
+						<?php endwhile; ?>
+					<?php endif; ?>
+					
+				</div>
+				<div class="image">
+					<?php if ( get_sub_field( 'slide_image' ) ) : ?>
+						<img src="<?php the_sub_field( 'slide_image' ); ?>" />
+					<?php endif ?>
+				</div>
+			</div>
 		</div>
-
-		<div class="image">
-			<?php if ( get_sub_field( 'slide_image' ) ) : ?>
-				<img src="<?php the_sub_field( 'slide_image' ); ?>" />
-			<?php endif ?>
-		</div>
-
-	</div>
+	</section>
 	<?php endwhile; ?>
-<?php else : ?>
-	<?php // no rows found ?>
 <?php endif; ?>
 
-<!-- 
 
-			<div class="content swiper-slide" data-name="textile">
-				<div class="text">
-					<h1>Hotelausstatter</h1>
-					<p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
-					<ul class="square">
-						<li>Lorem ipsum dolor sit amet, consectetur </li>
-						<li>Lorem ipsum dolor sit amet, consectetur </li>
-						<li>Lorem ipsum dolor sit amet, consectetur</li>
-					</ul>
-					<a href="#" class="btn black border">JETZT ANFRAGEN</a>
-				</div>
-				<div class="image">
-					<img src="< ?php echo get_template_directory_uri(); ?>/src/img/head_img.jpg" alt="">
-				</div>
-			</div>
-
-			<div class="content swiper-slide" data-name="drinks">
-				<div class="text">
-					<h1>Hotelausstatter</h1>
-					<p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
-					<ul class="square">
-						<li>Lorem ipsum dolor sit amet, consectetur </li>
-						<li>Lorem ipsum dolor sit amet, consectetur </li>
-						<li>Lorem ipsum dolor sit amet, consectetur</li>
-					</ul>
-					<a href="#" class="btn black border">JETZT ANFRAGEN</a>
-				</div>
-				<div class="image">
-					<img src="< ?php echo get_template_directory_uri(); ?>/src/img/head_img.jpg" alt="">
-				</div>
-			</div>
-
-			<div class="content swiper-slide" data-name="accesories">
-				<div class="text">
-					<h1>Hotelausstatter</h1>
-					<p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
-					<ul class="square">
-						<li>Lorem ipsum dolor sit amet, consectetur </li>
-						<li>Lorem ipsum dolor sit amet, consectetur </li>
-						<li>Lorem ipsum dolor sit amet, consectetur</li>
-					</ul>
-					<a href="#" class="btn black border">JETZT ANFRAGEN</a>
-				</div>
-				<div class="image">
-					<img src="< ?php echo get_template_directory_uri(); ?>/src/img/head_img.jpg" alt="">
-				</div>
-			</div> -->
+<?php if ( have_rows( 'slide_for_category' ) ) : ?>
+	<?php while ( have_rows( 'slide_for_category' ) ) : the_row(); ?>
+		<?php if ( get_sub_field( 'slide_image' ) ) : ?>
+			<img src="<?php the_sub_field( 'slide_image' ); ?>" />
+		<?php endif ?>
+		<?php the_sub_field( 'slide_title' ); ?>
+		<?php the_sub_field( 'slide_title' ); ?>
+		<?php the_sub_field( 'description' ); ?>
+		<?php the_sub_field( 'slide_descriptio' ); ?>
+		<?php if ( have_rows( 'list' ) ) : ?>
+			<?php while ( have_rows( 'list' ) ) : the_row(); ?>
+				<?php the_sub_field( 'item' ); ?>
+			<?php endwhile; ?>
+		<?php else : ?>
+			<?php // no rows found ?>
+		<?php endif; ?>
+		<?php if ( have_rows( 'slide_list' ) ) : ?>
+			<?php while ( have_rows( 'slide_list' ) ) : the_row(); ?>
+				<?php the_sub_field( 'item' ); ?>
+			<?php endwhile; ?>
+		<?php else : ?>
+			<?php // no rows found ?>
+		<?php endif; ?>
+		<?php if ( have_rows( 'button' ) ) : ?>
+			<?php while ( have_rows( 'button' ) ) : the_row(); ?>
+				<?php the_sub_field( 'title' ); ?>
+				<?php the_sub_field( 'link' ); ?>
+			<?php endwhile; ?>
+		<?php endif; ?>
+		<?php if ( have_rows( 'slide_button' ) ) : ?>
+			<?php while ( have_rows( 'slide_button' ) ) : the_row(); ?>
+				<?php the_sub_field( 'button_title' ); ?>
+				<?php the_sub_field( 'link_for_button' ); ?>
+			<?php endwhile; ?>
+		<?php endif; ?>
+	<?php endwhile; ?>
+<?php endif; ?>
 
 
-			</div>
-			</div>
-			  <!-- Add Pagination -->
-  <div class="swiper-pagination pag-shoes"></div>
-	</section>
+
 
 
 	<section id="services">
