@@ -18,7 +18,7 @@ get_header();
 
 <?php if ( have_rows( 'slide' ) ) : $count = 0; ?>
 	<?php while ( have_rows( 'slide' ) ) : the_row(); ?>
-	<div class="content swiper-slide" data-name="textile">
+	<div class="content swiper-slide" data-name="<?php the_sub_field( 'slide_list' ); ?>">
 
 
 		<div class="text">
@@ -28,15 +28,6 @@ get_header();
 				<h1><?php the_sub_field( 'slide_title' ); ?></h1>
 			<?php } ?>
 				<p class="description"><?php the_sub_field( 'slide_descriptio' ); ?></p>
-			<?php if ( have_rows( 'slide_list' ) ) : ?>
-				<ul class="square">
-				<?php while ( have_rows( 'slide_list' ) ) : the_row(); ?>
-					<li><?php the_sub_field( 'item' ); ?></li>
-				<?php endwhile; ?>
-				</ul>
-			<?php else : ?>
-				<?php // no rows found ?>
-			<?php endif; ?>
 			<?php if ( have_rows( 'slide_button' ) ) : ?>
 				<?php while ( have_rows( 'slide_button' ) ) : the_row(); ?>
 					<a href="<?php the_sub_field( 'link_for_button' ); ?>" class="btn black border"><?php the_sub_field( 'button_title' ); ?></a>
