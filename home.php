@@ -611,8 +611,6 @@ get_header();
 			<div class="reviewsSlider">
 				<div class="swiper-wrapper">
 
-
-
 <?php if ( have_rows( 'reviews_block' ) ) : ?>
 	<?php while ( have_rows( 'reviews_block' ) ) : the_row(); ?>
 		<?php if ( have_rows( 'reviews' ) ) : ?>
@@ -637,6 +635,8 @@ get_header();
 <?php else : ?>
 	<?php // no rows found ?>
 <?php endif; ?>
+
+
 <!-- 
 					<div class="item swiper-slide">
 						<div class="logo"><img src="img/logo_1.png" alt=""></div>
