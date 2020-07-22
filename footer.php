@@ -1,0 +1,83 @@
+<?php
+/**
+ * The template for displaying the footer
+ *
+ * Contains the closing of the #content div and all content after.
+ *
+ * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
+ *
+ * @package munich
+ */
+
+?>
+
+	</div><!-- #content -->
+
+
+	<footer id="footer">
+		<div class="container">
+			<div class="content">
+				<a href="#"><img src="<?php echo get_template_directory_uri(); ?>/src/img/logo_footer.png" alt=""></a>
+				<div class="widgets">
+
+					<div class="widget">
+						<h4>The company</h4>
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore</p>
+					</div>
+
+					<div class="widget">
+						<h4>our contacts</h4>
+						<ul>
+							<li>Südliche Münchner Str. 60 · 82031 <span>Grünwald · </span></li>
+							<li>
+								<span>+49 (0) 89/2324189-50</span>
+								<span>Fax: +49 (0) 89/2324189-56</span>
+							</li>
+							<li>
+								<span>sales@munich-accessories.de</span>
+								<span>munich-accessories.de</span>
+							</li>
+						</ul>
+					</div>
+
+					<div class="widget">
+						<h4>Links</h4>
+						<ul class="nav">
+							<li><a href="#">Hotels</a></li>
+							<li><a href="#">Friseursalone</a></li>
+							<li><a href="#">Thermen</a></li>
+						</ul>
+					</div>
+
+					<div class="widget">
+						<h4>certificates</h4>
+						<div>
+							<div class="certificats">
+								<img src="<?php echo get_template_directory_uri(); ?>/src/img/c1.png" alt="">
+								<img src="<?php echo get_template_directory_uri(); ?>/src/img/c2.png" alt="">
+								<img src="<?php echo get_template_directory_uri(); ?>/src/img/c3.png" alt="">
+								<img src="<?php echo get_template_directory_uri(); ?>/src/img/c4.png" alt="">
+							</div>
+						</div>
+					</div>
+
+				</div>
+			</div>
+		</div>
+		<div class="foot">
+			<div class="container">
+				<ul>
+					<li><a href="#">IMPRESSUM</a></li>
+					<li><a href="#">DATENSCHUTZERKLÄRUNG</a></li>
+					<li><a href="#">AGB</a></li>
+					<li><a href="#">© MUNICH ACCESSORIES</a></li>
+				</ul>
+			</div>
+		</div>
+	</footer>
+</div><!-- #page -->
+
+<?php wp_footer(); ?>
+
+</body>
+</html>

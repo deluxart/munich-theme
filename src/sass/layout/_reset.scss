@@ -1,0 +1,140 @@
+.container{padding-right:15px;padding-left:15px;margin-right:auto;margin-left:auto}@media (min-width:576px){.container{max-width:540px}}@media (min-width:768px){.container{max-width:720px}}@media (min-width:992px){.container{max-width:960px}}@media (min-width:1200px){.container{max-width:1140px}}
+
+* 
+{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ol, ul {
+	list-style: none;
+}
+
+.mobile {
+  display: none;
+}
+
+.desktop {
+  display: block;
+}
+
+@media (max-width: 992px) {
+  .mobile {
+    display: block;
+  }
+
+  .desktop {
+    display: none;
+  }
+}
+
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+button, input, textarea { 
+  outline: none; 
+}
+:focus {
+    outline: 0;
+}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, video {
+  display: block; }
+
+  .button-prev, .button-next {
+    cursor: pointer;
+  }
+
+
+
+.wpcf7-checkbox label {
+  position: relative;
+  cursor: pointer;
+  color: #767676;
+  padding-left: 46px;
+  display: block;
+}
+
+.wpcf7-checkbox input[type=checkbox] {
+  position: relative;
+  visibility: hidden;
+  margin-right: 0;
+  position: absolute;
+}
+
+.wpcf7-checkbox input[type=checkbox] + span:before {
+  content: '';
+  display: block;
+  position: absolute;
+  height: 27px;
+  width: 27px;
+  top: -4px;
+  left: 0;
+  background: #FFFFFF;
+  border: 1px solid #000000;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.wpcf7-checkbox input[type=checkbox] + span:after {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0px;
+  left: 10px;
+  width: 6px;
+  height: 13px;
+  border: solid #161616;
+  border-width: 0 2px 2px 0;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  visibility: hidden;
+}
+
+.wpcf7-checkbox input[type=checkbox]:checked + span:before {
+  /* background: #161616; */
+  border: 1px solid #161616;
+}
+
+.wpcf7-checkbox input[type=checkbox]:checked + span:after {
+  visibility: visible;
+}
+
+.wpcf7-checkbox .checkbox-text { position: relative; top: -7px }
+
+
+.addReadMore.showlesscontent .SecSec,
+.addReadMore.showlesscontent .readLess {
+    display: none;
+}
+
+.addReadMore.showmorecontent .readMore {
+    display: none;
+}
+
+.addReadMore .readMore,
+.addReadMore .readLess {
+    margin-left: 2px;
+    cursor: pointer;
+    display: inline-block;
+    
+}
+
+.addReadMore .readMore span,
+.addReadMore .readLess span {
+  text-decoration: underline;
+  color: #161616;;
+  font-weight: bold;
+}
+
+.addReadMoreWrapTxt.showmorecontent .SecSec,
+.addReadMoreWrapTxt.showmorecontent .readLess {
+    display: block;
+}
