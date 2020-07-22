@@ -461,7 +461,7 @@ get_header();
 					<?php while ( have_rows( 'left_side_categories' ) ) : the_row(); ?>
 						<?php if ( have_rows( 'item' ) ) : ?>
 							<?php while ( have_rows( 'item' ) ) : the_row(); ?>
-								<li><a href="<?php the_sub_field( 'link' ); ?>"><?php the_sub_field( 'title' ); ?></li>
+								<li><a href="<?php the_sub_field( 'link' ); ?>"><?php the_sub_field( 'title' ); ?></a></li>
 							<?php endwhile; ?>
 						<?php endif; ?>
 					<?php endwhile; ?>
@@ -621,12 +621,12 @@ get_header();
 				<?php endif ?>
 				<p class="addReadMore showlesscontent"><?php the_sub_field( 'content' ); ?></p>
 				<?php if ( have_rows( 'author' ) ) : ?>
-					<?php while ( have_rows( 'author' ) ) : the_row(); ?>
 					<ul class="foot">
-						<li><a href="<?php the_sub_field( 'link' ); ?>"><?php the_sub_field( 'name' ); ?></li>
+					<?php while ( have_rows( 'author' ) ) : the_row(); ?>
+						<li><a href="<?php the_sub_field( 'link' ); ?>"><?php the_sub_field( 'name' ); ?></a></li>
 						<li><?php the_sub_field( 'position' ); ?></li>
-					</ul>
 					<?php endwhile; ?>
+					</ul>
 				<?php endif; ?>
 			<?php endwhile; ?>
 			</div>
