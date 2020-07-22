@@ -458,13 +458,13 @@ get_header();
 				<p><?php the_sub_field( 'left_side_text' ); ?></p>
 				<?php if ( have_rows( 'left_side_categories' ) ) : ?>
 					<?php while ( have_rows( 'left_side_categories' ) ) : the_row(); ?>
-						<?php if ( have_rows( 'item' ) ) : ?>
 						<ul>
+						<?php if ( have_rows( 'item' ) ) : ?>
 							<?php while ( have_rows( 'item' ) ) : the_row(); ?>
 								<li><a href="<?php the_sub_field( 'link' ); ?>"><?php the_sub_field( 'title' ); ?></li>
 							<?php endwhile; ?>
-						</ul>
 						<?php endif; ?>
+						</ul>
 					<?php endwhile; ?>
 				<?php endif; ?>
 				</div>
@@ -612,12 +612,12 @@ get_header();
 				<div class="swiper-wrapper">
 
 
-<!-- 
+
 <?php if ( have_rows( 'reviews_block' ) ) : ?>
 	<?php while ( have_rows( 'reviews_block' ) ) : the_row(); ?>
 		<?php if ( have_rows( 'reviews' ) ) : ?>
-			<?php while ( have_rows( 'reviews' ) ) : the_row(); ?>
 			<div class="item swiper-slide">
+			<?php while ( have_rows( 'reviews' ) ) : the_row(); ?>
 				<?php if ( get_sub_field( 'logo' ) ) : ?>
 					<div class="logo"><img src="<?php the_sub_field( 'logo' ); ?>" /></div>
 				<?php endif ?>
@@ -630,14 +630,14 @@ get_header();
 					</ul>
 					<?php endwhile; ?>
 				<?php endif; ?>
-			</div>
 			<?php endwhile; ?>
+			</div>
 		<?php endif; ?>
 	<?php endwhile; ?>
 <?php else : ?>
 	<?php // no rows found ?>
-<?php endif; ?> -->
-
+<?php endif; ?>
+<!-- 
 					<div class="item swiper-slide">
 						<div class="logo"><img src="img/logo_1.png" alt=""></div>
 						<p class="addReadMore showlesscontent">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis Ut enim ad minim veniam, quis sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis labore et dolore magna aliqua. Ut enim ad minim veniam, quis Ut enim ad minim veniam, quis sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis </p>
@@ -669,7 +669,7 @@ get_header();
 							<li><a href="#">Alan Jones</a></li>
 							<li>CEO&FOUNDER</li>
 						</ul>
-					</div>
+					</div> -->
 
 
 
