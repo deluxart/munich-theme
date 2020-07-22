@@ -612,32 +612,7 @@ get_header();
 				<div class="swiper-wrapper">
 
 
-<?php if ( have_rows( 'reviews' ) ) : ?>
-	<?php while ( have_rows( 'reviews' ) ) : the_row(); ?>
-		<?php if ( have_rows( 'reviews' ) ) : ?>
-			<?php while ( have_rows( 'reviews' ) ) : the_row(); ?>
-				<div class="item swiper-slide">
-					<div class="logo">
-					<?php if ( get_sub_field( 'logo' ) ) : ?>
-						<img src="<?php the_sub_field( 'logo' ); ?>" />
-					<?php endif ?>
-					</div>
-					<p class="addReadMore showlesscontent"><?php the_sub_field( 'content' ); ?></p>
-					<?php if ( have_rows( 'author' ) ) : ?>
-						<ul class="foot">
-						<?php while ( have_rows( 'author' ) ) : the_row(); ?>
-							<li><a href="<?php the_sub_field( 'link' ); ?>"><?php the_sub_field( 'name' ); ?></a></li>
-							<li><?php the_sub_field( 'position' ); ?></li>
-						<?php endwhile; ?>
-						</ul>
-					<?php endif; ?>
-				</div>
-			<?php endwhile; ?>
-		<?php endif; ?>
-	<?php endwhile; ?>
-<?php else : ?>
-	<?php // no rows found ?>
-<?php endif; ?>
+---
 
 				</div>
 			</div>
