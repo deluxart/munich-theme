@@ -613,8 +613,8 @@ get_header();
 
 
 
-<?php if ( have_rows( 'reviews' ) ) : ?>
-	<?php while ( have_rows( 'reviews' ) ) : the_row(); ?>
+<?php if ( have_rows( 'reviews_block' ) ) : ?>
+	<?php while ( have_rows( 'reviews_block' ) ) : the_row(); ?>
 		<?php if ( have_rows( 'reviews' ) ) : ?>
 			<?php while ( have_rows( 'reviews' ) ) : the_row(); ?>
 			<div class="item swiper-slide">
