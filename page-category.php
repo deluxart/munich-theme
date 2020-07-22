@@ -43,49 +43,6 @@ get_header();
 	<?php endwhile; ?>
 <?php endif; ?>
 
-
-<?php if ( have_rows( 'slide_for_category' ) ) : ?>
-	<?php while ( have_rows( 'slide_for_category' ) ) : the_row(); ?>
-		<?php if ( get_sub_field( 'slide_image' ) ) : ?>
-			<img src="<?php the_sub_field( 'slide_image' ); ?>" />
-		<?php endif ?>
-		<?php the_sub_field( 'slide_title' ); ?>
-		<?php the_sub_field( 'slide_title' ); ?>
-		<?php the_sub_field( 'description' ); ?>
-		<?php the_sub_field( 'slide_descriptio' ); ?>
-		<?php if ( have_rows( 'list' ) ) : ?>
-			<?php while ( have_rows( 'list' ) ) : the_row(); ?>
-				<?php the_sub_field( 'item' ); ?>
-			<?php endwhile; ?>
-		<?php else : ?>
-			<?php // no rows found ?>
-		<?php endif; ?>
-		<?php if ( have_rows( 'slide_list' ) ) : ?>
-			<?php while ( have_rows( 'slide_list' ) ) : the_row(); ?>
-				<?php the_sub_field( 'item' ); ?>
-			<?php endwhile; ?>
-		<?php else : ?>
-			<?php // no rows found ?>
-		<?php endif; ?>
-		<?php if ( have_rows( 'button' ) ) : ?>
-			<?php while ( have_rows( 'button' ) ) : the_row(); ?>
-				<?php the_sub_field( 'title' ); ?>
-				<?php the_sub_field( 'link' ); ?>
-			<?php endwhile; ?>
-		<?php endif; ?>
-		<?php if ( have_rows( 'slide_button' ) ) : ?>
-			<?php while ( have_rows( 'slide_button' ) ) : the_row(); ?>
-				<?php the_sub_field( 'button_title' ); ?>
-				<?php the_sub_field( 'link_for_button' ); ?>
-			<?php endwhile; ?>
-		<?php endif; ?>
-	<?php endwhile; ?>
-<?php endif; ?>
-
-
-
-
-
 	<section id="services">
 		<div class="container">
 			<div class="content">
