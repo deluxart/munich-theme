@@ -780,27 +780,26 @@ get_header();
 				<div class="swiper-wrapper">
 
 
-<?php if ( have_rows( 'reviews' ) ) : ?>
-	<?php while ( have_rows( 'reviews' ) ) : the_row(); ?>
+
+<?php if ( have_rows( 'reviews_block' ) ) : ?>
+	<?php while ( have_rows( 'reviews_block' ) ) : the_row(); ?>
 		<?php if ( have_rows( 'reviews' ) ) : ?>
+			<div class="item swiper-slide">
 			<?php while ( have_rows( 'reviews' ) ) : the_row(); ?>
-				<div class="item swiper-slide">
-					<div class="logo">
-					<?php if ( get_sub_field( 'logo' ) ) : ?>
-						<img src="<?php the_sub_field( 'logo' ); ?>" />
-					<?php endif ?>
-					</div>
-					<p class="addReadMore showlesscontent"><?php the_sub_field( 'content' ); ?></p>
-					<?php if ( have_rows( 'author' ) ) : ?>
-						<ul class="foot">
-						<?php while ( have_rows( 'author' ) ) : the_row(); ?>
-							<li><a href="<?php the_sub_field( 'link' ); ?>"><?php the_sub_field( 'name' ); ?></a></li>
-							<li><?php the_sub_field( 'position' ); ?></li>
-						<?php endwhile; ?>
-						</ul>
-					<?php endif; ?>
-				</div>
+				<?php if ( get_sub_field( 'logo' ) ) : ?>
+					<div class="logo"><img src="<?php the_sub_field( 'logo' ); ?>" /></div>
+				<?php endif ?>
+				<p class="addReadMore showlesscontent"><?php the_sub_field( 'content' ); ?></p>
+				<?php if ( have_rows( 'author' ) ) : ?>
+					<ul class="foot">
+					<?php while ( have_rows( 'author' ) ) : the_row(); ?>
+						<li><a href="<?php the_sub_field( 'link' ); ?>"><?php the_sub_field( 'name' ); ?></a></li>
+						<li><?php the_sub_field( 'position' ); ?></li>
+					<?php endwhile; ?>
+					</ul>
+				<?php endif; ?>
 			<?php endwhile; ?>
+			</div>
 		<?php endif; ?>
 	<?php endwhile; ?>
 <?php else : ?>
