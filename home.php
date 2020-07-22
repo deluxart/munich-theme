@@ -457,15 +457,15 @@ get_header();
 				<div class="black">
 				<p><?php the_sub_field( 'left_side_text' ); ?></p>
 				<?php if ( have_rows( 'left_side_categories' ) ) : ?>
+					<ul>
 					<?php while ( have_rows( 'left_side_categories' ) ) : the_row(); ?>
-						<ul>
 						<?php if ( have_rows( 'item' ) ) : ?>
 							<?php while ( have_rows( 'item' ) ) : the_row(); ?>
 								<li><a href="<?php the_sub_field( 'link' ); ?>"><?php the_sub_field( 'title' ); ?></li>
 							<?php endwhile; ?>
 						<?php endif; ?>
-						</ul>
 					<?php endwhile; ?>
+					</ul>
 				<?php endif; ?>
 				</div>
 				<div class="text">
