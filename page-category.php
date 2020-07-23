@@ -27,7 +27,7 @@ get_header();
 					<?php endif; ?>
 					<?php if ( have_rows( 'slide_button' ) ) : ?>
 						<?php while ( have_rows( 'slide_button' ) ) : the_row(); ?>
-							<a href="<?php the_sub_field( 'link_for_button' ); ?>" class="btn black"><?php the_sub_field( 'button_title' ); ?></a>
+							<a href="<?php the_sub_field( 'link_for_button' ); ?>" class="btn border"><?php the_sub_field( 'button_title' ); ?></a>
 						<?php endwhile; ?>
 					<?php endif; ?>
 					
@@ -569,9 +569,6 @@ get_header();
 
 	<section id="grid">
 		<div class="content">
-
-
-
 <?php if ( have_rows( 'munich_textile' ) ) : ?>
 	<?php while ( have_rows( 'munich_textile' ) ) : the_row(); ?>
 			<div class="image">
@@ -584,9 +581,9 @@ get_header();
 				<p><?php the_sub_field( 'description' ); ?></p>
 
 				<?php if ( have_rows( 'list' ) ) : ?>
-				<ul class="square">
+				<ul class="grid-links">
 					<?php while ( have_rows( 'list' ) ) : the_row(); ?>
-						<li><?php the_sub_field( 'item' ); ?></li>
+						<li><a href="<?php the_sub_field( 'link' ); ?>"><?php the_sub_field( 'item' ); ?></li></a>
 					<?php endwhile; ?>
 				</ul>
 				<?php else : ?>
@@ -595,35 +592,20 @@ get_header();
 			</div>
 	<?php endwhile; ?>
 <?php endif; ?>
-
-
-
-<!-- 
-
-			<div class="image"><img src="<?php echo get_template_directory_uri(); ?>/src/img/textile2.png" alt=""></div>
-			<div class="text">
-				<h3 class="line">munich textile</h3>
-				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
-				<ul class="square">
-					<li>Lorem ipsum dolor sit amet, consectetur adipiscing elit dolor sit amet, consecteturl orem ipsum dolor sit amet</li>
-					<li>Lorem ipsum dolor sit amet, consectetur adipiscing elit dolor sit amet, consecteturl orem ipsum dolor sit amet</li>
-					<li>Lorem ipsum dolor sit amet, consectetur adipiscing elit dolor sit amet, consecteturl orem ipsum dolor sit amet</li>
-				</ul>
-			</div> -->
 		</div>
 		<div class="content last">
 
 
-<?php if ( have_rows( 'munich_drinks' ) ) : ?>
-	<?php while ( have_rows( 'munich_drinks' ) ) : the_row(); ?>
+<?php if ( have_rows( 'munich_textile_drinks' ) ) : ?>
+	<?php while ( have_rows( 'munich_textile_drinks' ) ) : the_row(); ?>
 			<div class="text">
 				<h3 class="line"><?php the_sub_field( 'sectipn_title' ); ?>e</h3>
 				<p><?php the_sub_field( 'description' ); ?></p>
 
 				<?php if ( have_rows( 'list' ) ) : ?>
-				<ul class="square">
+				<ul class="grid-links">
 					<?php while ( have_rows( 'list' ) ) : the_row(); ?>
-						<li><?php the_sub_field( 'item' ); ?></li>
+						<li><a href="<?php the_sub_field( 'link' ); ?>"><?php the_sub_field( 'item' ); ?></li></a>
 					<?php endwhile; ?>
 				</ul>
 				<?php else : ?>
@@ -637,19 +619,6 @@ get_header();
 			</div>
 	<?php endwhile; ?>
 <?php endif; ?>
-
-
-<!-- 
-			<div class="text">
-				<h3 class="line">munich drinks</h3>
-				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
-				<ul class="square">
-					<li>Lorem ipsum dolor sit amet, consectetur adipiscing elit dolor sit amet, consecteturl orem ipsum dolor sit amet</li>
-					<li>Lorem ipsum dolor sit amet, connected adipiscing elit dolor sit amet, consecteturl orem ipsum dolor sit amet</li>
-					<li>Lorem ipsum dolor sit amet, consectetur adipiscing elit dolor sit amet, consecteturl orem ipsum dolor sit amet</li>
-				</ul>
-			</div>
-			<div class="image"><img src="<?php echo get_template_directory_uri(); ?>/src/img/textile3.png" alt=""></div> -->
 		</div>
 	</section>
 
@@ -822,7 +791,7 @@ get_header();
 	<section id="articles">
 		<div class="container">
 			<div class="title">
-				<h3><?php the_field( 'section_title_blog' ); ?></h3>
+				<h3 class="line"><?php the_field( 'section_title_blog' ); ?></h3>
 				<div>
 					<div class="paginationSlider">
 						<div>

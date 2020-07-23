@@ -411,7 +411,7 @@ input, textarea {
                         border-bottom:4px solid #CECECE;
                         text-align:center;
                         color:$black;
-                        padding:0px 20px 8px 20px;
+                        padding: 0px 15px 8px 15px;
                         width: auto;
                         height: auto;
                         background: none;
@@ -466,7 +466,7 @@ input, textarea {
        min-height: 750px;
        height: 100%;
        display: grid;
-       grid-template-columns: 1fr 1fr;
+       grid-template-columns: 65% 1fr;
        position: relative;
 
        &.category {

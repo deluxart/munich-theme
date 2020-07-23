@@ -27,7 +27,7 @@ get_header();
 			<?php } else { ?>
 				<h1><?php the_sub_field( 'slide_title' ); ?></h1>
 			<?php } ?>
-				<p class="description"><?php the_sub_field( 'slide_descriptio' ); ?></p>
+				<p class="description main"><?php the_sub_field( 'slide_descriptio' ); ?></p>
 			<?php if ( have_rows( 'slide_button' ) ) : ?>
 				<?php while ( have_rows( 'slide_button' ) ) : the_row(); ?>
 					<a href="<?php the_sub_field( 'link_for_button' ); ?>" class="btn black border"><?php the_sub_field( 'button_title' ); ?></a>
@@ -195,7 +195,7 @@ get_header();
 				<div class="swiper-wrapper">
 					<div class="item swiper-slide">
 						<div class="image"><img src="<?php echo get_template_directory_uri(); ?>/src/img/post_1.png" alt=""></div>
-						<h3 class="line">Thermen </h3>
+						<a href="#"><h3 class="line">Hotels</h3></a>
 						<div class="text">
 							<p>And here is lorem ipsum forever, lorem ipsum forever, lorem ipsum forever, lorem ipsum forever, lorem ipsum forever.</p>
 						</div>
@@ -208,7 +208,7 @@ get_header();
 					</div>
 					<div class="item swiper-slide">
 						<div class="image"><img src="<?php echo get_template_directory_uri(); ?>/src/img/post_2.png" alt=""></div>
-						<h3 class="line">Hotels</h3>
+						<a href="#"><h3 class="line">Hotels</h3></a>
 						<div class="text">
 							<p>And here is lorem ipsum forever, lorem ipsum forever, lorem ipsum forever, lorem ipsum forever, lorem ipsum forever.</p>
 						</div>
@@ -221,7 +221,7 @@ get_header();
 					</div>
 					<div class="item swiper-slide">
 						<div class="image"><img src="<?php echo get_template_directory_uri(); ?>/src/img/post_3.png" alt=""></div>
-						<h3 class="line">Friseursalone</h3>
+						<a href="#"><h3 class="line">Hotels</h3></a>
 						<div class="text">
 							<p>And here is lorem ipsum forever, lorem ipsum forever, lorem ipsum forever, lorem ipsum forever, lorem ipsum forever.</p>
 						</div>
@@ -284,7 +284,7 @@ get_header();
 		<div class="content">
 			<div class="text">
 				<div>
-					<div class="title">
+					<div class="title main">
 						<h3 class="line"><?php the_field( 'section_title_drinks' ); ?></h3>
 						<div class="paginationSlider">
 							<div>
@@ -681,7 +681,7 @@ get_header();
 	<section id="articles">
 		<div class="container">
 			<div class="title">
-				<h3><?php the_field( 'section_title_blog' ); ?></h3>
+				<h3 class="line"><?php the_field( 'section_title_blog' ); ?></h3>
 				<div>
 					<div class="paginationSlider">
 						<div>
