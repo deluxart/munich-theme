@@ -165,6 +165,9 @@ function munich_scripts() {
 }
 add_action( 'wp_enqueue_scripts', 'munich_scripts' );
 
+// We connect CPT
+require get_template_directory() . '/inc/our-products.php';
+
 /**
  * Implement the Custom Header feature.
  */
