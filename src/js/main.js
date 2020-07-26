@@ -330,20 +330,15 @@ jQuery('.pageNav > ul > li').click(function (event) {
 
 
 // For form info
-$(function () {
+jQuery(function () {
     var has_single_class = jQuery('main').hasClass('product-page');
     if (has_single_class == true) {
-        var one_block = jQuery('.blocks').children('.block');
-        var block_btn = jQuery(one_block).children('.button').children('a.btn');
+        var productColor = jQuery('.colors-prod > li.active span').attr('title');
+        var productSize = jQuery('.sizes-prod > li.active').text();
 
-        jQuery(block_btn).click(function (event) {
-            jQuery(one_block).removeClass('active').addClass('disable');
-            jQuery(block_btn).removeClass('active').text('Select');
-            jQuery(this).closest('.block').addClass('active').removeClass('disable');
-            jQuery(this).addClass('active').text('Selected');
-            var block_name = jQuery(this).closest('.block').children('h3').text();
-            jQuery('input.serviceName').val(block_name);
-            jQuery('.careers__form').fadeIn("slow");
+        jQuery('.sizes-prod li').click(function (event) {
+            jQuery('input.color-prod').val(productColor);
+            jQuery('input.size-prod').val(productSize);
         });
     }
 });
