@@ -317,6 +317,15 @@ jQuery('.colors-prod > li').click(function (event) {
     return false;
 });
 
+
+jQuery('.pageNav > ul > li').click(function (event) {
+    jQuery('.pageNav > ul > li').removeClass('active');
+    jQuery(this).addClass('active');
+    // return false;
+});
+
+
+
 // For review section
 function AddReadMore() {
     var carLmt = 200;
