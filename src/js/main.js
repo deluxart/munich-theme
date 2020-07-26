@@ -326,6 +326,36 @@ jQuery('.pageNav > ul > li').click(function (event) {
 
 
 
+
+
+
+// For form info
+$(function () {
+    var has_single_class = jQuery('main').hasClass('product-page');
+    if (has_single_class == true) {
+        var one_block = jQuery('.blocks').children('.block');
+        var block_btn = jQuery(one_block).children('.button').children('a.btn');
+
+        jQuery(block_btn).click(function (event) {
+            jQuery(one_block).removeClass('active').addClass('disable');
+            jQuery(block_btn).removeClass('active').text('Select');
+            jQuery(this).closest('.block').addClass('active').removeClass('disable');
+            jQuery(this).addClass('active').text('Selected');
+            var block_name = jQuery(this).closest('.block').children('h3').text();
+            jQuery('input.serviceName').val(block_name);
+            jQuery('.careers__form').fadeIn("slow");
+        });
+    }
+});
+
+
+
+
+
+
+
+
+
 // For review section
 function AddReadMore() {
     var carLmt = 200;

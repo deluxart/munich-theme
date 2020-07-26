@@ -11,7 +11,7 @@ get_header();
 ?>
 
 	<div id="primary" class="content-area subpage">
-		<main id="main" class="site-main">
+		<main id="main" class="site-main product-page">
 			<div class="container">
 
 
