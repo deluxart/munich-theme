@@ -126,6 +126,15 @@ body {
     display: none !important;
 }
 
+div.wpcf7 .ajax-loader {
+    position: absolute;
+}
+
+span.wpcf7-list-item {
+    margin: 0;
+        display: block;
+}
+
 h1 {
 	font-weight: bold;
 	font-size: 70px;

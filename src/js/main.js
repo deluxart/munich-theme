@@ -326,6 +326,17 @@ jQuery('.pageNav > ul > li').click(function (event) {
 
 
 
+// jQuery(document).ready(function () {
+//     $('.productItem').on('click', 'button.ls-modal', function () {
+//         const page_link = document.location.href;
+//         const page_title = document.getElementsByTagName("title")[0].innerHTML;
+//         const product_name = jQuery(this).closest('.productItem').find('h4.product_title').text();
+//         jQuery('.link-page_input').val(page_link);
+//         jQuery('.title-page_input').val(page_title);
+//         jQuery('.product-name_input').val(product_name);
+//     });
+// });
+
 
 
 
@@ -333,12 +344,23 @@ jQuery('.pageNav > ul > li').click(function (event) {
 jQuery(function () {
     var has_single_class = jQuery('main').hasClass('product-page');
     if (has_single_class == true) {
-        var productColor = jQuery('.colors-prod > li.active span').attr('title');
-        var productSize = jQuery('.sizes-prod > li.active').text();
 
-        jQuery('.sizes-prod li').click(function (event) {
-            jQuery('input.color-prod').val(productColor);
+        const productName = jQuery('.productName.desktop > h3').text();
+        const page_link = document.location.href;
+
+        jQuery('input.product-name').val(productName);
+        jQuery('input.product-link').val(page_link);
+
+        jQuery('ul.sizes-prod > li').click(function () {
+            var productSize = jQuery(this).text();
             jQuery('input.size-prod').val(productSize);
+        });
+
+        jQuery('ul.colors-prod > li').click(function () {
+            const productColor = jQuery(this).children('span').attr('title');
+            const productColorStyle = jQuery(this).children('span').attr('style');
+            jQuery('input.color-prod').val(productColor);
+            jQuery('input.color-prod-style').val(productColorStyle);
         });
     }
 });
