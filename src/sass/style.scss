@@ -135,6 +135,10 @@ span.wpcf7-list-item {
         display: block;
 }
 
+.wpcf7 form.invalid .wpcf7-response-output, .wpcf7 form.unaccepted .wpcf7-response-output, .wpcf7 form .wpcf7-response-output {
+    margin: 0;
+}
+
 h1 {
 	font-weight: bold;
 	font-size: 70px;
@@ -2430,11 +2434,12 @@ input, textarea {
                 form {
                     display: grid;
                     grid-gap: 40px;
+                     margin-bottom: 40px;
 
                     input {
                         &.btn {
                             padding: 15px 55px;
-                            margin-bottom: 40px;
+                           
                             background: $black;
                             border: 0;
                             border-radius: 0;
