@@ -78,7 +78,9 @@
 </div><!-- #page -->
 
 <?php wp_footer(); ?>
-
+<script>
+	var sticky = new Sticky('.sticky');
+	</script>
 
 
 
