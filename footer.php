@@ -78,16 +78,6 @@
 </div><!-- #page -->
 
 <?php wp_footer(); ?>
-<script>
-	var sticky = new Sticky('.sticky');
-	</script>
-
-
-
-
-
-
-
 
 <div id="orderModal" class="daModal da-modal-popup">
     <div class="modal-inner da-modal-content">
