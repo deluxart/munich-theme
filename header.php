@@ -46,7 +46,7 @@
                 ?>
                 <?php
                     $menuParameters = array(
-                        'menu'            => 'Menu 1',
+                        'menu'            => 'Menu 2',
                         'container'       => false,
                         'items_wrap'      => '<ul class="black">%3$s</ul>',
                         'depth'           => 0,
