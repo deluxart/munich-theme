@@ -198,7 +198,7 @@ get_header();
 					<p><?php the_field( 'description_drinks' ); ?></p>
 					<?php if ( have_rows( 'button_drinks' ) ) : ?>
 						<?php while ( have_rows( 'button_drinks' ) ) : the_row(); ?>
-							<a href="<?php the_sub_field( 'link' ); ?>" class="btn"><?php the_sub_field( 'title' ); ?></a>
+							<button data-name="orderModal" class="btn da-modal"><?php the_sub_field( 'title' ); ?></button>
 						<?php endwhile; ?>
 					<?php endif; ?>
 				</div>
@@ -333,7 +333,7 @@ get_header();
 					<p><?php the_field( 'description_accessories' ); ?></p>
 					<?php if ( have_rows( 'button_accessories' ) ) : ?>
 						<?php while ( have_rows( 'button_accessories' ) ) : the_row(); ?>
-							<a href="<?php the_sub_field( 'link' ); ?>" class="btn"><?php the_sub_field( 'title' ); ?></a>
+							<button data-name="orderModal" class="btn da-modal"><?php the_sub_field( 'title' ); ?></button>
 						<?php endwhile; ?>
 					<?php endif; ?>
 				</div>
@@ -762,7 +762,7 @@ get_header();
 						<?php if ( have_rows( 'button' ) ) : ?>
 						<div class="button">
 							<?php while ( have_rows( 'button' ) ) : the_row(); ?>
-								<a href="<?php the_sub_field( 'link' ); ?>" class="btn border"><?php the_sub_field( 'title' ); ?></a>
+								<button data-name="orderModal" class="btn border da-modal"><?php the_sub_field( 'title' ); ?></button>
 							<?php endwhile; ?>
 						</div>
 						<?php endif; ?>

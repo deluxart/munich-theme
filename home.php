@@ -30,7 +30,7 @@ get_header();
 				<p class="description main"><?php the_sub_field( 'slide_descriptio' ); ?></p>
 			<?php if ( have_rows( 'slide_button' ) ) : ?>
 				<?php while ( have_rows( 'slide_button' ) ) : the_row(); ?>
-					<button href="<?php the_sub_field( 'link_for_button' ); ?>" class="btn black border da-modal"><?php the_sub_field( 'button_title' ); ?></button>
+					<button data-name="orderModal" class="btn black border da-modal"><?php the_sub_field( 'button_title' ); ?></button>
 				<?php endwhile; ?>
 			<?php endif; ?>
 		</div>
@@ -134,7 +134,7 @@ get_header();
 				
 				<?php if ( have_rows( 'button_about' ) ) : ?>
 					<?php while ( have_rows( 'button_about' ) ) : the_row(); ?>
-						<button href="<?php the_sub_field( 'link' ); ?>" class="btn da-modal"><?php the_sub_field( 'title' ); ?></button>
+						<button data-name="orderModal" class="btn da-modal"><?php the_sub_field( 'title' ); ?></button>
 					<?php endwhile; ?>
 				<?php endif; ?>
 			</div>
@@ -297,7 +297,7 @@ get_header();
 					<p><?php the_field( 'description_drinks' ); ?></p>
 					<?php if ( have_rows( 'button_drinks' ) ) : ?>
 						<?php while ( have_rows( 'button_drinks' ) ) : the_row(); ?>
-							<button href="<?php the_sub_field( 'link' ); ?>" class="btn da-modal"><?php the_sub_field( 'title' ); ?></button>
+							<button data-name="orderModal" class="btn da-modal"><?php the_sub_field( 'title' ); ?></button>
 						<?php endwhile; ?>
 					<?php endif; ?>
 				</div>
@@ -371,7 +371,7 @@ get_header();
 					<p><?php the_field( 'description_accessories' ); ?></p>
 					<?php if ( have_rows( 'button_accessories' ) ) : ?>
 						<?php while ( have_rows( 'button_accessories' ) ) : the_row(); ?>
-							<button href="<?php the_sub_field( 'link' ); ?>" class="btn da-modal"><?php the_sub_field( 'title' ); ?></button>
+							<button data-name="orderModal" class="btn da-modal"><?php the_sub_field( 'title' ); ?></button>
 						<?php endwhile; ?>
 					<?php endif; ?>
 				</div>
@@ -472,7 +472,7 @@ get_header();
 				<p><?php the_sub_field( 'right_side_text' ); ?></p>
 				<?php if ( have_rows( 'right_side_button' ) ) : ?>
 					<?php while ( have_rows( 'right_side_button' ) ) : the_row(); ?>
-					<div class="desktop"><button href="<?php the_sub_field( 'link' ); ?>" class="btn da-modal"><?php the_sub_field( 'title' ); ?></button></div>
+					<div class="desktop"><button data-name="orderModal" class="btn da-modal"><?php the_sub_field( 'title' ); ?></button></div>
 					<?php endwhile; ?>
 				<?php endif; ?>
 				<div class="mobile"><img src="<?php echo get_template_directory_uri(); ?>/src/img/otp.png" alt=""></div>
@@ -562,7 +562,7 @@ get_header();
 				</div>
 			</div>
 		</div>
-		<div class="productSlider">
+		<div class="productSliderCat">
 			<div class="swiper-wrapper">
 
 
@@ -751,7 +751,7 @@ get_header();
 						<?php if ( have_rows( 'button' ) ) : ?>
 						<div class="button">
 							<?php while ( have_rows( 'button' ) ) : the_row(); ?>
-								<button href="<?php the_sub_field( 'link' ); ?>" class="btn border da-modal"><?php the_sub_field( 'title' ); ?></button>
+								<button data-name="orderModal" class="btn border da-modal"><?php the_sub_field( 'title' ); ?></button>
 							<?php endwhile; ?>
 						</div>
 						<?php endif; ?>
