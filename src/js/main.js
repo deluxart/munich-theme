@@ -46,25 +46,22 @@ jQuery(window).scroll(function () {
 
 
 
-// Add modal
 jQuery(document).ready(function () {
+    jQuery('button.da-modal').click(function () {
+        const modal_id = jQuery(this).attr('data-name');
+        jQuery('.da-modal-open-bg').addClass("open").fadeIn();
+        jQuery("#" + modal_id).addClass("open");
+    });
 
-	jQuery('button.da-modal').click(function () {
-	  var modal_id = jQuery(this).attr('data-name');
-	  
-	  jQuery('.da-modal-open-bg').addClass("open").fadeIn();
-	  jQuery("#"+modal_id).addClass("open");
-	});
+    jQuery('button.closeModal').click(function () {
+        jQuery('.daModal').removeClass('open');
+        jQuery('.da-modal-open-bg').fadeOut();
+    });
 
-	jQuery('button.closeModal').click(function () {
-	    jQuery('.daModal').removeClass('open');
-	    jQuery('.da-modal-open-bg').fadeOut();
-	});    
-
-	jQuery('.da-modal-open-bg').click(function () {
-	    jQuery('.daModal').removeClass('open');
-	    jQuery('.da-modal-open-bg').fadeOut();
-	});
+    jQuery('.da-modal-open-bg').click(function () {
+        jQuery('.daModal').removeClass('open');
+        jQuery('.da-modal-open-bg').fadeOut();
+    });
 });
 
 

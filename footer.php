@@ -79,5 +79,32 @@
 
 <?php wp_footer(); ?>
 
+
+
+
+
+
+
+
+
+<div id="orderModal" class="daModal da-modal-popup">
+    <div class="modal-inner da-modal-content">
+        <div class="title-modal">
+			<div class="modal-content">
+				Здесь форма
+			</div>
+		</div>
+        <button class="closeModal">
+			<svg enable-background="new 0 0 386.667 386.667" height="512" viewBox="0 0 386.667 386.667" width="512" xmlns="http://www.w3.org/2000/svg"><path d="m386.667 45.564-45.564-45.564-147.77 147.769-147.769-147.769-45.564 45.564 147.769 147.769-147.769 147.77 45.564 45.564 147.769-147.769 147.769 147.769 45.564-45.564-147.768-147.77z"></path></svg>
+		</button>
+    </div>
+</div>
+<div class="da-modal-open-bg"></div>
+
+
+
+
+
+
 </body>
 </html>
