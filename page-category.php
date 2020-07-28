@@ -150,10 +150,8 @@ get_header();
 				</div>
 			</div>
 		</div>
-		<div class="productSlider">
+		<div class="productSliderCat">
 			<div class="swiper-wrapper">
-
-
 
 <?php if ( have_rows( 'items_products' ) ) : ?>
 	<?php while ( have_rows( 'items_products' ) ) : the_row(); ?>
@@ -177,45 +175,6 @@ get_header();
 <?php else : ?>
 	<?php // no rows found ?>
 <?php endif; ?>
-
-
-				<!-- <div class="item swiper-slide">
-					<div class="img"><img src="<?php echo get_template_directory_uri(); ?>/src/img/slide_1.png" alt=""></div>
-					<h3>towels</h3>
-					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
-					<a href="#" class="btn">JETZT ANFRAGEN</a>
-				</div> -->
-				<!-- <div class="item swiper-slide">
-					<div class="img"><img src="<?php echo get_template_directory_uri(); ?>/src/img/slide_3.png" alt=""></div>
-					<h3>bathrobes</h3>
-					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
-					<a href="#" class="btn">JETZT ANFRAGEN</a>
-				</div>
-				<div class="item swiper-slide">
-					<div class="img"><img src="<?php echo get_template_directory_uri(); ?>/src/img/slide_1.png" alt=""></div>
-					<h3>towels</h3>
-					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
-					<a href="#" class="btn">JETZT ANFRAGEN</a>
-				</div>
-				<div class="item swiper-slide">
-					<div class="img"><img src="<?php echo get_template_directory_uri(); ?>/src/img/slide_3.png" alt=""></div>
-					<h3>bathrobes</h3>
-					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
-					<a href="#" class="btn">JETZT ANFRAGEN</a>
-				</div>
-				<div class="item swiper-slide">
-					<div class="img"><img src="<?php echo get_template_directory_uri(); ?>/src/img/slide_1.png" alt=""></div>
-					<h3>towels</h3>
-					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
-					<a href="#" class="btn">JETZT ANFRAGEN</a>
-				</div>
-				<div class="item swiper-slide">
-					<div class="img"><img src="<?php echo get_template_directory_uri(); ?>/src/img/slide_3.png" alt=""></div>
-					<h3>bathrobes</h3>
-					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
-					<a href="#" class="btn">JETZT ANFRAGEN</a>
-				</div> -->
-
 
 			</div>
 		</div>

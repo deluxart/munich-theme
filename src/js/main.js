@@ -69,7 +69,7 @@ jQuery(document).ready(function () {
 
 
 
-var swiperProducts = new Swiper('.productSlider', {
+var swiperProducts = new Swiper('.productSliderCat', {
     slidesPerView: 1.3,
     spaceBetween: 20, 
     loop: true,
