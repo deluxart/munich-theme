@@ -150,6 +150,8 @@ function munich_scripts() {
 	wp_enqueue_style( 'my-site-style', get_stylesheet_uri(), array(), _S_VERSION );
 
 	wp_enqueue_script( 'munich-jquery', get_template_directory_uri() . '/src/js/jquery.min.js', array(), _S_VERSION, true );
+	wp_enqueue_script( 'munich-sticky', get_template_directory_uri() . '/src/js/sticky.min.js', array(), _S_VERSION, true );
+	
 
 	wp_enqueue_script( 'munich-swiper', get_template_directory_uri() . '/src/js/swiper.min.js', array(), _S_VERSION, true );
 	// wp_enqueue_script( 'munich-main', get_template_directory_uri() . '/src/js/main.js', array(), _S_VERSION, true );
