@@ -110,6 +110,7 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 # Layout
 --------------------------------------------------------------*/
 @import "layout/reset";
+@import "layout/fsmenu";
 // @import "layout/basic";
 
 
@@ -323,7 +324,7 @@ input, textarea {
       &#header {
         position: fixed;
         width: 100%;
-        z-index: 33;
+        z-index: 133;
         transition: 0.3s all;
 
         .content {
@@ -383,7 +384,7 @@ input, textarea {
 
         &.fixed {
           background: #fff;
-          z-index: 33;
+          z-index: 133;
           border-bottom: 1px solid #D1D1D1;
           height: 80px;
 
