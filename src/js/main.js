@@ -285,7 +285,7 @@ var postsSlider = new Swiper('.postsSlider', {
             slidesPerView: 3,
             spaceBetween: 20,
             centeredSlides: true,
-            // loop: true,
+            loop: true,
         },
     },
     pagination: {
