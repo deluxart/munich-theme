@@ -579,3 +579,6 @@ const galleryTop = new Swiper('.gallery-top', {
 //         }
 //     },
 // });
+if (jQuery('.sticky').length > 0) { 
+    const sticky = new Sticky('.sticky');
+}
