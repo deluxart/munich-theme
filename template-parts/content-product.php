@@ -115,8 +115,8 @@
 						<div class="paginationSlider">
 							<div>
 								<div class="pagination"></div>
-								<div class="button-prev"><img src="img/arrow_left.svg" alt=""></div>
-								<div class="button-next"><img src="img/arrow_right.svg" alt=""></div>
+								<div class="button-prev"><img src="<?php echo get_template_directory_uri(); ?>/src/img/arrow_left.svg" alt=""></div>
+								<div class="button-next"><img src="<?php echo get_template_directory_uri(); ?>/src/img/arrow_right.svg" alt=""></div>
 							</div>
 						</div>
 					</div>
@@ -124,7 +124,7 @@
 						<div class="swiper-wrapper">
 							<div class="item swiper-slide">
 								<div>
-									<div class="img"><img src="img/acc_1.png" alt=""></div>
+									<div class="img"><img src="<?php echo get_template_directory_uri(); ?>/src/img/acc_1.png" alt=""></div>
 									<a href="#"><h4 class="line">Cosmetics</h4></a>
 									<p>Kurzmantel mit Kapuze und Waffelpikee Kontrast, Walkfrottier, 100% Cotton, 380 g/m</p>
 									<ul class="sizes-item">
@@ -138,7 +138,7 @@
 							</div>
 							<div class="item swiper-slide">
 								<div>
-									<div class="img"><img src="img/acc_2.png" alt=""></div>
+									<div class="img"><img src="<?php echo get_template_directory_uri(); ?>/src/img/acc_2.png" alt=""></div>
 									<a href="#"><h4 class="line">Cover</h4></a>
 									<p>Kurzmantel mit Kapuze und Waffelpikee Kontrast, Walkfrottier, 100% Cotton, 380 g/m</p>
 									<ul class="sizes-item">
@@ -152,7 +152,7 @@
 							</div>
 							<div class="item swiper-slide">
 								<div>
-									<div class="img"><img src="img/acc_3.png" alt=""></div>
+									<div class="img"><img src="<?php echo get_template_directory_uri(); ?>/src/img/acc_3.png" alt=""></div>
 									<a href="#"><h4 class="line">Feel good</h4></a>
 									<p>Kurzmantel mit Kapuze und Waffelpikee Kontrast, Walkfrottier, 100% Cotton, 380 g/m</p>
 									<ul class="sizes-item">
@@ -166,7 +166,7 @@
 							</div>
 							<div class="item swiper-slide">
 								<div>
-									<div class="img"><img src="img/acc_4.png" alt=""></div>
+									<div class="img"><img src="<?php echo get_template_directory_uri(); ?>/src/img/acc_4.png" alt=""></div>
 									<a href="#"><h4 class="line">Nail</h4></a>
 									<p>Kurzmantel mit Kapuze und Waffelpikee Kontrast, Walkfrottier, 100% Cotton, 380 g/m</p>
 									<ul class="sizes-item">
