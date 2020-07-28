@@ -69,6 +69,11 @@ $color-dark: #161616;
 			grid-template-columns: auto 1fr auto;
 			grid-gap: 120px;
 
+			@media (max-width: 992px) {
+				grid-template-columns: 1fr 1fr;
+				grid-gap: 40px;
+			}
+
 			.fs-contacts {
 				opacity: 0;
 				transition: opacity .2s ease, transform .3s ease;
@@ -76,6 +81,11 @@ $color-dark: #161616;
 				// transition-delay: $transition--length + s;
 				transition-delay: .3s;
 				padding-left: 150px;
+
+				@media (max-width: 992px) {
+					padding: 0;
+					grid-column: 1/3;
+				}
 
 				ul {
 					display: grid;
@@ -86,6 +96,10 @@ $color-dark: #161616;
 						line-height: 35px;
 						position: relative;
 						color: $color-dark;
+
+						@media (max-width: 992px) {
+							padding-left: 47px;
+						}
 
 						a {
 							color: $color-dark;
@@ -102,6 +116,10 @@ $color-dark: #161616;
 							text-transform: uppercase;
 							width: 61px;
 							text-align: right;
+
+							@media (max-width: 992px) {
+								display: none;
+							}
 						}
 
 						&:before {
@@ -112,6 +130,11 @@ $color-dark: #161616;
 							height: 1px;
 							width: 51px;
 							left: -70px;
+
+							@media (max-width: 992px) {
+								width: 28px;
+								left: 0;
+							}
 						}
 					}
 				}
@@ -133,6 +156,12 @@ $color-dark: #161616;
 		font-size: 25px;
 		line-height: 30px;
 		padding: 20px 0;
+
+		@media (max-width: 992px) {
+			font-size: 15px;
+			line-height: 18px;
+			padding: 15px 0;
+		}
 
       a {
         color: $color-gray;

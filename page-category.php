@@ -15,7 +15,7 @@ get_header();
 			<div class="content category">
 				<div class="text">
 					<h1><?php the_sub_field( 'slide_title' ); ?></h1>
-					<p class="description simple"><?php the_sub_field( 'slide_descriptio' ); ?></p>
+					<p class="description"><?php the_sub_field( 'slide_descriptio' ); ?></p>
 					<?php if ( have_rows( 'slide_list' ) ) : ?>
 						<ul class="square">
 						<?php while ( have_rows( 'slide_list' ) ) : the_row(); ?>
@@ -42,66 +42,6 @@ get_header();
 	</section>
 	<?php endwhile; ?>
 <?php endif; ?>
-
-	<section id="services">
-		<div class="container">
-			<div class="content">
-
-
-<?php if ( have_rows( 'items_services' ) ) : ?>
-	<?php while ( have_rows( 'items_services' ) ) : the_row(); ?>
-				<a href="<?php the_sub_field( 'link' ); ?>">
-					<div class="item">
-						<h3><?php the_sub_field( 'title' ); ?></h3>
-						<div class="icon">
-							<?php if ( get_sub_field( 'icon' ) ) : ?>
-								<img src="<?php the_sub_field( 'icon' ); ?>" />
-							<?php endif ?>
-						</div>
-					</div>
-				</a>
-	<?php endwhile; ?>
-<?php else : ?>
-	<?php // no rows found ?>
-<?php endif; ?>
-
-<!-- 
-
-				<a href="#">
-					<div class="item">
-						<h3>BATHROOM</h3>
-						<div class="icon"><img src="<?php echo get_template_directory_uri(); ?>/src/img/service_1.svg" alt=""></div>
-					</div>
-				</a>
-				<a href="#">
-					<div class="item">
-						<h3>HYGIENE</h3>
-						<div class="icon"><img src="<?php echo get_template_directory_uri(); ?>/src/img/service_2.svg" alt=""></div>
-					</div>
-				</a>
-				<a href="#">
-					<div class="item">
-						<h3>LIVING</h3>
-						<div class="icon"><img src="<?php echo get_template_directory_uri(); ?>/src/img/service_3.svg" alt=""></div>
-					</div>
-				</a>
-				<a href="#">
-					<div class="item">
-						<h3>FOOD</h3>
-						<div class="icon"><img src="<?php echo get_template_directory_uri(); ?>/src/img/service_4.svg" alt=""></div>
-					</div>
-				</a>
-				<a href="#">
-					<div class="item">
-						<h3>OFFICE</h3>
-						<div class="icon"><img src="<?php echo get_template_directory_uri(); ?>/src/img/service_5.svg" alt=""></div>
-					</div>
-				</a> -->
-			</div>
-		</div>
-	</section>
-
-
 	<section id="unser">
 		<div class="container">
 			<div class="content">
@@ -581,7 +521,7 @@ get_header();
 				<p><?php the_sub_field( 'description' ); ?></p>
 
 				<?php if ( have_rows( 'list' ) ) : ?>
-				<ul class="grid-links">
+				<ul class="square">
 					<?php while ( have_rows( 'list' ) ) : the_row(); ?>
 						<li><a href="<?php the_sub_field( 'link' ); ?>"><?php the_sub_field( 'item' ); ?></li></a>
 					<?php endwhile; ?>
@@ -603,7 +543,7 @@ get_header();
 				<p><?php the_sub_field( 'description' ); ?></p>
 
 				<?php if ( have_rows( 'list' ) ) : ?>
-				<ul class="grid-links">
+				<ul class="square">
 					<?php while ( have_rows( 'list' ) ) : the_row(); ?>
 						<li><a href="<?php the_sub_field( 'link' ); ?>"><?php the_sub_field( 'item' ); ?></li></a>
 					<?php endwhile; ?>

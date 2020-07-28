@@ -378,7 +378,7 @@ const app = (() => {
 
     const init = () => {
         body = document.querySelector('body');
-        menu = document.querySelector('.menu-icon');
+        menu = document.querySelector('.btn-menu');
         menuItems = document.querySelectorAll('.nav-menu__list-item');
 
         applyListeners();
