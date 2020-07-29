@@ -66,12 +66,22 @@
 		</div>
 		<div class="foot">
 			<div class="container">
-				<ul>
-					<li><a href="#">IMPRESSUM</a></li>
-					<li><a href="#">DATENSCHUTZERKLÄRUNG</a></li>
-					<li><a href="#">AGB</a></li>
-					<li><a href="#">© MUNICH ACCESSORIES</a></li>
-				</ul>
+ 				<?php
+                    $menuParameters = array(
+                        'menu'            => 'Footer menu (bottom)',
+                        'container'       => false,
+                        'items_wrap'      => '<ul>%3$s</ul>',
+                        'depth'           => 0,
+                        'echo'            => true,
+                        'before'          => '',
+                        'after'           => '',
+                        'link_before'     => '',
+                        'link_after'      => '',
+						'walker'          => '',
+                        'walker_nav_menu_start_el'          => '',
+                    );
+                    echo strip_tags(wp_nav_menu( $menuParameters ), '<a>' );
+                ?>
 			</div>
 		</div>
 	</footer>
