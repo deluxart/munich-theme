@@ -17,16 +17,10 @@
 	<?php munich_post_thumbnail(); ?>
 
 	<div class="entry-content">
-		<?php
-		the_content();
-
-		wp_link_pages(
-			array(
-				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'my-site' ),
-				'after'  => '</div>',
-			)
-		);
-		?>
+		<div class="textPage">
+			<div><?php the_field( 'left_column' ); ?></div>
+			<div><?php the_field( 'right_column' ); ?></div>
+		</div>
 	</div><!-- .entry-content -->
 
 	<?php if ( get_edit_post_link() ) : ?>

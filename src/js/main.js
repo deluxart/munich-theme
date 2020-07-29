@@ -37,7 +37,7 @@ jQuery(document).ready(function () {
 
 jQuery(window).scroll(function () {
     var heightHeader = jQuery('#header').height();
-    if (jQuery(this).scrollTop() > heightHeader) {
+    if (jQuery(this).scrollTop() > 1) {
         jQuery('#header').addClass('fixed');
     } else {
         jQuery('#header').removeClass('fixed');

@@ -11,11 +11,6 @@ get_header();
 		<div class="home_slider">
 		<div class="swiper-wrapper">
 
-
-
-
-
-
 <?php if ( have_rows( 'slide' ) ) : $count = 0; ?>
 	<?php while ( have_rows( 'slide' ) ) : the_row(); ?>
 	<div class="content swiper-slide" data-name="<?php the_sub_field( 'slide_list' ); ?>">
@@ -46,58 +41,6 @@ get_header();
 <?php else : ?>
 	<?php // no rows found ?>
 <?php endif; ?>
-
-<!-- 
-
-			<div class="content swiper-slide" data-name="textile">
-				<div class="text">
-					<h1>Hotelausstatter</h1>
-					<p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
-					<ul class="square">
-						<li>Lorem ipsum dolor sit amet, consectetur </li>
-						<li>Lorem ipsum dolor sit amet, consectetur </li>
-						<li>Lorem ipsum dolor sit amet, consectetur</li>
-					</ul>
-					<a href="#" class="btn black border">JETZT ANFRAGEN</a>
-				</div>
-				<div class="image">
-					<img src="< ?php echo get_template_directory_uri(); ?>/src/img/head_img.jpg" alt="">
-				</div>
-			</div>
-
-			<div class="content swiper-slide" data-name="drinks">
-				<div class="text">
-					<h1>Hotelausstatter</h1>
-					<p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
-					<ul class="square">
-						<li>Lorem ipsum dolor sit amet, consectetur </li>
-						<li>Lorem ipsum dolor sit amet, consectetur </li>
-						<li>Lorem ipsum dolor sit amet, consectetur</li>
-					</ul>
-					<a href="#" class="btn black border">JETZT ANFRAGEN</a>
-				</div>
-				<div class="image">
-					<img src="< ?php echo get_template_directory_uri(); ?>/src/img/head_img.jpg" alt="">
-				</div>
-			</div>
-
-			<div class="content swiper-slide" data-name="accesories">
-				<div class="text">
-					<h1>Hotelausstatter</h1>
-					<p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
-					<ul class="square">
-						<li>Lorem ipsum dolor sit amet, consectetur </li>
-						<li>Lorem ipsum dolor sit amet, consectetur </li>
-						<li>Lorem ipsum dolor sit amet, consectetur</li>
-					</ul>
-					<a href="#" class="btn black border">JETZT ANFRAGEN</a>
-				</div>
-				<div class="image">
-					<img src="< ?php echo get_template_directory_uri(); ?>/src/img/head_img.jpg" alt="">
-				</div>
-			</div> -->
-
-
 			</div>
 			</div>
 			  <!-- Add Pagination -->

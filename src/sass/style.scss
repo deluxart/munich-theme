@@ -202,7 +202,7 @@ ul {
 
 
 body {
-    &.single {
+    &.single, &.page-template-default, &.page-template-page-text-php {
         header {
             &#header {
                 border-bottom: 1px solid #E1E1E1;
@@ -215,21 +215,28 @@ body {
 h4 {
 	font-size: 14px;
 	line-height: 17px;
-  text-transform: uppercase;
-  font-weight: bold;
-  position: relative;
-  &.line {
-      padding-bottom: 7px;
-      margin-bottom: 10px;
-      &:before {
-        position: absolute;
-        bottom: 0;
-        width: 100%;
-        height: 3px;
-        background: $black;
-        content: '';
-      }
+    text-transform: uppercase;
+    font-weight: bold;
+    position: relative;
+
+    &.line {
+        padding-bottom: 7px;
+        margin-bottom: 10px;
+        &:before {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            height: 3px;
+            background: $black;
+            content: '';
+        }
     }
+}
+
+h5 {
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 18px;
 }
 
 a {
@@ -2013,6 +2020,7 @@ input, textarea {
     padding-top: 185px;
 
     .breadcrumbs {
+        padding-bottom: 34px;
 
         ul {
             list-style: none;
@@ -2027,7 +2035,7 @@ input, textarea {
                 &+li {
                     &:before {
                         padding: 8px;
-                        color: #C4C4C4;
+                        color: $black;
                         content: "/\00a0";
                     }
                 }
@@ -2049,7 +2057,7 @@ input, textarea {
         display: grid;
         grid-template-columns: minmax(0, 1fr) 390px;
         grid-column-gap: 220px;
-        padding: 107px 0 250px 0;
+        padding: 73px 0 250px 0;
         grid-template-rows: auto 1fr;
 
         h3 {
@@ -2473,6 +2481,63 @@ input, textarea {
         .product {
             grid-template-columns: minmax(0, 1fr) 250px;
             grid-column-gap: 120px;
+        }
+    }
+
+    .entry-title {
+        margin-bottom: 30px;
+    }
+
+    .entry-content {
+        margin: 0;
+
+        & > p {
+            margin-bottom: 68px;
+            color: #767676;
+            font-weight: 300;
+            font-size: 15px;
+            line-height: 150%;
+        }
+
+        & > span {
+            margin-bottom: 21px;
+        }
+
+        & > h1, & > h2, & > h3, & > h4, & > h5, & > h5, & > blockquote {
+            margin-bottom: 21px;
+        }
+
+        .textPage {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-gap: 60px;
+
+            @media (max-width: 992px) {
+                grid-template-columns: 1fr;
+                grid-gap: 0px;
+            }
+
+            & > div {
+                & > p {
+                    margin-bottom: 68px;
+                    color: #767676;
+                    font-weight: 300;
+                    font-size: 15px;
+                    line-height: 150%;
+
+                    @media (max-width: 992px) {
+                        margin-bottom: 50px;
+                    }
+                }
+
+                & > span {
+                    margin-bottom: 21px;
+                }
+
+                & > h1, & > h2, & > h3, & > h4, & > h5, & > h5, & > blockquote, & > strong, & > img, & > ul, & > ol {
+                    margin-bottom: 21px;
+                }
+            }
         }
     }
 }
@@ -3660,3 +3725,8 @@ input, textarea {
         }
     }
 }
+
+
+
+
+
