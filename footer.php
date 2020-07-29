@@ -80,11 +80,12 @@
 <?php wp_footer(); ?>
 
 <div id="orderModal" class="daModal da-modal-popup">
-    <div class="modal-inner da-modal-content">
-        <div class="title-modal">
-			<div class="modal-content">
-				Здесь форма
-			</div>
+    <div class="content-modal universal">
+		<div class="form">
+			<?php echo do_shortcode('[contact-form-7 id="541" title="For popup"]'); ?>
+		</div>
+		<div class="image">
+			<img src="<?php echo get_template_directory_uri(); ?>/src/img/foot_section_bg.png" alt="">
 		</div>
         <button class="closeModal">
 			<svg enable-background="new 0 0 386.667 386.667" height="512" viewBox="0 0 386.667 386.667" width="512" xmlns="http://www.w3.org/2000/svg"><path d="m386.667 45.564-45.564-45.564-147.77 147.769-147.769-147.769-45.564 45.564 147.769 147.769-147.769 147.77 45.564 45.564 147.769-147.769 147.769 147.769 45.564-45.564-147.768-147.77z"></path></svg>
