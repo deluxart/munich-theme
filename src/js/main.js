@@ -355,13 +355,13 @@ jQuery('.formnav > ul > li > a').click(function (event) {
 });
 
 jQuery('.sizes-prod > li').click(function (event) {
-    jQuery('.sizes-prod > li').removeClass('active');
+    // jQuery('.sizes-prod > li').removeClass('active');
     jQuery(this).closest('li').toggleClass('active');
     return false;
 });
 
 jQuery('.colors-prod > li').click(function (event) {
-    jQuery('.colors-prod > li').removeClass('active');
+    // jQuery('.colors-prod > li').removeClass('active');
     jQuery(this).closest('li').toggleClass('active');
     return false;
 });
