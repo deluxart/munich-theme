@@ -98,7 +98,7 @@
 
 <?php if ( have_rows( 'content_tabs_product' ) ) : ?>
 	<?php while ( have_rows( 'content_tabs_product' ) ) : the_row(); ?>
-		<h4 id="<?php the_sub_field( 'tab_name' ); ?>"><?php the_sub_field( 'tab_name' ); ?></h4>
+		<h4 id="<?php the_sub_field( 'tab_name' ); ?>" class="title"><?php the_sub_field( 'tab_name' ); ?></h4>
 		<p><?php the_sub_field( 'tab_content' ); ?></p>
 	<?php endwhile; ?>
 <?php endif; ?>
