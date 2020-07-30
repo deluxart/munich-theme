@@ -553,69 +553,7 @@ get_header();
 			</div>
 			<div class="reviewsSlider">
 				<div class="swiper-wrapper">
-
-<?php if ( have_rows( 'reviews_block' ) ) : ?>
-	<?php while ( have_rows( 'reviews_block' ) ) : the_row(); ?>
-		<?php if ( have_rows( 'reviews' ) ) : ?>
-			<div class="item swiper-slide">
-			<?php while ( have_rows( 'reviews' ) ) : the_row(); ?>
-				<?php if ( get_sub_field( 'logo' ) ) : ?>
-					<div class="logo"><img src="<?php the_sub_field( 'logo' ); ?>" /></div>
-				<?php endif ?>
-				<p class="addReadMore showlesscontent"><?php the_sub_field( 'content' ); ?></p>
-				<?php if ( have_rows( 'author' ) ) : ?>
-					<ul class="foot">
-					<?php while ( have_rows( 'author' ) ) : the_row(); ?>
-						<li><a href="<?php the_sub_field( 'link' ); ?>"><?php the_sub_field( 'name' ); ?></a></li>
-						<li><?php the_sub_field( 'position' ); ?></li>
-					<?php endwhile; ?>
-					</ul>
-				<?php endif; ?>
-			<?php endwhile; ?>
-			</div>
-		<?php endif; ?>
-	<?php endwhile; ?>
-<?php else : ?>
-	<?php // no rows found ?>
-<?php endif; ?>
-
-
-<!-- 
-					<div class="item swiper-slide">
-						<div class="logo"><img src="img/logo_1.png" alt=""></div>
-						<p class="addReadMore showlesscontent">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis Ut enim ad minim veniam, quis sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis labore et dolore magna aliqua. Ut enim ad minim veniam, quis Ut enim ad minim veniam, quis sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis </p>
-						<ul class="foot">
-							<li><a href="#">Alan Jones</a></li>
-							<li>CEO&FOUNDER</li>
-						</ul>
-					</div>
-					<div class="item swiper-slide">
-						<div class="logo"><img src="img/logo_2.png" alt=""></div>
-						<p class="addReadMore showlesscontent">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis Ut enim ad minim veniam, quis sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis labore et dolore magna aliqua. Ut enim ad minim veniam, quis Ut enim ad minim veniam, quis sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis </p>
-						<ul class="foot">
-							<li><a href="#">Alan Jones</a></li>
-							<li>CEO&FOUNDER</li>
-						</ul>
-					</div>
-					<div class="item swiper-slide">
-						<div class="logo"><img src="img/logo_4.png" alt=""></div>
-						<p class="addReadMore showlesscontent">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis Ut enim ad minim veniam, quis sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis labore et dolore magna aliqua. Ut enim ad minim veniam, quis Ut enim ad minim veniam, quis sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis </p>
-						<ul class="foot">
-							<li><a href="#">Alan Jones</a></li>
-							<li>CEO&FOUNDER</li>
-						</ul>
-					</div>
-					<div class="item swiper-slide">
-						<div class="logo"><img src="img/logo_3.png" alt=""></div>
-						<p class="addReadMore showlesscontent">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis Ut enim ad minim veniam, quis sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis labore et dolore magna aliqua. Ut enim ad minim veniam, quis Ut enim ad minim veniam, quis sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis </p>
-						<ul class="foot">
-							<li><a href="#">Alan Jones</a></li>
-							<li>CEO&FOUNDER</li>
-						</ul>
-					</div> -->
-
-
-
+					<?php echo do_shortcode('[reviews-list]'); ?>
 				</div>
 			</div>
 	</section>
