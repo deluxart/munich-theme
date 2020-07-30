@@ -1821,6 +1821,10 @@ input, textarea {
                     i {
                         vertical-align: middle;
                     }
+
+                    &.read-more {
+                        font-weight: 300;
+                    }
                 }
            }
 

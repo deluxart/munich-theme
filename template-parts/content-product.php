@@ -17,15 +17,23 @@
 
 
 
-		<div class="breadcrumbs">
+		<!-- <div class="breadcrumbs">
 			<ul>
 				<li><a href="#">Main</a></li>
 				<li><a href="#">Catalog</a></li>
 				<li><a href="#">Textile</a></li>
 				<li>MIAMI</li>
 			</ul>
-		</div>
+		</div> -->
+		<!-- < ?php if ( function_exists( 'dimox_breadcrumbs' ) ) dimox_breadcrumbs(); ?> -->
 
+
+<?php if(function_exists('bcn_display')) { 
+	echo '<div class="breadcrumbs"><ul>';
+		bcn_display(); 
+	echo '</ul></div>';
+	}
+?>
 
 	<div class="product" id="product-<?php the_ID(); ?>">
 

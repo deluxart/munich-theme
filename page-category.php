@@ -715,7 +715,7 @@ get_header();
 						<div class="text">
 							<p>And here is lorem ipsum forever, lorem ipsum forever, lorem ipsum forever, lorem ipsum forever, lorem ipsum forever.</p>
 						</div>
-						<a href="#">read <img src="<?php echo get_template_directory_uri(); ?>/src/img/article_arrow.svg" alt=""></a>
+						<a href="#" class="read-more">read <img src="<?php echo get_template_directory_uri(); ?>/src/img/article_arrow.svg" alt=""></a>
 					</div>
 					<div class="item swiper-slide">
 						<div class="image"><img src="<?php echo get_template_directory_uri(); ?>/src/img/blog_2.png" alt=""></div>
@@ -729,7 +729,7 @@ get_header();
 						<div class="text">
 							<p>And here is lorem ipsum forever, lorem ipsum forever, lorem ipsum forever, lorem ipsum forever, lorem ipsum forever.</p>
 						</div>
-						<a href="#">read <img src="<?php echo get_template_directory_uri(); ?>/src/img/article_arrow.svg" alt=""></a>
+						<a href="#" class="read-more">read <img src="<?php echo get_template_directory_uri(); ?>/src/img/article_arrow.svg" alt=""></a>
 					</div>
 					<div class="item swiper-slide">
 						<div class="image"><img src="<?php echo get_template_directory_uri(); ?>/src/img/blog_3.png" alt=""></div>
@@ -743,7 +743,7 @@ get_header();
 						<div class="text">
 							<p>And here is lorem ipsum forever, lorem ipsum forever, lorem ipsum forever, lorem ipsum forever, lorem ipsum forever.</p>
 						</div>
-						<a href="#">read <img src="<?php echo get_template_directory_uri(); ?>/src/img/article_arrow.svg" alt=""></a>
+						<a href="#" class="read-more">read <img src="<?php echo get_template_directory_uri(); ?>/src/img/article_arrow.svg" alt=""></a>
 					</div>
 				</div>
 			</div>

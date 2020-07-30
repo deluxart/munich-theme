@@ -407,6 +407,12 @@ function dimox_breadcrumbs() {
 				elseif ( $show_home_link && $show_last_sep ) echo $sep;
 			}
 
+} elseif ( is_post_type_mp_products() ) {
+			$post_type = get_post_type_object( get_post_type() );
+			if ( $show_home_link && $show_current ) echo $sep;
+			if ( $show_current ) echo $before . get_the_title() . $after;
+			elseif ( $show_home_link && $show_last_sep ) echo $sep;
+
 		} elseif ( is_attachment() ) {
 			$parent = get_post( $parent_id );
 			$cat = get_the_category( $parent->ID ); $catID = $cat[0]->cat_ID;
