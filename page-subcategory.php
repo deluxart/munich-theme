@@ -1,6 +1,6 @@
 <?php
 /*
-Template Name: Category
+Template Name: Sub Category
 */
 
 get_header();
@@ -42,40 +42,6 @@ get_header();
 	</section>
 	<?php endwhile; ?>
 <?php endif; ?>
-
-
-
-
-
-	<section id="services">
-		<div class="container">
-			<div class="content">
-
-
-<?php if ( have_rows( 'items_services' ) ) : ?>
-	<?php while ( have_rows( 'items_services' ) ) : the_row(); ?>
-				<a href="<?php the_sub_field( 'link' ); ?>">
-					<div class="item">
-						<h3><?php the_sub_field( 'title' ); ?></h3>
-						<div class="icon">
-							<?php if ( get_sub_field( 'icon' ) ) : ?>
-								<img src="<?php the_sub_field( 'icon' ); ?>" />
-							<?php endif ?>
-						</div>
-					</div>
-				</a>
-	<?php endwhile; ?>
-<?php else : ?>
-	<?php // no rows found ?>
-<?php endif; ?>
-			</div>
-		</div>
-	</section>
-
-
-
-
-
 	<section id="unser">
 		<div class="container">
 			<div class="content">
