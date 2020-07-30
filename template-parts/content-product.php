@@ -62,23 +62,37 @@
 <?php endif; ?>
 
 		<div class="productCont">
-			<div class="pageNav sticky" data-margin-top="79" data-sticky-for="1023" data-sticky-class="moreProducts">
+			<!-- <div class="pageNav">
 				<ul>
 					<li><a href="#information">Information</a></li>
 					<li><a href="#fabric">Fabric</a></li>
 					<li><a href="#colors">Colors</a></li>
 					<li><a href="#care">Care</a></li>
 				</ul>
-			</div>
+			</div> -->
+
+
+	<div class="pageNav">
+		<ul>
+		<?php if ( have_rows( 'content_tabs_product' ) ) : ?>
+			<?php while ( have_rows( 'content_tabs_product' ) ) : the_row(); ?>
+			<?php if ( get_sub_field( 'display_tab_in_navigation' ) == 1 ) : ?>
+				<li><a href="#<?php the_sub_field( 'tab_name' ); ?>"><?php the_sub_field( 'tab_name' ); ?></a></li>
+				<?php endif; ?>
+			<?php endwhile; ?>
+		<?php endif; ?>
+		<li><a href="#<?php the_sub_field( 'colors' ); ?>">COLOUR</a></li>
+		</ul>
+	</div>
+
+
 
 
 <?php if ( have_rows( 'content_tabs_product' ) ) : ?>
 	<?php while ( have_rows( 'content_tabs_product' ) ) : the_row(); ?>
-		<h4><?php the_sub_field( 'tab_name' ); ?></h4>
+		<h4 id="<?php the_sub_field( 'tab_name' ); ?>"><?php the_sub_field( 'tab_name' ); ?></h4>
 		<p><?php the_sub_field( 'tab_content' ); ?></p>
 	<?php endwhile; ?>
-<?php else : ?>
-	<?php // no rows found ?>
 <?php endif; ?>
 
 
@@ -194,7 +208,7 @@
 
 
 <div class="productSidebar">
-
+	<div>
 			<div class="productName desktop">
 						<h3><?php the_title(); ?></h3>
 						<p><?php the_field( 'short_description_product' ); ?></p>
@@ -263,6 +277,7 @@
 					<?php // no rows found ?>
 				<?php endif; ?>
 			</div>
+		</div>
 		</div>
 
 
