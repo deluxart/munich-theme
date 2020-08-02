@@ -106,10 +106,10 @@
 
 	<section id="team">
 		<div class="team-content">
-
+			<div class="swiper-wrapper">
 			<?php if ( have_rows( 'user_team' ) ) : ?>
 				<?php while ( have_rows( 'user_team' ) ) : the_row(); ?>
-					<div class="item">
+					<div class="item swiper-slide">
 					<?php if ( get_sub_field( 'photo' ) ) : ?>
 						<div class="photo"><img src="<?php the_sub_field( 'photo' ); ?>" /></div>
 					<?php endif ?>
@@ -120,6 +120,7 @@
 			<?php else : ?>
 				<?php // no rows found ?>
 			<?php endif; ?>
+			</div>
 		</div>
 	</section>
 

@@ -4016,6 +4016,7 @@ blockquote {
            .item {
                display: grid;
                align-items: center;
+                height: 300px;
            }
        }
     }
@@ -4057,21 +4058,24 @@ blockquote {
 
     #team {
         padding: 120px 0 250px;
+        overflow: hidden;
         .team-content {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            grid-column-gap: 20px;
-            grid-row-gap: 70px;
+            .swiper-wrapper {
+                display: grid;
+                grid-template-columns: repeat(4, 1fr);
+                grid-column-gap: 20px;
+                grid-row-gap: 70px;
 
-            .item {
-                text-align: center;
+                .item {
+                    text-align: center;
 
-                img {
-                    margin-bottom: 20px;
-                }
+                    img {
+                        margin-bottom: 20px;
+                    }
 
-                h3 {
-                    text-transform: none;
+                    h3 {
+                        text-transform: none;
+                    }
                 }
             }
         }

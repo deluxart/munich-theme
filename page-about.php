@@ -31,6 +31,22 @@ get_header();
 		</main><!-- #main -->
 	</div><!-- #primary -->
 
+
+<div id="insta">
+		<div class="container">
+			<h3>follow on  instagram</h3>
+			<div class="content">
+				<img src="<?php echo get_template_directory_uri(); ?>/src/img/insta1.png" alt="">
+				<img src="<?php echo get_template_directory_uri(); ?>/src/img/insta2.png" alt="">
+				<img src="<?php echo get_template_directory_uri(); ?>/src/img/insta3.png" alt="">
+				<img src="<?php echo get_template_directory_uri(); ?>/src/img/insta1.png" alt="">
+				<img src="<?php echo get_template_directory_uri(); ?>/src/img/insta2.png" alt="">
+				<img src="<?php echo get_template_directory_uri(); ?>/src/img/insta3.png" alt="">
+			</div>
+		</div>
+	</div>
+
+
 <?php
 // get_sidebar();
 get_footer();

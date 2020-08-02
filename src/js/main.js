@@ -281,6 +281,52 @@ var reviewsSlider = new Swiper('.reviewsSlider', {
 });
 
 
+
+
+
+
+
+(function () {
+    'use strict';
+    const breakpoint = window.matchMedia('(min-width:992px)');
+    let mySwiper;
+    const breakpointChecker = function () {
+        if (breakpoint.matches === true) {
+
+            if (mySwiper !== undefined) mySwiper.destroy(true, true);
+            return;
+        } else if (breakpoint.matches === false) {
+
+            return enableSwiper();
+
+        }
+
+    };
+
+    const enableSwiper = function () {
+
+        mySwiper = new Swiper('.team-content', {
+            slidesPerView: "1.3",
+            spaceBetween: 30,
+            // pagination
+            pagination: '.swiper-pagination',
+            paginationClickable: true,
+
+        });
+
+    };
+
+    breakpoint.addListener(breakpointChecker);
+
+    breakpointChecker();
+})();
+
+
+
+
+
+
+
 var clientsSlider = new Swiper('.clients_slider', {
     slidesPerView: 1,
     spaceBetween: 30,
