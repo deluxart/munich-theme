@@ -108,7 +108,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   visibility: visible;
 }
 
-.wpcf7-checkbox .checkbox-text { position: relative; top: -7px }
+.wpcf7-checkbox .checkbox-text { position: relative; top: 50%; transform: translateY(-50%);}
 
 
 .addReadMore.showlesscontent .SecSec,

@@ -12,7 +12,7 @@
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<div class="contacts-page">
 
-		<h2><?php the_field( 'page_title' ); ?></h2>
+		<h3><?php the_field( 'page_title' ); ?></h3>
 		<div class="top_side">
 			<div class="map">
 				<?php the_field( 'map_frame' ); ?>
@@ -32,11 +32,13 @@
 		</div>
 
 		<div class="contact-form">
-			<h2><?php the_field( 'contacts_form_title' ); ?></h2>
+			<h3><?php the_field( 'contacts_form_title' ); ?></h3>
+			<div class="form-prod">
 			<?php
-				$shortcode = get_post_meta($post->ID,'contacts_form_-_shortcode',true);
-				echo do_shortcode($shortcode);
+				$contacts_form = get_post_meta($post->ID,'contacts_form_-_shortcode',true);
+				echo do_shortcode($contacts_form);
  			?>
+			</div>
 		</div>
 	
 	</div>
