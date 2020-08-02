@@ -344,7 +344,7 @@ input, textarea {
 
         .content {
           display: grid;
-          grid-template-columns: 1fr auto auto;
+          grid-template-columns: 1fr auto auto auto;
           align-items: center;
           grid-gap: 70px;
           padding: 30px 0;
@@ -363,6 +363,31 @@ input, textarea {
             a {
               font-weight: bold;
             }
+          }
+
+          .lang-selector {
+                select {
+                    appearance: none;
+                    background-color: transparent;
+                    background-image: url(./src/img/lang_arrow.svg);
+                    background-position: right 10px center;
+                    background-repeat: no-repeat;
+                    cursor: pointer;
+                    padding-right: 28px;
+                    text-indent: 0.01px;
+                    text-overflow: "";
+                    border: 0;
+                    text-transform: uppercase;
+                    font-weight: 900;
+                    font-size: 15px;
+                    line-height: 18px;
+
+                    option {
+                        padding: 2px 3px;
+                        font-size: 15px;
+                        line-height: 18px;
+                    }
+                }
           }
 
           .nav {
@@ -3747,8 +3772,3 @@ input, textarea {
         }
     }
 }
-
-
-
-
-

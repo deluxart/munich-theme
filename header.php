@@ -82,6 +82,10 @@
 			<div class="content">
 				<div class="logo"><a href="<?php echo esc_url( home_url( '/' ) ); ?>"><img src="<?php echo get_template_directory_uri(); ?>/src/img/logo.png" alt=""></a></div>
 				<div class="phone"><a href="tel:+49089232418950">+49 (0) 89/2324189-50</a></div>
+				<div class="lang-selector"><?php pll_the_languages(array(
+					'dropdown'=>1,
+					'display_names_as' => 'slug'
+					)); ?></div>
 				<div class="nav">
 					<div class="btn-menu">
 						<div class="menu-icon">

@@ -386,9 +386,6 @@ jQuery('.pageNav > ul > li').click(function (event) {
 //     });
 // });
 
-
-
-
 // For form info
 jQuery(function () {
     var has_single_class = jQuery('main').hasClass('product-page');
