@@ -3772,3 +3772,75 @@ input, textarea {
         }
     }
 }
+
+
+.contacts-page {
+    .top_side {
+        display: grid;
+        grid-template-columns: 65% 1fr;
+        grid-gap: 67px;
+
+        .map {
+            iframe {
+                display: block;
+            }
+        }
+
+        .contacts-block {
+				ul {
+					display: grid;
+					grid-gap: 20px;
+					li {
+						font-weight: 300;
+						font-size: 15px;
+						line-height: 35px;
+						position: relative;
+                        color: $color-dark;
+                        display: grid;
+                        grid-template-columns: auto 1fr;
+                        align-items: start;
+                        grid-gap: 90px;
+
+						@media (max-width: 992px) {
+							padding-left: 47px;
+						}
+
+						a {
+							color: $color-dark;
+						}
+
+						span {
+							color: $color-dark;
+							font-weight: bold;
+							font-size: 10px;
+							line-height: 12px;
+							text-transform: uppercase;
+							width: 61px;
+                            text-align: right;
+                            top: 15px;
+                            position: relative;
+
+                            &:before {
+                                position: absolute;
+                                content: '';
+                                background: $color-dark;
+                                top: 4px;
+                                height: 1px;
+                                width: 50px;
+                                right: calc(-100% - 10px);
+
+                                @media (max-width: 992px) {
+                                    width: 28px;
+                                    left: 0;
+                                }
+                            }
+
+							@media (max-width: 992px) {
+								display: none;
+							}
+						}
+					}
+				}
+            }
+    }
+}
