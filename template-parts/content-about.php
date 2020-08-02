@@ -28,9 +28,9 @@
 	</section>
 
 	<section id="history">
-		<h2><?php the_field( 'section_title_history' ); ?></h2>
 		<div class="content">
 			<div class="text">
+				<h2><?php the_field( 'section_title_history' ); ?></h2>
 				<?php the_field( 'section_content_history' ); ?>
 			</div>
 			<div class="image">
@@ -43,7 +43,7 @@
 
 
 	<section id="about_video">
-
+		<img src="http://dev.seiten.co/wp-munich-accessories-de/wp-content/uploads/2020/08/video_img.jpg" alt="">
 	</section>
 
 
@@ -61,20 +61,21 @@
 			</div>
 		</div>
 		<div class="clients_slider">
-
+			<div class="swiper-wrapper">
 			<?php if ( have_rows( 'client_about' ) ) : ?>
-				<div class="item">
+				
 				<?php while ( have_rows( 'client_about' ) ) : the_row(); ?>
+				<div class="item swiper-slide">
 					<a href="<?php the_sub_field( 'link' ); ?>"><?php if ( get_sub_field( 'logo' ) ) : ?>
 						<img src="<?php the_sub_field( 'logo' ); ?>" />
 					<?php endif ?></a>
-					
-				<?php endwhile; ?>
 				</div>
+				<?php endwhile; ?>
+				
 			<?php else : ?>
 				<?php // no rows found ?>
 			<?php endif; ?>
-
+			</div>
 		</div>
 	</section>
 
@@ -123,7 +124,7 @@
 	</section>
 
 
-	<section class="contact-form">
+	<section id="contact-form">
 			<h3><?php the_field( 'section_title_contact' ); ?></h3>
 			<div class="form-prod">
 			<?php

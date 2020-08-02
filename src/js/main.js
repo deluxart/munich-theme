@@ -281,6 +281,36 @@ var reviewsSlider = new Swiper('.reviewsSlider', {
 });
 
 
+var clientsSlider = new Swiper('.clients_slider', {
+    slidesPerView: 1,
+    spaceBetween: 30,
+    // slidesPerGroup: 3,
+    loop: true,
+    // loopFillGroupWithBlank: true,
+    breakpoints: {
+        640: {
+            slidesPerView: 2,
+            spaceBetween: 30,
+        },
+        768: {
+            slidesPerView: 3,
+            spaceBetween: 30,
+        },
+        1024: {
+            slidesPerView: 4,
+            spaceBetween: 60,
+        },
+    },
+    pagination: {
+        el: '#our_clients .pagination',
+        clickable: true,
+        type: 'fraction',
+    },
+    navigation: {
+        nextEl: '#our_clients .button-next',
+        prevEl: '#our_clients .button-prev',
+    },
+});
 
 
 var blogSlider = new Swiper('.blogSlider', {
