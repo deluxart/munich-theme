@@ -1997,15 +1997,11 @@ input, textarea {
                                    display: block;
                                    line-height: 18px;
                                }
-                           }
-                           &.nav {
-                               & > li {
-                                   a {
-                                       text-transform: uppercase;
-                                       font-weight: bold;
-                                       color: #A4A4A4;
-                                   }
-                               }
+                                a {
+                                    text-transform: uppercase;
+                                    font-weight: bold;
+                                    color: #A4A4A4;
+                                }
                            }
                        }
 
@@ -2022,6 +2018,13 @@ input, textarea {
                                max-width: 100%;
                            }
                        }
+
+                       .textwidget {
+                            font-size: 15px;
+                            line-height: 150%;
+                            color: #767676;
+                            font-weight: 300;
+                        }
                    }
                }
            }

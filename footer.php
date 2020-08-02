@@ -20,12 +20,13 @@
 				<a href="#"><img src="<?php echo get_template_directory_uri(); ?>/src/img/logo_footer.png" alt=""></a>
 				<div class="widgets">
 
-					<div class="widget">
-						<h4>The company</h4>
-						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore</p>
-					</div>
 
-					<div class="widget">
+				<?php if ( function_exists('dynamic_sidebar') ) dynamic_sidebar('footer-1'); ?>
+				<?php if ( function_exists('dynamic_sidebar') ) dynamic_sidebar('footer-2'); ?>
+				<?php if ( function_exists('dynamic_sidebar') ) dynamic_sidebar('footer-3'); ?>
+				<?php if ( function_exists('dynamic_sidebar') ) dynamic_sidebar('footer-4'); ?>
+
+					<!-- <div class="widget">
 						<h4>our contacts</h4>
 						<ul>
 							<li>Südliche Münchner Str. 60 · 82031 <span>Grünwald · </span></li>
@@ -38,18 +39,18 @@
 								<span>munich-accessories.de</span>
 							</li>
 						</ul>
-					</div>
+					</div> -->
 
-					<div class="widget">
+					<!-- <div class="widget">
 						<h4>Links</h4>
 						<ul class="nav">
 							<li><a href="#">Hotels</a></li>
 							<li><a href="#">Friseursalone</a></li>
 							<li><a href="#">Thermen</a></li>
 						</ul>
-					</div>
+					</div> -->
 
-					<div class="widget">
+					<!-- <div class="widget">
 						<h4>certificates</h4>
 						<div>
 							<div class="certificats">
@@ -59,7 +60,7 @@
 								<img src="<?php echo get_template_directory_uri(); ?>/src/img/c4.png" alt="">
 							</div>
 						</div>
-					</div>
+					</div> -->
 
 				</div>
 			</div>
