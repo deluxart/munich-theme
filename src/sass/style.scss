@@ -3932,6 +3932,15 @@ blockquote {
             display: grid;
             grid-template-columns: auto 1fr;
             grid-gap: 97px;
+
+            @media (max-width: 992px) {
+                grid-template-columns: 1fr;
+                grid-gap: 35px;
+
+                .text {
+                    grid-row: 1;
+                }
+            }
         }
     }
 
@@ -3940,6 +3949,11 @@ blockquote {
             display: grid;
             grid-template-columns: 1fr auto;
             grid-gap: 100px;
+
+            @media (max-width: 992px) {
+                grid-template-columns: 1fr;
+                grid-gap: 35px;
+            }
         }
     }
 
