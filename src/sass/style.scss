@@ -1862,6 +1862,10 @@ input, textarea {
 
                     &.read-more {
                         font-weight: 300;
+
+                        img {
+                            display: inline-block;
+                        }
                     }
                 }
            }
