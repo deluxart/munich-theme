@@ -110,16 +110,6 @@
 <?php endif; ?>
 
 
-<?php if ( have_rows( 'privat_label_product' ) ) : ?>
-	<?php while ( have_rows( 'privat_label_product' ) ) : the_row(); ?>
-		<h4 id="privat_label"><?php the_sub_field( 'tab_title' ); ?></h4>
-		<p><?php the_sub_field( 'content' ); ?></p>
-	<?php endwhile; ?>
-<?php endif; ?>
-
-
-
-
 <?php if ( have_rows( 'product_filters' ) ) : ?>
 	<?php while ( have_rows( 'product_filters' ) ) : the_row(); ?>
 		<?php if ( have_rows( 'colour' ) ) : ?>
@@ -138,6 +128,14 @@
 				<?php endif; ?>
 			<?php endwhile; ?>
 		<?php endif; ?>
+	<?php endwhile; ?>
+<?php endif; ?>
+
+
+<?php if ( have_rows( 'privat_label_product' ) ) : ?>
+	<?php while ( have_rows( 'privat_label_product' ) ) : the_row(); ?>
+		<h4 id="privat_label" class="title"><?php the_sub_field( 'tab_title' ); ?></h4>
+		<p><?php the_sub_field( 'content' ); ?></p>
 	<?php endwhile; ?>
 <?php endif; ?>
 
