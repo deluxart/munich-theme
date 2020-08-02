@@ -83,8 +83,6 @@ get_header();
 					<h3 class="line"><?php the_field( 'section_title_unser' ); ?></h3>
 					<p><?php the_field( 'section_description_unser' ); ?></p>
 				</div>
-
-
 				<?php if ( have_rows( 'items_unser' ) ) : ?>
 					<?php while ( have_rows( 'items_unser' ) ) : the_row(); ?>
 								<div class="item">
@@ -97,27 +95,6 @@ get_header();
 				<?php else : ?>
 					<?php // no rows found ?>
 				<?php endif; ?>
-
-<!-- 
-
-				<div class="item">
-					<div class="icon">
-						<img src="<?php echo get_template_directory_uri(); ?>/src/img/star.svg" alt="">
-					</div>
-					<p>Wir produzieren auf über <strong>80.000 m²</strong> Produktionsfläche hochwertige, strapazierfähige und unverwechselbare <strong>Frottier-Qualität</strong>, die unsere Kunden begeistert.</p>
-				</div>
-				<div class="item">
-					<div class="icon">
-						<img src="<?php echo get_template_directory_uri(); ?>/src/img/star.svg" alt="">
-					</div>
-					<p>Um Ihnen <strong>beste Qualität</strong> bieten zu können, nutzen wir unsere <strong>langjährige Erfahrung</strong> mit eigener Produktion.</p>
-				</div>
-				<div class="item">
-					<div class="icon">
-						<img src="<?php echo get_template_directory_uri(); ?>/src/img/star.svg" alt="">
-					</div>
-					<p>Produkte mit <strong>hervorragender Qualität</strong>, die Freude machen.</p>
-				</div> -->
 			</div>
 		</div>
 	</section>
