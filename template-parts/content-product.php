@@ -89,7 +89,7 @@
 				<?php endif; ?>
 			<?php endwhile; ?>
 		<?php endif; ?>
-		<li><a href="#<?php the_sub_field( 'colors' ); ?>">COLOUR</a></li>
+		<li><a href="#colors">COLOUR</a></li>
 <?php if ( have_rows( 'privat_label_product' ) ) : ?>
 	<?php while ( have_rows( 'privat_label_product' ) ) : the_row(); ?>
 		<li><a href="#privat_label"><?php the_sub_field( 'tab_title' ); ?></a></li>
