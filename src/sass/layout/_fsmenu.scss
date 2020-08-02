@@ -51,7 +51,7 @@ $color-dark: #161616;
 	}
 	&:after{
 		background: rgba(#ffffff, 1);
-		transition-delay: 0s;
+		transition-delay: 0.3s;
 	}
 	&:before{
 		transition-delay: .1s;
@@ -74,11 +74,40 @@ $color-dark: #161616;
 				grid-gap: 40px;
 			}
 
+			.lang-selector {
+				opacity: 0;
+				transition: opacity .2s ease, transform .2s ease;
+				transform: translate(0%, -100%);
+				transition-delay: .2s;
+
+				select {
+                    appearance: none;
+                    background-color: transparent;
+                    background-image: url(./src/img/lang_arrow.svg);
+                    background-position: right 10px center;
+                    background-repeat: no-repeat;
+                    cursor: pointer;
+                    padding-right: 28px;
+                    text-indent: 0.01px;
+                    text-overflow: "";
+                    border: 0;
+                    text-transform: uppercase;
+                    font-weight: 900;
+                    font-size: 15px;
+                    line-height: 18px;
+
+                    option {
+                        padding: 2px 3px;
+                        font-size: 15px;
+                        line-height: 18px;
+                    }
+                }
+			}
+
 			.fs-contacts {
 				opacity: 0;
 				transition: opacity .2s ease, transform .3s ease;
 				transform: translate(0%, -100%);
-				// transition-delay: $transition--length + s;
 				transition-delay: .3s;
 				padding-left: 150px;
 
@@ -218,6 +247,12 @@ body.nav-active{
 		}
 
 		.fs-content {
+			.lang-selector {
+				opacity: 1;
+				transform: translateX(0%);
+				transition: opacity .5s ease, transform .5s ease, color .5s ease;
+				transition-delay: .5s;
+			}
 			.fs-contacts {
 				opacity: 1;
 				transform: translateX(0%);

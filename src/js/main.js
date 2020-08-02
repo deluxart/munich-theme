@@ -328,14 +328,14 @@ var reviewsSlider = new Swiper('.reviewsSlider', {
 
 
 var clientsSlider = new Swiper('.clients_slider', {
-    slidesPerView: 1,
+    slidesPerView: 1.5,
     spaceBetween: 30,
     // slidesPerGroup: 3,
     loop: true,
     // loopFillGroupWithBlank: true,
     breakpoints: {
         640: {
-            slidesPerView: 2,
+            slidesPerView: 1.7,
             spaceBetween: 30,
         },
         768: {

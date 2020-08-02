@@ -3972,11 +3972,19 @@ blockquote {
     #our_clients {
         overflow: hidden;
         padding-bottom: 200px;
+
+        @media (max-width: 992px) {
+            margin: 0 -15px;
+        }
         
         .title {
             width: 100%;
             max-width: 290px;
             position: relative;
+
+            @media (max-width: 992px) {
+                padding: 0 15px;
+            }
 
             & > div {
                 position: absolute;

@@ -60,7 +60,11 @@
                         'walker_nav_menu_start_el'          => '',
                     );
                     echo strip_tags(wp_nav_menu( $menuParameters ), '<a>' );
-                ?>
+				?>
+			<div class="lang-selector mobile"><?php pll_the_languages(array(
+					'dropdown'=>1,
+					'display_names_as' => 'slug'
+					)); ?></div>
 			<div class="fs-contacts">
 				<ul>
 					<li><span>adress</span>Südliche Münchner Str. <br/>60 82031 Grünwald <br/>Germany</li>
