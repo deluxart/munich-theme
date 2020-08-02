@@ -13,7 +13,7 @@
 	<div class="about-page">
 		
 
-	<section id="about">
+	<section id="aboutus">
 		<div class="content">
 			<div class="image">
 				<?php if ( get_field( 'about_section_image' ) ) : ?>
