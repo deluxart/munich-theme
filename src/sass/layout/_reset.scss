@@ -132,15 +132,19 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
     outline: 0;
 
     & > span {
-      display: grid !important;
-      grid-template-columns: 27px 1fr;
-      grid-gap: 15px;
-      align-items: center;
       text-align: left;
       font-weight: 300;
       font-size: 15px;
       line-height: 150%;
       color: #767676;
+
+      & > label {
+        display: grid !important;
+        grid-template-columns: 27px 1fr;
+        grid-gap: 15px;
+        align-items: center;
+        cursor: pointer;
+      }
 
       input[type=checkbox] {
         display: inline-block;
