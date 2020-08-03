@@ -168,7 +168,11 @@
 	<?php foreach ( $products as $post_ids ) : ?>
 		<div class="item swiper-slide">
 			<div>
-				<div class="img"><?php the_post_thumbnail( 'square-large', $post_ids ); ?></div>
+				<div class="img">
+				<?php if ( get_field( 'preview_image' ) ) : ?>
+					<img src="<?php the_field( 'preview_image', $post_ids ); ?>" />
+				<?php endif ?>
+				</div>
 				<a href="<?php echo get_permalink( $post_ids ); ?>"><h4 class="line"><?php echo get_the_title( $post_ids ); ?></h4></a>
 				<p><?php the_field( 'short_description_product', $post_ids ); ?></p>
 				<?php if ( have_rows( 'product_filters', $post_ids ) ) : ?>
