@@ -628,7 +628,8 @@ input, textarea {
          img {
            position: relative;
            z-index: 1;
-               max-width: 100px;
+            max-width: 100px;
+            margin: 0 auto;
          }
 
          &:hover {
