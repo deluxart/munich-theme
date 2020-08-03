@@ -142,7 +142,7 @@
 
 				<div class="moreProducts">
 					<div class="title">
-						<h3>you may also like</h3>
+						<h3><?php the_field( 'section_title_also_like' ); ?></h3>
 						<div class="paginationSlider">
 							<div>
 								<div class="pagination"></div>
@@ -153,62 +153,18 @@
 					</div>
 					<div class="prodAfterSlider">
 						<div class="swiper-wrapper">
-							<div class="item swiper-slide">
-								<div>
-									<div class="img"><img src="<?php echo get_template_directory_uri(); ?>/src/img/acc_1.png" alt=""></div>
-									<a href="#"><h4 class="line">Cosmetics</h4></a>
-									<p>Kurzmantel mit Kapuze und Waffelpikee Kontrast, Walkfrottier, 100% Cotton, 380 g/m</p>
-									<ul class="sizes-item">
-										<li>S</li>
-										<li>M</li>
-										<li>L</li>
-										<li>XL</li>
-										<li>XXL</li>
-									</ul>
-								</div>
-							</div>
-							<div class="item swiper-slide">
-								<div>
-									<div class="img"><img src="<?php echo get_template_directory_uri(); ?>/src/img/acc_2.png" alt=""></div>
-									<a href="#"><h4 class="line">Cover</h4></a>
-									<p>Kurzmantel mit Kapuze und Waffelpikee Kontrast, Walkfrottier, 100% Cotton, 380 g/m</p>
-									<ul class="sizes-item">
-										<li>S</li>
-										<li>M</li>
-										<li>L</li>
-										<li>XL</li>
-										<li>XXL</li>
-									</ul>
-								</div>
-							</div>
-							<div class="item swiper-slide">
-								<div>
-									<div class="img"><img src="<?php echo get_template_directory_uri(); ?>/src/img/acc_3.png" alt=""></div>
-									<a href="#"><h4 class="line">Feel good</h4></a>
-									<p>Kurzmantel mit Kapuze und Waffelpikee Kontrast, Walkfrottier, 100% Cotton, 380 g/m</p>
-									<ul class="sizes-item">
-										<li>S</li>
-										<li>M</li>
-										<li>L</li>
-										<li>XL</li>
-										<li>XXL</li>
-									</ul>
-								</div>
-							</div>
-							<div class="item swiper-slide">
-								<div>
-									<div class="img"><img src="<?php echo get_template_directory_uri(); ?>/src/img/acc_4.png" alt=""></div>
-									<a href="#"><h4 class="line">Nail</h4></a>
-									<p>Kurzmantel mit Kapuze und Waffelpikee Kontrast, Walkfrottier, 100% Cotton, 380 g/m</p>
-									<ul class="sizes-item">
-										<li>S</li>
-										<li>M</li>
-										<li>L</li>
-										<li>XL</li>
-										<li>XXL</li>
-									</ul>
-								</div>
-							</div>
+							<?php if ( have_rows( 'select_products' ) ) : ?>
+								<?php while ( have_rows( 'select_products' ) ) : the_row(); ?>
+									<?php $product = get_sub_field( 'product' ); ?>
+									<?php if ( $product ) : ?>
+										<?php foreach ( $product as $post_ids ) : ?>
+											<?php echo do_shortcode('[products-slider]'); ?>
+										<?php endforeach; ?>
+									<?php endif; ?>
+								<?php endwhile; ?>
+							<?php else : ?>
+								<?php // no rows found ?>
+							<?php endif; ?>
 						</div>
 					</div>
 				</div>
