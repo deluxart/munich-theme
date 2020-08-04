@@ -210,7 +210,7 @@ get_header();
 						<?php foreach ( $items_drinks as $post_ids ) : ?>
 							<div class="item swiper-slide">
 								<div>
-									<?php if ( get_field( 'preview_image' ) ) : ?>
+									<?php if ( get_field( 'preview_image', $post_ids ) ) : ?>
 										<div class="img"><img src="<?php the_field( 'preview_image', $post_ids ); ?>" /></div>
 									<?php endif ?>
 									<a href="<?php echo get_permalink( $post_ids ); ?>"><h4 class="line"><?php echo get_the_title( $post_ids ); ?></h4></a>
@@ -234,7 +234,7 @@ get_header();
 						<?php foreach ( $items_accessories as $post_ids ) : ?>
 							<div class="item swiper-slide">
 								<div>
-									<?php if ( get_field( 'preview_image' ) ) : ?>
+									<?php if ( get_field( 'preview_image', $post_ids ) ) : ?>
 										<div class="img"><img src="<?php the_field( 'preview_image', $post_ids ); ?>" /></div>
 									<?php endif ?>
 									<a href="<?php echo get_permalink( $post_ids ); ?>"><h4 class="line"><?php echo get_the_title( $post_ids ); ?></h4></a>

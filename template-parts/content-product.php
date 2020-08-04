@@ -164,7 +164,7 @@
 								<div class="item swiper-slide">
 									<div>
 										<div class="img">
-										<?php if ( get_field( 'preview_image' ) ) : ?>
+										<?php if ( get_field( 'preview_image', $post_ids ) ) : ?>
 											<img src="<?php the_field( 'preview_image', $post_ids ); ?>" />
 										<?php endif ?>
 										</div>
