@@ -10,9 +10,9 @@
 get_header();
 ?>
 
-	<section id="primary" class="content-area">
+	<section id="primary" class="content-area subpage">
 		<main id="main" class="site-main">
-
+		<div class="container"></div>
 		<?php if ( have_posts() ) : ?>
 
 			<header class="page-header">
@@ -46,7 +46,7 @@ get_header();
 
 		endif;
 		?>
-
+			</div>
 		</main><!-- #main -->
 	</section><!-- #primary -->
 
