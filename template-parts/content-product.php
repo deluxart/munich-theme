@@ -158,62 +158,38 @@
 
 					<div class="prodAfterSlider">
 						<div class="swiper-wrapper">
-
-
-
-
-
-<?php $products = get_field( 'products' ); ?>
-<?php if ( $products ) : ?>
-	<?php foreach ( $products as $post_ids ) : ?>
-		<div class="item swiper-slide">
-			<div>
-				<div class="img">
-				<?php if ( get_field( 'preview_image' ) ) : ?>
-					<img src="<?php the_field( 'preview_image', $post_ids ); ?>" />
-				<?php endif ?>
-				</div>
-				<a href="<?php echo get_permalink( $post_ids ); ?>"><h4 class="line"><?php echo get_the_title( $post_ids ); ?></h4></a>
-				<p><?php the_field( 'short_description_product', $post_ids ); ?></p>
-				<?php if ( have_rows( 'product_filters', $post_ids ) ) : ?>
-					<?php while ( have_rows( 'product_filters', $post_ids ) ) : the_row(); ?>
-						<?php if ( have_rows( 'set_of_sizes', $post_ids ) ) : ?>
-						<ul class="sizes-item">
-							<?php while ( have_rows( 'set_of_sizes', $post_ids ) ) : the_row(); ?>
-								<?php $select_sizes_checked_values = get_sub_field( 'select_sizes', $post_ids ); ?>
-								<?php if ( $select_sizes_checked_values ) : ?>
-									<?php foreach ( $select_sizes_checked_values as $select_sizes_value ): ?>
-										<li><?php echo esc_html( $select_sizes_value ); ?></li>
-									<?php endforeach; ?>
-								<?php endif; ?>
-							<?php endwhile; ?>
-						</ul>
+						<?php $products = get_field( 'products' ); ?>
+						<?php if ( $products ) : ?>
+							<?php foreach ( $products as $post_ids ) : ?>
+								<div class="item swiper-slide">
+									<div>
+										<div class="img">
+										<?php if ( get_field( 'preview_image' ) ) : ?>
+											<img src="<?php the_field( 'preview_image', $post_ids ); ?>" />
+										<?php endif ?>
+										</div>
+										<a href="<?php echo get_permalink( $post_ids ); ?>"><h4 class="line"><?php echo get_the_title( $post_ids ); ?></h4></a>
+										<p><?php the_field( 'short_description_product', $post_ids ); ?></p>
+										<?php if ( have_rows( 'product_filters', $post_ids ) ) : ?>
+											<?php while ( have_rows( 'product_filters', $post_ids ) ) : the_row(); ?>
+												<?php if ( have_rows( 'set_of_sizes', $post_ids ) ) : ?>
+												<ul class="sizes-item">
+													<?php while ( have_rows( 'set_of_sizes', $post_ids ) ) : the_row(); ?>
+														<?php $select_sizes_checked_values = get_sub_field( 'select_sizes', $post_ids ); ?>
+														<?php if ( $select_sizes_checked_values ) : ?>
+															<?php foreach ( $select_sizes_checked_values as $select_sizes_value ): ?>
+																<li><?php echo esc_html( $select_sizes_value ); ?></li>
+															<?php endforeach; ?>
+														<?php endif; ?>
+													<?php endwhile; ?>
+												</ul>
+												<?php endif; ?>
+											<?php endwhile; ?>
+										<?php endif; ?>
+									</div>
+								</div>
+							<?php endforeach; ?>
 						<?php endif; ?>
-					<?php endwhile; ?>
-				<?php endif; ?>
-			</div>
-		</div>
-	<?php endforeach; ?>
-<?php endif; ?>
-
-
-
-
-
-
-
-							<!-- < ?php if ( have_rows( 'select_products' ) ) : ?>
-								< ?php while ( have_rows( 'select_products' ) ) : the_row(); ?>
-									< ?php $product = get_sub_field( 'product' ); ?>
-									< ?php if ( $product ) : ?>
-										< ?php foreach ( $product as $post_ids ) : ?>
-											< ?php echo do_shortcode('[products-slider]'); ?>
-										< ?php endforeach; ?>
-									< ?php endif; ?>
-								< ?php endwhile; ?>
-							< ?php else : ?>
-								< ?php // no rows found ?>
-							< ?php endif; ?> -->
 						</div>
 					</div>
 				</div>

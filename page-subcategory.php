@@ -205,56 +205,20 @@ get_header();
 			</div>
 			<div class="drinksSlider">
 				<div class="swiper-wrapper">
-
-					<!-- <div class="item swiper-slide">
-						<div>
-							<div class="img"><img src="<?php echo get_template_directory_uri(); ?>/src/img/drink_1.png" alt=""></div>
-							<a href="#"><h4 class="line">Munich ice</h4></a>
-							<p>Kurzmantel mit Kapuze und Waffelpikee Kontrast, Walkfrottier, 100% Cotton, 380 g/m</p>
-						</div>
-					</div> -->
-
-					<?php if ( have_rows( 'items_drinks' ) ) : ?>
-						<?php while ( have_rows( 'items_drinks' ) ) : the_row(); ?>
-							<?php if ( have_rows( 'item' ) ) : ?>
-									<?php while ( have_rows( 'item' ) ) : the_row(); ?>
-									<div class="item swiper-slide">
-										<div>
-										<?php if ( get_sub_field( 'image' ) ) : ?>
-											<div class="img"><img src="<?php the_sub_field( 'image' ); ?>" /></div>
-										<?php endif ?>
-										<a href="<?php the_sub_field( 'link' ); ?>"><h4 class="line"><?php the_sub_field( 'title' ); ?></h4></a>
-										<p><?php the_sub_field( 'description' ); ?></p>
-										</div>
-									</div>
-									<?php endwhile; ?>
-							<?php endif; ?>
-						<?php endwhile; ?>
-					<?php else : ?>
-						<?php // no rows found ?>
+					<?php $items_drinks = get_field( 'items_drinks' ); ?>
+					<?php if ( $items_drinks ) : ?>
+						<?php foreach ( $items_drinks as $post_ids ) : ?>
+							<div class="item swiper-slide">
+								<div>
+									<?php if ( get_field( 'preview_image' ) ) : ?>
+										<div class="img"><img src="<?php the_field( 'preview_image', $post_ids ); ?>" /></div>
+									<?php endif ?>
+									<a href="<?php echo get_permalink( $post_ids ); ?>"><h4 class="line"><?php echo get_the_title( $post_ids ); ?></h4></a>
+									<p><?php the_field( 'short_description_product', $post_ids ); ?></p>
+								</div>
+							</div>
+						<?php endforeach; ?>
 					<?php endif; ?>
-<!-- 					
-					<div class="item swiper-slide">
-						<div>
-							<div class="img"><img src="<?php echo get_template_directory_uri(); ?>/src/img/drink_2.png" alt=""></div>
-							<a href="#"><h4 class="line">Gold</h4></a>
-							<p>Kurzmantel mit Kapuze und Waffelpikee Kontrast, Walkfrottier, 100% Cotton, 380 g/m</p>
-						</div>
-					</div>
-					<div class="item swiper-slide">
-						<div>
-							<div class="img"><img src="<?php echo get_template_directory_uri(); ?>/src/img/drink_3.png" alt=""></div>
-							<a href="#"><h4 class="line">Energy</h4></a>
-							<p>Kurzmantel mit Kapuze und Waffelpikee Kontrast, Walkfrottier, 100% Cotton, 380 g/m</p>
-						</div>
-					</div>
-					<div class="item swiper-slide">
-						<div>
-							<div class="img"><img src="<?php echo get_template_directory_uri(); ?>/src/img/drink_4.png" alt=""></div>
-							<a href="#"><h4 class="line">Munich ice</h4></a>
-							<p>Kurzmantel mit Kapuze und Waffelpikee Kontrast, Walkfrottier, 100% Cotton, 380 g/m</p>
-						</div>
-					</div> -->
 				</div>
 			</div>
 		</div>
@@ -265,57 +229,20 @@ get_header();
 		<div class="content">
 			<div class="accSlider">
 				<div class="swiper-wrapper">
-
-
-					<?php if ( have_rows( 'items_accessories' ) ) : ?>
-						<?php while ( have_rows( 'items_accessories' ) ) : the_row(); ?>
-							<?php if ( have_rows( 'item' ) ) : ?>
-									<?php while ( have_rows( 'item' ) ) : the_row(); ?>
-									<div class="item swiper-slide">
-										<div>
-										<?php if ( get_sub_field( 'image' ) ) : ?>
-											<div class="img"><img src="<?php the_sub_field( 'image' ); ?>" /></div>
-										<?php endif ?>
-										<a href="<?php the_sub_field( 'link' ); ?>"><h4 class="line"><?php the_sub_field( 'title' ); ?></h4></a>
-										<p><?php the_sub_field( 'description' ); ?></p>
-										</div>
-									</div>
-									<?php endwhile; ?>
-							<?php endif; ?>
-						<?php endwhile; ?>
-					<?php else : ?>
-						<?php // no rows found ?>
+					<?php $items_accessories = get_field( 'items_accessories' ); ?>
+					<?php if ( $items_accessories ) : ?>
+						<?php foreach ( $items_accessories as $post_ids ) : ?>
+							<div class="item swiper-slide">
+								<div>
+									<?php if ( get_field( 'preview_image' ) ) : ?>
+										<div class="img"><img src="<?php the_field( 'preview_image', $post_ids ); ?>" /></div>
+									<?php endif ?>
+									<a href="<?php echo get_permalink( $post_ids ); ?>"><h4 class="line"><?php echo get_the_title( $post_ids ); ?></h4></a>
+									<p><?php the_field( 'short_description_product', $post_ids ); ?></p>
+								</div>
+							</div>
+						<?php endforeach; ?>
 					<?php endif; ?>
-
-<!-- 				
-					<div class="item swiper-slide">
-						<div>
-							<div class="img"><img src="<?php echo get_template_directory_uri(); ?>/src/img/acc_1.png" alt=""></div>
-							<a href="#"><h4 class="line">Cosmetics</h4></a>
-							<p>Kurzmantel mit Kapuze und Waffelpikee Kontrast, Walkfrottier, 100% Cotton, 380 g/m</p>
-						</div>
-					</div>
-					<div class="item swiper-slide">
-						<div>
-							<div class="img"><img src="<?php echo get_template_directory_uri(); ?>/src/img/acc_2.png" alt=""></div>
-							<a href="#"><h4 class="line">Cover</h4></a>
-							<p>Kurzmantel mit Kapuze und Waffelpikee Kontrast, Walkfrottier, 100% Cotton, 380 g/m</p>
-						</div>
-					</div>
-					<div class="item swiper-slide">
-						<div>
-							<div class="img"><img src="<?php echo get_template_directory_uri(); ?>/src/img/acc_3.png" alt=""></div>
-							<a href="#"><h4 class="line">Feel good</h4></a>
-							<p>Kurzmantel mit Kapuze und Waffelpikee Kontrast, Walkfrottier, 100% Cotton, 380 g/m</p>
-						</div>
-					</div>
-					<div class="item swiper-slide">
-						<div>
-							<div class="img"><img src="<?php echo get_template_directory_uri(); ?>/src/img/acc_4.png" alt=""></div>
-							<a href="#"><h4 class="line">Nail</h4></a>
-							<p>Kurzmantel mit Kapuze und Waffelpikee Kontrast, Walkfrottier, 100% Cotton, 380 g/m</p>
-						</div>
-					</div> -->
 				</div>
 			</div>
 			<div class="text">
@@ -352,11 +279,6 @@ get_header();
 			<div class="text">
 				<h3 class="line"><?php the_field( 'section_title_otherproducts' ); ?></h3>
 				<p><?php the_field( 'description_otherproducts' ); ?></p>
-				<!-- <ul class="square">
-					<li>Lorem ipsum dolor sit amet, consectetur adipiscing elit dolor sit amet, consecteturl orem ipsum dolor sit amet</li>
-					<li>Lorem ipsum dolor sit amet, consectetur adipiscing elit dolor sit amet, consecteturl orem ipsum dolor sit amet</li>
-					<li>Lorem ipsum dolor sit amet, consectetur adipiscing elit dolor sit amet, consecteturl orem ipsum dolor sit amet</li>
-				</ul> -->
 				<?php if ( have_rows( 'list_otherproducts' ) ) : ?>
 				<ul class="square">
 					<?php while ( have_rows( 'list_otherproducts' ) ) : the_row(); ?>
@@ -379,86 +301,35 @@ get_header();
 			</div>
 			<div class="content unserSlider">
 				<div class="swiper-wrapper">
+				<?php if ( have_rows( 'items_up' ) ) : ?>
+					<?php while ( have_rows( 'items_up' ) ) : the_row(); ?>
+						<?php if ( have_rows( 'item' ) ) : ?>
+							<?php while ( have_rows( 'item' ) ) : the_row(); ?>
+							<div class="item  swiper-slide">
 
-
-<?php if ( have_rows( 'items_up' ) ) : ?>
-	<?php while ( have_rows( 'items_up' ) ) : the_row(); ?>
-		<?php if ( have_rows( 'item' ) ) : ?>
-			<?php while ( have_rows( 'item' ) ) : the_row(); ?>
-			<div class="item  swiper-slide">
-
-				<?php if ( get_sub_field( 'icon' ) ) : ?>
-					<img src="<?php the_sub_field( 'icon' ); ?>" />
-				<?php endif ?>
-				<h3><?php the_sub_field( 'title' ); ?></h3>
-				<p><?php the_sub_field( 'description' ); ?></p>
-				<?php if ( have_rows( 'list' ) ) : ?>
-				<div>
-					<ul class="square">
-					<?php while ( have_rows( 'list' ) ) : the_row(); ?>
-						<li><?php the_sub_field( 'item' ); ?></li>
+								<?php if ( get_sub_field( 'icon' ) ) : ?>
+									<img src="<?php the_sub_field( 'icon' ); ?>" />
+								<?php endif ?>
+								<h3><?php the_sub_field( 'title' ); ?></h3>
+								<p><?php the_sub_field( 'description' ); ?></p>
+								<?php if ( have_rows( 'list' ) ) : ?>
+								<div>
+									<ul class="square">
+									<?php while ( have_rows( 'list' ) ) : the_row(); ?>
+										<li><?php the_sub_field( 'item' ); ?></li>
+									<?php endwhile; ?>
+									</ul>
+								</div>
+								<?php else : ?>
+									<?php // no rows found ?>
+								<?php endif; ?>
+							</div>
+							<?php endwhile; ?>
+						<?php endif; ?>
 					<?php endwhile; ?>
-					</ul>
-				</div>
 				<?php else : ?>
 					<?php // no rows found ?>
 				<?php endif; ?>
-
-
-
-
-
-			</div>
-			<?php endwhile; ?>
-		<?php endif; ?>
-	<?php endwhile; ?>
-<?php else : ?>
-	<?php // no rows found ?>
-<?php endif; ?>
-
-
-<!-- 
-
-					<div class="item  swiper-slide">
-						<img src="<?php echo get_template_directory_uri(); ?>/src/img/tools.svg" alt="">
-						<h3>Verpackung</h3>
-						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</p>
-						<div>
-							<ul class="square">
-								<li>1-2 lorem ipsum dolor sit amet</li>
-								<li>100 lorem ipsum dolor sit amet</li>
-								<li>Lorem ipsum dolor sit amet</li>
-							</ul>
-						</div>
-					</div> -->
-
-
-
-<!-- 
-					<div class="item  swiper-slide">
-						<img src="<?php echo get_template_directory_uri(); ?>/src/img/truck.svg" alt="">
-						<h3>Transport</h3>
-						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</p>
-						<div>
-							<ul class="square">
-								<li>1-2 lorem ipsum dolor sit amet</li>
-								<li>100 lorem ipsum dolor sit amet</li>
-								<li>Lorem ipsum dolor sit amet</li>
-							</ul>
-						</div>
-					</div>
-					<div class="item  swiper-slide">
-						<img src="<?php echo get_template_directory_uri(); ?>/src/img/Verfolgung.svg" alt="">
-						<h3>Verfolgung</h3>
-						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</p>
-						<div>
-							<ul class="square">
-								<li>1-2 lorem ipsum dolor sit amet</li>
-								<li>100 lorem ipsum dolor sit amet</li>
-								<li>Lorem ipsum dolor sit amet</li>
-							</ul>
-						</div>
-					</div> -->
 				</div>
 			</div>
 		</div>
@@ -468,56 +339,54 @@ get_header();
 
 	<section id="grid">
 		<div class="content">
-<?php if ( have_rows( 'munich_textile' ) ) : ?>
-	<?php while ( have_rows( 'munich_textile' ) ) : the_row(); ?>
-			<div class="image">
-				<?php if ( get_sub_field( 'image' ) ) : ?>
-					<img src="<?php the_sub_field( 'image' ); ?>" />
-				<?php endif ?>
-			</div>
-			<div class="text">
-				<h3 class="line"><?php the_sub_field( 'sectipn_title' ); ?>e</h3>
-				<p><?php the_sub_field( 'description' ); ?></p>
+			<?php if ( have_rows( 'munich_textile' ) ) : ?>
+				<?php while ( have_rows( 'munich_textile' ) ) : the_row(); ?>
+						<div class="image">
+							<?php if ( get_sub_field( 'image' ) ) : ?>
+								<img src="<?php the_sub_field( 'image' ); ?>" />
+							<?php endif ?>
+						</div>
+						<div class="text">
+							<h3 class="line"><?php the_sub_field( 'sectipn_title' ); ?>e</h3>
+							<p><?php the_sub_field( 'description' ); ?></p>
 
-				<?php if ( have_rows( 'list' ) ) : ?>
-				<ul class="square">
-					<?php while ( have_rows( 'list' ) ) : the_row(); ?>
-						<li><a href="<?php the_sub_field( 'link' ); ?>"><?php the_sub_field( 'item' ); ?></li></a>
-					<?php endwhile; ?>
-				</ul>
-				<?php else : ?>
-					<?php // no rows found ?>
-				<?php endif; ?>
-			</div>
-	<?php endwhile; ?>
-<?php endif; ?>
+							<?php if ( have_rows( 'list' ) ) : ?>
+							<ul class="square">
+								<?php while ( have_rows( 'list' ) ) : the_row(); ?>
+									<li><a href="<?php the_sub_field( 'link' ); ?>"><?php the_sub_field( 'item' ); ?></li></a>
+								<?php endwhile; ?>
+							</ul>
+							<?php else : ?>
+								<?php // no rows found ?>
+							<?php endif; ?>
+						</div>
+				<?php endwhile; ?>
+			<?php endif; ?>
 		</div>
 		<div class="content last">
+			<?php if ( have_rows( 'munich_textile_drinks' ) ) : ?>
+				<?php while ( have_rows( 'munich_textile_drinks' ) ) : the_row(); ?>
+						<div class="text">
+							<h3 class="line"><?php the_sub_field( 'sectipn_title' ); ?>e</h3>
+							<p><?php the_sub_field( 'description' ); ?></p>
 
-
-<?php if ( have_rows( 'munich_textile_drinks' ) ) : ?>
-	<?php while ( have_rows( 'munich_textile_drinks' ) ) : the_row(); ?>
-			<div class="text">
-				<h3 class="line"><?php the_sub_field( 'sectipn_title' ); ?>e</h3>
-				<p><?php the_sub_field( 'description' ); ?></p>
-
-				<?php if ( have_rows( 'list' ) ) : ?>
-				<ul class="square">
-					<?php while ( have_rows( 'list' ) ) : the_row(); ?>
-						<li><a href="<?php the_sub_field( 'link' ); ?>"><?php the_sub_field( 'item' ); ?></li></a>
-					<?php endwhile; ?>
-				</ul>
-				<?php else : ?>
-					<?php // no rows found ?>
-				<?php endif; ?>
-			</div>
-			<div class="image">
-				<?php if ( get_sub_field( 'image' ) ) : ?>
-					<img src="<?php the_sub_field( 'image' ); ?>" />
-				<?php endif ?>
-			</div>
-	<?php endwhile; ?>
-<?php endif; ?>
+							<?php if ( have_rows( 'list' ) ) : ?>
+							<ul class="square">
+								<?php while ( have_rows( 'list' ) ) : the_row(); ?>
+									<li><a href="<?php the_sub_field( 'link' ); ?>"><?php the_sub_field( 'item' ); ?></li></a>
+								<?php endwhile; ?>
+							</ul>
+							<?php else : ?>
+								<?php // no rows found ?>
+							<?php endif; ?>
+						</div>
+						<div class="image">
+							<?php if ( get_sub_field( 'image' ) ) : ?>
+								<img src="<?php the_sub_field( 'image' ); ?>" />
+							<?php endif ?>
+						</div>
+				<?php endwhile; ?>
+			<?php endif; ?>
 		</div>
 	</section>
 
@@ -600,35 +469,6 @@ get_header();
 			<?php else : ?>
 				<?php // no rows found ?>
 			<?php endif; ?>
-
-
-<!-- 
-				<div class="spoiler">
-					<div class="head">Wie lange dauert die Entwicklung normalerweise?</div>
-					<div class="cont">Wir befragen den Kunden ausführlich über sein Geschäft, seine Vorlieben und Erwartungen auf der Website. Um das Design so genau wie möglich entsprechend den Erwartungen des Kunden vorzubereiten und das Produkt für den Besucher der Website richtig zu positionieren.</div>
-				</div> -->
-
-<!-- 				
-				<div class="spoiler">
-					<div class="head">Was ist im Preis enthalten?</div>
-					<div class="cont">Wir befragen den Kunden ausführlich über sein Geschäft, seine Vorlieben und Erwartungen auf der Website. Um das Design so genau wie möglich entsprechend den Erwartungen des Kunden vorzubereiten und das Produkt für den Besucher der Website richtig zu positionieren.</div>
-				</div>
-				<div class="spoiler">
-					<div class="head">Wie kann ich sicher sein, dass Sie keinen Kunden für andere Arten von Dienstleistungen abholen?</div>
-					<div class="cont">Wir befragen den Kunden ausführlich über sein Geschäft, seine Vorlieben und Erwartungen auf der Website. Um das Design so genau wie möglich entsprechend den Erwartungen des Kunden vorzubereiten und das Produkt für den Besucher der Website richtig zu positionieren.</div>
-				</div>
-				<div class="spoiler">
-					<div class="head">Wann zahlst du</div>
-					<div class="cont">Wir befragen den Kunden ausführlich über sein Geschäft, seine Vorlieben und Erwartungen auf der Website. Um das Design so genau wie möglich entsprechend den Erwartungen des Kunden vorzubereiten und das Produkt für den Besucher der Website richtig zu positionieren.</div>
-				</div>
-				<div class="spoiler">
-					<div class="head">Unterstützen Sie nach dem Erstellen der Site?</div>
-					<div class="cont">Wir befragen den Kunden ausführlich über sein Geschäft, seine Vorlieben und Erwartungen auf der Website. Um das Design so genau wie möglich entsprechend den Erwartungen des Kunden vorzubereiten und das Produkt für den Besucher der Website richtig zu positionieren.</div>
-				</div>
-				<div class="spoiler">
-					<div class="head">Unterstützen Sie nach dem Erstellen der Site?</div>
-					<div class="cont">Wir befragen den Kunden ausführlich über sein Geschäft, seine Vorlieben und Erwartungen auf der Website. Um das Design so genau wie möglich entsprechend den Erwartungen des Kunden vorzubereiten und das Produkt für den Besucher der Website richtig zu positionieren.</div>
-				</div> -->
 			</div>
 		</div>
 	</section>

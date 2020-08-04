@@ -247,25 +247,21 @@ get_header();
 			</div>
 			<div class="drinksSlider">
 				<div class="swiper-wrapper">
-					<?php if ( have_rows( 'items_drinks' ) ) : ?>
-						<?php while ( have_rows( 'items_drinks' ) ) : the_row(); ?>
-							<?php if ( have_rows( 'item' ) ) : ?>
-									<?php while ( have_rows( 'item' ) ) : the_row(); ?>
-									<div class="item swiper-slide">
-										<div>
-										<?php if ( get_sub_field( 'image' ) ) : ?>
-											<div class="img"><img src="<?php the_sub_field( 'image' ); ?>" /></div>
-										<?php endif ?>
-										<a href="<?php the_sub_field( 'link' ); ?>"><h4 class="line"><?php the_sub_field( 'title' ); ?></h4></a>
-										<p><?php the_sub_field( 'description' ); ?></p>
-										</div>
-									</div>
-									<?php endwhile; ?>
-							<?php endif; ?>
-						<?php endwhile; ?>
-					<?php else : ?>
-						<?php // no rows found ?>
+					<?php $items_drinks = get_field( 'items_drinks' ); ?>
+					<?php if ( $items_drinks ) : ?>
+						<?php foreach ( $items_drinks as $post_ids ) : ?>
+							<div class="item swiper-slide">
+								<div>
+									<?php if ( get_field( 'preview_image' ) ) : ?>
+										<div class="img"><img src="<?php the_field( 'preview_image', $post_ids ); ?>" /></div>
+									<?php endif ?>
+									<a href="<?php echo get_permalink( $post_ids ); ?>"><h4 class="line"><?php echo get_the_title( $post_ids ); ?></h4></a>
+									<p><?php the_field( 'short_description_product', $post_ids ); ?></p>
+								</div>
+							</div>
+						<?php endforeach; ?>
 					<?php endif; ?>
+
 				</div>
 			</div>
 		</div>
@@ -278,25 +274,21 @@ get_header();
 				<div class="swiper-wrapper">
 
 
-					<?php if ( have_rows( 'items_accessories' ) ) : ?>
-						<?php while ( have_rows( 'items_accessories' ) ) : the_row(); ?>
-							<?php if ( have_rows( 'item' ) ) : ?>
-									<?php while ( have_rows( 'item' ) ) : the_row(); ?>
-									<div class="item swiper-slide">
-										<div>
-										<?php if ( get_sub_field( 'image' ) ) : ?>
-											<div class="img"><img src="<?php the_sub_field( 'image' ); ?>" /></div>
-										<?php endif ?>
-										<a href="<?php the_sub_field( 'link' ); ?>"><h4 class="line"><?php the_sub_field( 'title' ); ?></h4></a>
-										<p><?php the_sub_field( 'description' ); ?></p>
-										</div>
-									</div>
-									<?php endwhile; ?>
-							<?php endif; ?>
-						<?php endwhile; ?>
-					<?php else : ?>
-						<?php // no rows found ?>
+					<?php $items_accessories = get_field( 'items_accessories' ); ?>
+					<?php if ( $items_accessories ) : ?>
+						<?php foreach ( $items_accessories as $post_ids ) : ?>
+							<div class="item swiper-slide">
+								<div>
+									<?php if ( get_field( 'preview_image' ) ) : ?>
+										<div class="img"><img src="<?php the_field( 'preview_image', $post_ids ); ?>" /></div>
+									<?php endif ?>
+									<a href="<?php echo get_permalink( $post_ids ); ?>"><h4 class="line"><?php echo get_the_title( $post_ids ); ?></h4></a>
+									<p><?php the_field( 'short_description_product', $post_ids ); ?></p>
+								</div>
+							</div>
+						<?php endforeach; ?>
 					<?php endif; ?>
+					
 				</div>
 			</div>
 			<div class="text">
