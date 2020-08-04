@@ -534,3 +534,39 @@ function dimox_breadcrumbs() {
 
 	}
 } // end of dimox_breadcrumbs()
+
+
+
+
+add_shortcode( 'recent_posts', 'recent_posts_shortcode' );
+function recent_posts_shortcode( $atts ) {
+    ob_start();
+    $args = shortcode_atts( array (
+        'type' => 'post',
+        'posts' => 6,
+		'public'   => true,
+		'order'   => 'DESC',
+		'orderby' => 'post_date',
+    ), $atts );
+    $options = array(
+        'post_type' => $args['type'],
+        // 'meta_key'          => 'otkryt_nabor_sortirovka',
+        // 'orderby'           => 'meta_value',
+        // 'order'             => 'ASC',
+        'posts_per_page' => $args['posts']
+    );
+
+    $query = new WP_Query( $options );
+    if ( $query->have_posts() ) { ?>
+            <?php while ( $query->have_posts() ) : $query->the_post(); ?>
+                <?php
+                    get_template_part( 'template-parts/recent-posts', get_post_format() );
+                 ?>
+            <?php endwhile;
+            wp_reset_postdata(); ?>
+    <?php $myvariable = ob_get_clean();
+    return $myvariable;
+    }
+}
+
+// [recent_posts posts="10"]

@@ -61,7 +61,8 @@
                     );
                     echo strip_tags(wp_nav_menu( $menuParameters ), '<a>' );
 				?>
-			<div class="lang-selector mobile"><?php pll_the_languages(array(
+			<div class="lang-selector mobile">
+			<?php pll_the_languages(array(
 					'dropdown'=>1,
 					'display_names_as' => 'slug'
 					)); ?></div>

@@ -491,48 +491,7 @@ get_header();
 			</div>
 			<div class="blogSlider">
 				<div class="swiper-wrapper">
-					<div class="item swiper-slide">
-						<div class="image"><img src="<?php echo get_template_directory_uri(); ?>/src/img/blog_1.png" alt=""></div>
-						<div class="info">
-							<ul>
-								<li>sep 02, 2018</li>
-								<li>hotels, design</li>
-							</ul>
-						</div>
-						<a href="#" class="title">Amazingly interesting text about beauty of the world</a>
-						<div class="text">
-							<p>And here is lorem ipsum forever, lorem ipsum forever, lorem ipsum forever, lorem ipsum forever, lorem ipsum forever.</p>
-						</div>
-						<a href="#" class="read-more">read <img src="<?php echo get_template_directory_uri(); ?>/src/img/article_arrow.svg" alt=""></a>
-					</div>
-					<div class="item swiper-slide">
-						<div class="image"><img src="<?php echo get_template_directory_uri(); ?>/src/img/blog_2.png" alt=""></div>
-						<div class="info">
-							<ul>
-								<li>sep 02, 2018</li>
-								<li>hotels, design</li>
-							</ul>
-						</div>
-						<a href="#" class="title">Amazingly interesting text about beauty of the world</a>
-						<div class="text">
-							<p>And here is lorem ipsum forever, lorem ipsum forever, lorem ipsum forever, lorem ipsum forever, lorem ipsum forever.</p>
-						</div>
-						<a href="#" class="read-more">read <img src="<?php echo get_template_directory_uri(); ?>/src/img/article_arrow.svg" alt=""></a>
-					</div>
-					<div class="item swiper-slide">
-						<div class="image"><img src="<?php echo get_template_directory_uri(); ?>/src/img/blog_3.png" alt=""></div>
-						<div class="info">
-							<ul>
-								<li>sep 02, 2018</li>
-								<li>hotels, design</li>
-							</ul>
-						</div>
-						<a href="#" class="title">Amazingly interesting text about beauty of the world</a>
-						<div class="text">
-							<p>And here is lorem ipsum forever, lorem ipsum forever, lorem ipsum forever, lorem ipsum forever, lorem ipsum forever.</p>
-						</div>
-						<a href="#" class="read-more">read <img src="<?php echo get_template_directory_uri(); ?>/src/img/article_arrow.svg" alt=""></a>
-					</div>
+					<?php echo do_shortcode('[recent_posts posts="'.get_field( 'show_items' ).'"]'); ?>
 				</div>
 			</div>
 		</div>
