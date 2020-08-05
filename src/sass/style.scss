@@ -206,7 +206,7 @@ ul {
 
 
 body {
-    &.single, &.page-template-default, &.page-template-page-text-php {
+    &.single:not(.ma-services-template-default), &.page-template-default, &.page-template-page-text-php {
         header {
             &#header {
                 border-bottom: 1px solid #E1E1E1;

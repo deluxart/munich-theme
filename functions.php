@@ -221,6 +221,7 @@ add_action( 'wp_enqueue_scripts', 'munich_scripts' );
 // We connect CPT
 require get_template_directory() . '/inc/our-products.php';
 require get_template_directory() . '/inc/ma-reviews.php';
+require get_template_directory() . '/inc/ma-services.php';
 
 /**
  * Implement the Custom Header feature.
@@ -570,3 +571,5 @@ function recent_posts_shortcode( $atts ) {
 }
 
 // [recent_posts posts="10"]
+
+
