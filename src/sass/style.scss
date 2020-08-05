@@ -123,7 +123,7 @@ body {
   font-family: 'HelveticaNeueCyr';
 }
 
-.d-none {
+.d-none, .nav-links {
     display: none !important;
 }
 
@@ -1409,9 +1409,56 @@ input, textarea {
             }
         }
 
+            .wpcf7 form .wpcf7-response-output {
+                margin-top: 20px;
+                font-size: 14px;
+                    max-width: 387px;
+            }
+
+            .form {
+                margin-top: 50px;
+                max-width: 387px;
+                display: grid;
+                grid-gap: 40px;
+
+                input[type=submit] {
+                    &.btn {
+                        padding: 15px 55px;
+                        // margin-top: 20px;
+                    }
+                }
+            }
 
          .formnav {
              margin: 50px 0 70px 0;
+
+             & > span {
+                display: flex;
+                justify-content: space-between;
+
+                & > span {
+                    flex-basis: auto;
+                }
+             }
+
+            [type=checkbox], [type=radio] {
+                position: absolute;
+                opacity: 0;
+            }
+
+            label {
+                color: #a4a4a4;
+                text-transform: uppercase;
+                font-weight: 700;
+                cursor: pointer;
+
+                &.active {
+                    color: #161616;
+                    border-bottom: 2px solid #161616;
+                }
+            }
+
+
             ul {
                 display: flex;
                 justify-content: space-between;

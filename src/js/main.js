@@ -430,6 +430,22 @@ jQuery('.formnav > ul > li > a').click(function (event) {
     return false;
 });
 
+
+
+
+
+$('.formnav input:checkbox').change(function () {
+    if ($(this).is(":checked")) {
+        $(this).closest('label').addClass("active");
+    } else {
+        $(this).closest('label').removeClass("active");
+    }
+});
+
+
+
+
+
 jQuery('.sizes-prod > li').click(function (event) {
     // jQuery('.sizes-prod > li').removeClass('active');
     jQuery(this).closest('li').toggleClass('active');

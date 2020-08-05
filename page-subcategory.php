@@ -394,35 +394,10 @@ get_header();
 	<section id="formhome">
 		<div class="container">
 			<div class="content">
-				<h3><span>01</span> Ihr Produkt:</h3>
-				<div class="formnav">
-					<ul>
-						<li><a href="#">BATHROOM</a></li>
-						<li class="active"><a href="#">HYGIENE</a></li>
-						<li><a href="#">LIVING</a></li>
-						<li><a href="#">food</a></li>
-						<li><a href="#">office</a></li>
-					</ul>
-				</div>
-				<h3><span>02</span> Ihr Produkt:</h3>
-				<div class="homeform">
-					<form>
-						<input type="text" placeholder="Phone number" />
-						<input type="email" placeholder="Email" />
-						<input type="text" placeholder="Your comment" />
-						
-						<span class="wpcf7-checkbox">
-							<label class="control control--checkbox">
-							<span class="wpcf7-list-item first last">
-								<input type="checkbox" name="your-policy[]" value="" checked="checked" />
-								<span class="wpcf7-list-item-label"></span>
-							</span>
-							 <span class="checkbox-text"> Lorem ipsum dolor sit amet, consectetur adipiscing </span>
-							</label>
-						</span>
-						<div><button class="btn">order</button></div>
-					</form>
-				</div>
+				<?php
+					$ihr_produkt = get_post_meta($post->ID,'select_contact_form',true);
+					echo do_shortcode($ihr_produkt);
+				?>
 			</div>
 		</div>
 	</section>
