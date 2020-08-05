@@ -50,7 +50,7 @@ function register_products_post_type() {
 		'publicly_queryable'  => true,
 		'show_ui'             => true,
         'show_in_rest'        => false,
-        'menu_position' => 5,
+        'menu_position' => 2,
 		'rest_base'           => '',
 		'show_in_menu'        => true,
 		'exclude_from_search' => false,

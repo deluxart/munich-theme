@@ -21,7 +21,7 @@ function ma_services() {
 		'show_ui' => true,
 		'has_archive' => true,
 		'menu_icon' => 'dashicons-welcome-widgets-menus',
-		'menu_position' => 10,
+		'menu_position' => 1,
         'supports' => array( 'title', 'revisions'),
         // 'rewrite' => array('slug' => 'service'),
         'rewrite'    => array('slug' => '/' )
