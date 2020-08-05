@@ -21,7 +21,7 @@ function courses_programs() {
 		'show_ui' => true,
 		'has_archive' => true,
 		'menu_icon' => 'dashicons-format-status',
-		'menu_position' => 3,
+		'menu_position' => 7,
 		'supports' => array( 'title', 'revisions')
 	);
 	register_post_type('ma-reviews', $args);
