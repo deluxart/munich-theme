@@ -171,15 +171,15 @@
 										<a href="<?php echo get_permalink( $post_ids ); ?>"><h4 class="line"><?php echo get_the_title( $post_ids ); ?></h4></a>
 										<p><?php the_field( 'short_description_product', $post_ids ); ?></p>
 
-								<?php if ( have_rows( 'product_filters' ) ) : ?>
-									<?php while ( have_rows( 'product_filters' ) ) : the_row(); ?>
-										<?php if ( have_rows( 'custom_filter_product' ) ) : ?>
+								<?php if ( have_rows( 'product_filters', $post_ids ) ) : ?>
+									<?php while ( have_rows( 'product_filters', $post_ids ) ) : the_row(); ?>
+										<?php if ( have_rows( 'custom_filter_product', $post_ids ) ) : ?>
 										
-											<?php while ( have_rows( 'custom_filter_product' ) ) : the_row(); ?>
-												<ul class="value-item" title="<?php the_sub_field( 'filter_name' ); ?>">
-												<?php if ( have_rows( 'value' ) ) : ?>
-													<?php while ( have_rows( 'value' ) ) : the_row(); ?>
-														<li><?php the_sub_field( 'value' ); ?></li>
+											<?php while ( have_rows( 'custom_filter_product', $post_ids ) ) : the_row(); ?>
+												<ul class="value-item" title="<?php the_sub_field( 'filter_name', $post_ids ); ?>">
+												<?php if ( have_rows( 'value', $post_ids ) ) : ?>
+													<?php while ( have_rows( 'value', $post_ids ) ) : the_row(); ?>
+														<li><?php the_sub_field( 'value', $post_ids ); ?></li>
 													<?php endwhile; ?>
 												<?php else : ?>
 													<?php // no rows found ?>
