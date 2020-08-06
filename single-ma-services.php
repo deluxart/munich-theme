@@ -369,7 +369,7 @@ get_header();
 							<?php if ( have_rows( 'list' ) ) : ?>
 							<ul class="square">
 								<?php while ( have_rows( 'list' ) ) : the_row(); ?>
-									<li><a href="<?php the_sub_field( 'link' ); ?>"><?php the_sub_field( 'item' ); ?></li></a>
+									<li><?php the_sub_field( 'item' ); ?></li>
 								<?php endwhile; ?>
 							</ul>
 							<?php else : ?>
@@ -389,7 +389,7 @@ get_header();
 							<?php if ( have_rows( 'list' ) ) : ?>
 							<ul class="square">
 								<?php while ( have_rows( 'list' ) ) : the_row(); ?>
-									<li><a href="<?php the_sub_field( 'link' ); ?>"><?php the_sub_field( 'item' ); ?></li></a>
+									<li><?php the_sub_field( 'item' ); ?></li>
 								<?php endwhile; ?>
 							</ul>
 							<?php else : ?>
