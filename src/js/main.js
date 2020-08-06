@@ -489,10 +489,17 @@ jQuery(function () {
         jQuery('input.product-name').val(productName);
         jQuery('input.product-link').val(page_link);
 
+        // jQuery('ul.value-prod > li').click(function () {
+        //     var productSize = jQuery(this).text();
+        //     jQuery('input.value-prod').val(productSize);
+        // });
+
         jQuery('ul.value-prod > li').click(function () {
-            var productSize = jQuery(this).text();
-            jQuery('input.value-prod').val(productSize);
+            const text = jQuery(this).text();
+            const val = jQuery('input.value-prod').val((i, v) => v.trim() == "" ? text : [v, text]).val();
+            jQuery('p').text((i, txt) => txt.trim() == "" ? text : +txt + +text)
         });
+
 
         jQuery('ul.colors-prod > li').click(function () {
             const productColor = jQuery(this).children('span').attr('title');
