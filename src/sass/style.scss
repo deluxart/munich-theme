@@ -2442,7 +2442,8 @@ input, textarea {
                                 overflow: hidden;
                                 margin-top: 12px;
                                 li {
-                                    width: 21px;
+                                    width: auto;
+                                    min-width: 21px;
                                     height: 18px;
                                     display: block;
                                     float: left;
@@ -2455,6 +2456,7 @@ input, textarea {
                                     cursor: pointer;
                                     color: #161616;
                                     text-transform: uppercase;
+                                    padding: 0 3px;
 
                                     &:hover {
                                         font-weight: bold;
@@ -2530,7 +2532,9 @@ input, textarea {
                     padding: 3px;
                     margin: -3px -3px 22px -3px;
                     li {
-                        width: 28px;
+                        width: auto;
+                        min-width: 28px;
+                        padding: 0 5px;
                         height: 28px;
                         display: block;
                         float: left;

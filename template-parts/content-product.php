@@ -174,9 +174,9 @@
 								<?php if ( have_rows( 'product_filters' ) ) : ?>
 									<?php while ( have_rows( 'product_filters' ) ) : the_row(); ?>
 										<?php if ( have_rows( 'custom_filter_product' ) ) : ?>
-										<ul class="value-item">
+										
 											<?php while ( have_rows( 'custom_filter_product' ) ) : the_row(); ?>
-												<?php the_sub_field( 'filter_name' ); ?>
+												<ul class="value-item" title="<?php the_sub_field( 'filter_name' ); ?>">
 												<?php if ( have_rows( 'value' ) ) : ?>
 													<?php while ( have_rows( 'value' ) ) : the_row(); ?>
 														<li><?php the_sub_field( 'value' ); ?></li>
@@ -184,8 +184,9 @@
 												<?php else : ?>
 													<?php // no rows found ?>
 												<?php endif; ?>
+												</ul>
 											<?php endwhile; ?>
-										</ul>
+										
 										<?php else : ?>
 											<?php // no rows found ?>
 										<?php endif; ?>
@@ -218,37 +219,6 @@
 						<h3><?php the_title(); ?></h3>
 						<p><?php the_field( 'short_description_product' ); ?></p>
 			</div>
-
-
-
-
-
-
-<?php if ( have_rows( 'product_filters' ) ) : ?>
-	<?php while ( have_rows( 'product_filters' ) ) : the_row(); ?>
-		<?php if ( have_rows( 'custom_filter_product' ) ) : ?>
-		<ul class="value-item">
-			<?php while ( have_rows( 'custom_filter_product' ) ) : the_row(); ?>
-				<?php the_sub_field( 'filter_name' ); ?>
-				<?php if ( have_rows( 'value' ) ) : ?>
-					<?php while ( have_rows( 'value' ) ) : the_row(); ?>
-						<li><?php the_sub_field( 'value' ); ?></li>
-					<?php endwhile; ?>
-				<?php else : ?>
-					<?php // no rows found ?>
-				<?php endif; ?>
-			<?php endwhile; ?>
-		</ul>
-		<?php else : ?>
-			<?php // no rows found ?>
-		<?php endif; ?>
-	<?php endwhile; ?>
-<?php endif; ?>
-
-
-
-
-
 
 
 
