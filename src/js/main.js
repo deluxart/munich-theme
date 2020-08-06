@@ -430,10 +430,6 @@ jQuery('.formnav > ul > li > a').click(function (event) {
     return false;
 });
 
-
-
-
-
 $('.formnav input:checkbox').change(function () {
     if ($(this).is(":checked")) {
         $(this).closest('label').addClass("active");
@@ -442,18 +438,12 @@ $('.formnav input:checkbox').change(function () {
     }
 });
 
-
-
-
-
 jQuery('.value-prod > li').click(function (event) {
-    // jQuery('.sizes-prod > li').removeClass('active');
     jQuery(this).closest('li').toggleClass('active');
     return false;
 });
 
 jQuery('.colors-prod > li').click(function (event) {
-    // jQuery('.colors-prod > li').removeClass('active');
     jQuery(this).closest('li').toggleClass('active');
     return false;
 });
@@ -489,15 +479,9 @@ jQuery(function () {
         jQuery('input.product-name').val(productName);
         jQuery('input.product-link').val(page_link);
 
-        // jQuery('ul.value-prod > li').click(function () {
-        //     var productSize = jQuery(this).text();
-        //     jQuery('input.value-prod').val(productSize);
-        // });
-
         jQuery('ul.value-prod > li').click(function () {
             const text = jQuery(this).text();
             const val = jQuery('input.value-prod').val((i, v) => v.trim() == "" ? text : [v, text]).val();
-            // jQuery('p').text((i, txt) => txt.trim() == "" ? text : +txt + +text)
         });
 
 
