@@ -497,7 +497,7 @@ jQuery(function () {
         jQuery('ul.value-prod > li').click(function () {
             const text = jQuery(this).text();
             const val = jQuery('input.value-prod').val((i, v) => v.trim() == "" ? text : [v, text]).val();
-            jQuery('p').text((i, txt) => txt.trim() == "" ? text : +txt + +text)
+            // jQuery('p').text((i, txt) => txt.trim() == "" ? text : +txt + +text)
         });
 
 
