@@ -170,22 +170,29 @@
 										</div>
 										<a href="<?php echo get_permalink( $post_ids ); ?>"><h4 class="line"><?php echo get_the_title( $post_ids ); ?></h4></a>
 										<p><?php the_field( 'short_description_product', $post_ids ); ?></p>
-										<?php if ( have_rows( 'product_filters', $post_ids ) ) : ?>
-											<?php while ( have_rows( 'product_filters', $post_ids ) ) : the_row(); ?>
-												<?php if ( have_rows( 'set_of_sizes', $post_ids ) ) : ?>
-												<ul class="sizes-item">
-													<?php while ( have_rows( 'set_of_sizes', $post_ids ) ) : the_row(); ?>
-														<?php $select_sizes_checked_values = get_sub_field( 'select_sizes', $post_ids ); ?>
-														<?php if ( $select_sizes_checked_values ) : ?>
-															<?php foreach ( $select_sizes_checked_values as $select_sizes_value ): ?>
-																<li><?php echo esc_html( $select_sizes_value ); ?></li>
-															<?php endforeach; ?>
-														<?php endif; ?>
+
+								<?php if ( have_rows( 'product_filters' ) ) : ?>
+									<?php while ( have_rows( 'product_filters' ) ) : the_row(); ?>
+										<?php if ( have_rows( 'custom_filter_product' ) ) : ?>
+										<ul class="value-item">
+											<?php while ( have_rows( 'custom_filter_product' ) ) : the_row(); ?>
+												<?php the_sub_field( 'filter_name' ); ?>
+												<?php if ( have_rows( 'value' ) ) : ?>
+													<?php while ( have_rows( 'value' ) ) : the_row(); ?>
+														<li><?php the_sub_field( 'value' ); ?></li>
 													<?php endwhile; ?>
-												</ul>
+												<?php else : ?>
+													<?php // no rows found ?>
 												<?php endif; ?>
 											<?php endwhile; ?>
+										</ul>
+										<?php else : ?>
+											<?php // no rows found ?>
 										<?php endif; ?>
+									<?php endwhile; ?>
+								<?php endif; ?>
+
+
 									</div>
 								</div>
 							<?php endforeach; ?>
@@ -215,31 +222,53 @@
 
 
 
+
+
 <?php if ( have_rows( 'product_filters' ) ) : ?>
 	<?php while ( have_rows( 'product_filters' ) ) : the_row(); ?>
-		<?php if ( get_sub_field( 'size' ) == 1 ) : ?>
-			<?php // echo 'true'; ?>
-		<?php else : ?>
-			<?php // echo 'false'; ?>
-		<?php endif; ?>
-		<?php if ( have_rows( 'set_of_sizes' ) ) : ?>
-			<h4>Size</h4>
-			<ul class="sizes-prod">
-			<?php while ( have_rows( 'set_of_sizes' ) ) : the_row(); ?>
-				<?php $select_sizes_checked_values = get_sub_field( 'select_sizes' ); ?>
-				<?php if ( $select_sizes_checked_values ) : ?>
-					<?php foreach ( $select_sizes_checked_values as $select_sizes_value ): ?>
-						<li><?php echo esc_html( $select_sizes_value ); ?></li>
-					<?php endforeach; ?>
+		<?php if ( have_rows( 'custom_filter_product' ) ) : ?>
+		<ul class="value-item">
+			<?php while ( have_rows( 'custom_filter_product' ) ) : the_row(); ?>
+				<?php the_sub_field( 'filter_name' ); ?>
+				<?php if ( have_rows( 'value' ) ) : ?>
+					<?php while ( have_rows( 'value' ) ) : the_row(); ?>
+						<li><?php the_sub_field( 'value' ); ?></li>
+					<?php endwhile; ?>
+				<?php else : ?>
+					<?php // no rows found ?>
 				<?php endif; ?>
 			<?php endwhile; ?>
-			</ul>
-		<?php endif; ?>
-
-		<?php if ( get_sub_field( 'colour_filter' ) == 1 ) : ?>
-			<?php // echo 'true'; ?>
+		</ul>
 		<?php else : ?>
-			<?php // echo 'false'; ?>
+			<?php // no rows found ?>
+		<?php endif; ?>
+	<?php endwhile; ?>
+<?php endif; ?>
+
+
+
+
+
+
+
+
+<?php if ( have_rows( 'product_filters' ) ) : ?>
+	<?php while ( have_rows( 'product_filters' ) ) : the_row(); ?>
+		<?php if ( have_rows( 'custom_filter_product' ) ) : ?>
+			<?php while ( have_rows( 'custom_filter_product' ) ) : the_row(); ?>
+				<h4><?php the_sub_field( 'filter_name' ); ?></h4>
+				<?php if ( have_rows( 'value' ) ) : ?>
+				<ul class="value-prod">
+					<?php while ( have_rows( 'value' ) ) : the_row(); ?>
+						<li><?php the_sub_field( 'value' ); ?></li>
+					<?php endwhile; ?>
+				</ul>	
+				<?php else : ?>
+					<?php // no rows found ?>
+				<?php endif; ?>
+			<?php endwhile; ?>
+		<?php else : ?>
+			<?php // no rows found ?>
 		<?php endif; ?>
 		<?php if ( have_rows( 'colour' ) ) : ?>
 			<?php while ( have_rows( 'colour' ) ) : the_row(); ?>

@@ -2438,7 +2438,7 @@ input, textarea {
                         }
 
                         ul {
-                            &.sizes-item {
+                            &.value-item {
                                 overflow: hidden;
                                 margin-top: 12px;
                                 li {
@@ -2525,7 +2525,7 @@ input, textarea {
             }
 
             ul {
-                &.sizes-prod {
+                &.value-prod {
                     overflow: hidden;
                     padding: 3px;
                     margin: -3px -3px 22px -3px;

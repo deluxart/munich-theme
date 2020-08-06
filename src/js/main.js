@@ -446,7 +446,7 @@ $('.formnav input:checkbox').change(function () {
 
 
 
-jQuery('.sizes-prod > li').click(function (event) {
+jQuery('.value-prod > li').click(function (event) {
     // jQuery('.sizes-prod > li').removeClass('active');
     jQuery(this).closest('li').toggleClass('active');
     return false;
@@ -489,9 +489,9 @@ jQuery(function () {
         jQuery('input.product-name').val(productName);
         jQuery('input.product-link').val(page_link);
 
-        jQuery('ul.sizes-prod > li').click(function () {
+        jQuery('ul.value-prod > li').click(function () {
             var productSize = jQuery(this).text();
-            jQuery('input.size-prod').val(productSize);
+            jQuery('input.value-prod').val(productSize);
         });
 
         jQuery('ul.colors-prod > li').click(function () {
