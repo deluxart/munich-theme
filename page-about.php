@@ -7,7 +7,7 @@ get_header();
 
 	<div id="primary" class="content-area subpage">
 		<main id="main" class="site-main">
-			<div class="container">
+			<!-- <div class="container"> -->
 				<?php if(function_exists('bcn_display')) { 
 					echo '<div class="breadcrumbs"><ul>';
 						bcn_display(); 
@@ -27,7 +27,7 @@ get_header();
 
 			endwhile; // End of the loop.
 			?>
-			</div>
+			<!-- </div> -->
 		</main><!-- #main -->
 	</div><!-- #primary -->
 

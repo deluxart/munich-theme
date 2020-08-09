@@ -14,29 +14,33 @@
 		
 
 	<section id="aboutus">
-		<div class="content">
-			<div class="image">
-				<?php if ( get_field( 'about_section_image' ) ) : ?>
-					<img src="<?php the_field( 'about_section_image' ); ?>" />
-				<?php endif ?>
-			</div>
-			<div class="text">
-				<h2><?php the_field( 'about_section_title' ); ?></h2>
-				<?php the_field( 'about_section_content' ); ?>
+		<div class="container">
+			<div class="content">
+				<div class="image">
+					<?php if ( get_field( 'about_section_image' ) ) : ?>
+						<img src="<?php the_field( 'about_section_image' ); ?>" />
+					<?php endif ?>
+				</div>
+				<div class="text">
+					<h2><?php the_field( 'about_section_title' ); ?></h2>
+					<?php the_field( 'about_section_content' ); ?>
+				</div>
 			</div>
 		</div>
 	</section>
 
 	<section id="history">
-		<div class="content">
-			<div class="text">
-				<h2><?php the_field( 'section_title_history' ); ?></h2>
-				<?php the_field( 'section_content_history' ); ?>
-			</div>
-			<div class="image">
-				<?php if ( get_field( 'section_image_history' ) ) : ?>
-					<img src="<?php the_field( 'section_image_history' ); ?>" />
-				<?php endif ?>
+		<div class="container">
+			<div class="content">
+				<div class="text">
+					<h2><?php the_field( 'section_title_history' ); ?></h2>
+					<?php the_field( 'section_content_history' ); ?>
+				</div>
+				<div class="image">
+					<?php if ( get_field( 'section_image_history' ) ) : ?>
+						<img src="<?php the_field( 'section_image_history' ); ?>" />
+					<?php endif ?>
+				</div>
 			</div>
 		</div>
 	</section>
@@ -48,6 +52,7 @@
 
 
 	<section id="our_clients">
+		<div class="container">
 		<div class="title">
 			<h3 class="line"><?php the_field( 'section_title_clients' ); ?></h3>
 			<div>
@@ -77,6 +82,7 @@
 			<?php endif; ?>
 			</div>
 		</div>
+		</div>
 	</section>
 
 
@@ -105,6 +111,7 @@
 
 
 	<section id="team">
+		<div class="container">
 		<div class="team-content">
 			<div class="swiper-wrapper">
 			<?php if ( have_rows( 'user_team' ) ) : ?>
@@ -122,10 +129,12 @@
 			<?php endif; ?>
 			</div>
 		</div>
+		</div>
 	</section>
 
 
 	<section id="contact-form">
+		<div class="container">
 			<h3><?php the_field( 'section_title_contact' ); ?></h3>
 			<div class="form-prod">
 			<?php
@@ -133,6 +142,7 @@
 				echo do_shortcode($contacts_form);
  			?>
 			</div>
+		</div>
 	</section>
 
 
