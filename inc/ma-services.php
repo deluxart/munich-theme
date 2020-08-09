@@ -23,8 +23,8 @@ function ma_services() {
 		'menu_icon' => 'dashicons-welcome-widgets-menus',
 		'menu_position' => 5,
         'supports' => array( 'title', 'revisions'),
-        // 'rewrite' => array('slug' => 'service'),
-        'rewrite'    => array('slug' => '/' )
+        'rewrite' => array('slug' => 'service'),
+        // 'rewrite'    => array('slug' => '/' )
 	);
 	register_post_type('ma-services', $args);
 }
@@ -36,33 +36,28 @@ function ma_services() {
 
 
 
-add_action( 'pre_get_posts', 'wpse_include_my_post_type_in_query' );
-function wpse_include_my_post_type_in_query( $query ) {
+// add_action( 'pre_get_posts', 'wpse_include_my_post_type_in_query' );
+// function wpse_include_my_post_type_in_query( $query ) {
 
-     // Only noop the main query
-     if ( ! $query->is_main_query() )
-         return;
-
-     // Only noop our very specific rewrite rule match
-     if ( 2 != count( $query->query )
-     || ! isset( $query->query['page'] ) )
-          return;
-
-      // Include my post type in the query
-     if ( ! empty( $query->query['name'] ) )
-          $query->set( 'post_type', array( 'post', 'page', 'ma-services' ) );
- }
+//      if ( ! $query->is_main_query() )
+//          return;
+//      if ( 2 != count( $query->query )
+//      || ! isset( $query->query['page'] ) )
+//           return;
+//      if ( ! empty( $query->query['name'] ) )
+//           $query->set( 'post_type', array( 'ma-services' ) );
+//  }
 
 
-add_action( 'parse_query', 'wpse_parse_query' );
-function wpse_parse_query( $wp_query ) {
+// add_action( 'parse_query', 'wpse_parse_query' );
+// function wpse_parse_query( $wp_query ) {
 
-    if( get_page_by_path($wp_query->query_vars['name']) ) {
-        $wp_query->is_single = false;
-        $wp_query->is_page = true;
-    }
+//     if( get_page_by_path($wp_query->query_vars['name']) ) {
+//         $wp_query->is_single = false;
+//         $wp_query->is_page = true;
+//     }
 
-}
+// }
 
 
 

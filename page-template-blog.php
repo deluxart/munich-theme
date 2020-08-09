@@ -6,8 +6,6 @@ Template Name: Blog
 get_header();
 ?>
 
-
-
 	<div id="primary" class="content-area subpage">
 		<main id="main" class="site-main">
 			<div class="container">
@@ -18,12 +16,20 @@ get_header();
 					}
 				?>
 			<?php
-			if ( have_posts() ) :
-				while ( have_posts() ) :
-					the_post();
-					get_template_part( 'template-parts/content', 'posts' );
-				endwhile; // End of the loop.
-			endif;
+		if ( have_posts() ) {
+
+			// Load posts loop.
+			while ( have_posts() ) {
+				the_post();
+				get_template_part( 'template-parts/content-posts' );
+			}
+
+		} else {
+
+			// If no content, include the "No posts found" template.
+			get_template_part( 'template-parts/content', 'none' );
+
+		}
 			?>
 			</div>
 		</main><!-- #main -->
