@@ -23,42 +23,43 @@ function ma_services() {
 		'menu_icon' => 'dashicons-welcome-widgets-menus',
 		'menu_position' => 5,
         'supports' => array( 'title', 'revisions'),
-        'rewrite' => array('slug' => 'service'),
+        // 'rewrite' => array('slug' => 'service'),
+        'rewrite' => array('slug' => 'ma-services')
         // 'rewrite'    => array('slug' => '/' )
 	);
 	register_post_type('ma-services', $args);
 }
 
+/**
+ * Remove the slug from published post permalinks.
+ */
+function custom_remove_cpt_slug($post_link, $post, $leavename)
+{
+    if ('ma-services' != $post->post_type || 'publish' != $post->post_status)
+    {
+        return $post_link;
+    }
+    $post_link = str_replace('/' . $post->post_type . '/', '/', $post_link);
 
+    return $post_link;
+}
 
+add_filter('post_type_link', 'custom_remove_cpt_slug', 10, 3);
 
-
-
-
-
-// add_action( 'pre_get_posts', 'wpse_include_my_post_type_in_query' );
-// function wpse_include_my_post_type_in_query( $query ) {
-
-//      if ( ! $query->is_main_query() )
-//          return;
-//      if ( 2 != count( $query->query )
-//      || ! isset( $query->query['page'] ) )
-//           return;
-//      if ( ! empty( $query->query['name'] ) )
-//           $query->set( 'post_type', array( 'ma-services' ) );
-//  }
-
-
-// add_action( 'parse_query', 'wpse_parse_query' );
-// function wpse_parse_query( $wp_query ) {
-
-//     if( get_page_by_path($wp_query->query_vars['name']) ) {
-//         $wp_query->is_single = false;
-//         $wp_query->is_page = true;
-//     }
-
-// }
-
+function custom_parse_request_tricksy($query)
+{
+    if (!$query->is_main_query())
+        return;
+    if (2 != count($query->query) || !isset($query->query['page']))
+    {
+        return;
+    }
+    if (!empty($query->query['name']))
+    {
+        $query->set('post_type', array('post', 'ma-services', 'page'));
+    }
+}
+add_action('pre_get_posts', 'custom_parse_request_tricksy');
 
 
 
