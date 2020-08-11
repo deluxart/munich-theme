@@ -72,5 +72,14 @@ if (is_blog()) {
 		</main><!-- #main -->
 	</div><!-- #primary -->
 
+<?php if (is_blog()) { ?>
+<section id="gray_circle_text">
+	<div class="container">
+		<a href="#" class="btn border">zum Produkte</a>
+	</div>
+</section>
+<? } ?>
+
+
 <?php
 get_footer();

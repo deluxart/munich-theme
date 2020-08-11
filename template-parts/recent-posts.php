@@ -1,5 +1,5 @@
 <div class="item swiper-slide">
-	<div class="image"><?php the_post_thumbnail(); ?></div>
+	<div class="image"><?php the_post_thumbnail('spec_thumb_slider'); ?></div>
 	<div class="info">
 		<ul>
 			<li><?php echo get_the_date(); ?></li>

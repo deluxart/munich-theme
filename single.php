@@ -13,6 +13,12 @@ get_header();
 	<div id="primary" class="content-area subpage">
 		<main id="main" class="site-main">
 			<div class="container">
+				<?php if(function_exists('bcn_display')) { 
+					echo '<div class="breadcrumbs"><ul>';
+						bcn_display(); 
+					echo '</ul></div>';
+					}
+				?>
 		<?php
 		while ( have_posts() ) :
 			the_post();
@@ -22,15 +28,50 @@ get_header();
 			the_post_navigation();
 
 			// If comments are open or we have at least one comment, load up the comment template.
-			if ( comments_open() || get_comments_number() ) :
-				comments_template();
-			endif;
+			// if ( comments_open() || get_comments_number() ) :
+			// 	comments_template();
+			// endif;
 
 		endwhile; // End of the loop.
 		?>
+<?php if (is_singular('post')) { ?>
+<section id="articles" class="single">
+		<div class="container">
+			<div class="title">
+				<h3>you may also like</h3>
+				<div>
+					<div class="paginationSlider">
+						<div>
+							<div class="pagination"></div>
+							<div class="button-prev"><img src="<?php echo get_template_directory_uri(); ?>/src/img/arrow_left.svg" alt=""></div>
+							<div class="button-next"><img src="<?php echo get_template_directory_uri(); ?>/src/img/arrow_right.svg" alt=""></div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="blogSlider">
+				<div class="swiper-wrapper">
+						<?php echo do_shortcode('[recent_posts posts="'.get_field( 'show_items' ).'"]'); ?>
+				</div>
+			</div>
+		</div>
+	</section>
+<? } ?>
+
 			</div>
 		</main><!-- #main -->
 	</div><!-- #primary -->
+
+
+
+
+<?php if (is_singular('post')) { ?>
+<section id="gray_circle_text">
+	<div class="container">
+		<a href="#" class="btn border">zum Produkte</a>
+	</div>
+</section>
+<? } ?>
 
 <?php
 get_footer();

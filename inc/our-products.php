@@ -178,6 +178,87 @@ function related_posts_function ($atts){
 
 
 
+add_shortcode( 'product', 'product_by_slug' );
+function product_by_slug( $atts ) {
+    ob_start();
+    $args = shortcode_atts( array (
+		'type' => 'mp_products',
+		'name' => array(),
+        'posts' => 1,
+        'public'   => true,
+	), $atts );
+	$slug = explode(',', $args['name']);
+    $options = array(
+		'post_type' => $args['type'],
+		'post_name__in' => $slug,
+    );
+
+    $query = new WP_Query( $options );
+    if ( $query->have_posts() ) { ?>
+            <?php while ( $query->have_posts() ) : $query->the_post(); ?>
+                <?php
+                    get_template_part( 'template-parts/product-post', get_post_format() );
+                 ?>
+            <?php endwhile;
+            wp_reset_postdata(); ?>
+    <?php $myvariable = ob_get_clean();
+    return $myvariable;
+    }
+}
+
+
+
+    add_filter( 'manage_edit-mp_products_columns', 'my_edit_programs_columns' ) ;
+    function my_edit_programs_columns( $columns ) {
+        $columns = array(
+            'cb' => '&lt;input type="checkbox" />',
+            'title' => __( 'Product name' ),
+            'shortcode' => __( 'Shortcode' ),
+            // 'cat_teatcher' => __( 'Курс' ),
+            'date' => __( 'Date' )
+        );
+        return $columns;
+    }
+
+
+    add_action( 'manage_mp_products_posts_custom_column', 'my_manage_programs_columns', 10, 2 );
+    function my_manage_programs_columns( $column, $post_id ) {
+        global $post;
+
+        switch( $column ) {
+            case 'shortcode' :
+                $shortcode = $post->post_name;
+                if ( empty( $shortcode ) )
+                    echo __( 'Unknown' );
+                else
+                    printf( __( '<input type="text" onfocus="this.select();" style="width: auto;max-width: 200px;" readonly="" value="[product name=%s]" class="large-text code">' ), $shortcode );
+            break;
+
+            default :
+                break;
+        }
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

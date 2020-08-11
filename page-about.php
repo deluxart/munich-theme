@@ -7,13 +7,15 @@ get_header();
 
 	<div id="primary" class="content-area subpage">
 		<main id="main" class="site-main">
-			<!-- <div class="container"> -->
+			<div class="container">
+
 				<?php if(function_exists('bcn_display')) { 
 					echo '<div class="breadcrumbs"><ul>';
 						bcn_display(); 
 					echo '</ul></div>';
 					}
 				?>
+				</div>
 			<?php
 			while ( have_posts() ) :
 				the_post();

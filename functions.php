@@ -218,6 +218,15 @@ function munich_scripts() {
 }
 add_action( 'wp_enqueue_scripts', 'munich_scripts' );
 
+
+if ( function_exists( 'add_theme_support' ) ) {
+	add_theme_support( 'post-thumbnails' );
+	set_post_thumbnail_size( 560, 340 );
+}
+add_image_size( 'spec_thumb', 560, 340, true );
+add_image_size( 'spec_thumb_slider', 370, 265, true );
+
+
 // We connect CPT
 require get_template_directory() . '/inc/our-products.php';
 require get_template_directory() . '/inc/ma-reviews.php';
