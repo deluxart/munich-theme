@@ -11,6 +11,7 @@
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<div class="head_single">
+			<h2 class="mobile"><?php the_title(); ?></h2>
 			<div class="image"><?php the_post_thumbnail( 'spec_thumb' ); ?></div>
 			<div class="excerpt">
 				<ul class="post_info">
@@ -20,7 +21,7 @@
 					<li><span><?php the_tags('', ', ', '<br />'); ?></li>
 					<?php } ?>
 				</ul>
-				<h2><?php the_title(); ?></h2>
+				<h2 class="desktop"><?php the_title(); ?></h2>
 				<p class="text">
 					<?php echo get_the_excerpt() ?>
 				</p>

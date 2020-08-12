@@ -55,6 +55,9 @@ get_header();
 				</div>
 			</div>
 		</div>
+		<div class="container scrollbar">
+			<div class="swiper-scrollbar js-swiper-scrollbar"></div>
+		</div>
 	</section>
 <? } ?>
 
