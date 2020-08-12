@@ -234,6 +234,9 @@ get_header();
 				</div>
 			</div>
 		</div>
+		<div class="container">
+			<div class="swiper-scrollbar js-swiper-scrollbar"></div>
+		</div>
 	</section>
 
 
@@ -277,6 +280,9 @@ get_header();
 					<?php endif; ?>
 				</div>
 			</div>
+		</div>
+		<div class="container">
+			<div class="swiper-scrollbar js-swiper-scrollbar"></div>
 		</div>
 	</section>
 
@@ -434,6 +440,7 @@ get_header();
 					<?php echo do_shortcode('[reviews-list]'); ?>
 				</div>
 			</div>
+			<div class="swiper-scrollbar js-swiper-scrollbar"></div>
 	</section>
 
 

@@ -121,8 +121,12 @@ $(window).scroll(function () {
 var swiperProducts = new Swiper('.productSliderCat', {
     slidesPerView: 1.3,
     spaceBetween: 20, 
-    loop: true,
-    // slidesPerGroup: 3,
+    scrollbar: {
+        el: '#products .js-swiper-scrollbar',
+        draggable: true,
+        snapOnRelease: true,
+        // dragSize: "20px"
+    },
     breakpoints: {
         640: {
             slidesPerView: 1.3,
@@ -131,6 +135,7 @@ var swiperProducts = new Swiper('.productSliderCat', {
         768: {
             slidesPerView: 3,
             spaceBetween: 20,
+            loop: true,
         },
         1024: {
             slidesPerView: 4,
@@ -159,8 +164,12 @@ var swiperDrinks = new Swiper('.drinksSlider', {
     slidesPerView: 1.3,
     spaceBetween: 30,
     // slidesPerGroup: 3,
-    loop: true,
-    // loopFillGroupWithBlank: true,
+    scrollbar: {
+        el: '#drinks .js-swiper-scrollbar',
+        draggable: true,
+        snapOnRelease: true,
+        // dragSize: "20px"
+    },
     breakpoints: {
         640: {
             slidesPerView: 1.3,
@@ -169,6 +178,7 @@ var swiperDrinks = new Swiper('.drinksSlider', {
         768: {
             slidesPerView: 3,
             spaceBetween: 20,
+            loop: true,
         },
         1024: {
             slidesPerView: 4,
@@ -193,8 +203,12 @@ var swiperaccSlider = new Swiper('.accSlider', {
     slidesPerView: 1.3,
     spaceBetween: 30,
     // slidesPerGroup: 3,
-    loop: true,
-    // loopFillGroupWithBlank: true,
+    scrollbar: {
+        el: '#accessories .js-swiper-scrollbar',
+        draggable: true,
+        snapOnRelease: true,
+        // dragSize: "20px"
+    },
     breakpoints: {
         640: {
             slidesPerView: 1.3,
@@ -203,6 +217,7 @@ var swiperaccSlider = new Swiper('.accSlider', {
         768: {
             slidesPerView: 3,
             spaceBetween: 20,
+            loop: true,
         },
         1024: {
             slidesPerView: 4,
@@ -253,8 +268,12 @@ var reviewsSlider = new Swiper('.reviewsSlider', {
     slidesPerView: 1.3,
     spaceBetween: 30,
     // slidesPerGroup: 3,
-    loop: true,
-    // loopFillGroupWithBlank: true,
+    scrollbar: {
+        el: '#reviews .js-swiper-scrollbar',
+        draggable: true,
+        snapOnRelease: true,
+        // dragSize: "20px"
+    },
     breakpoints: {
         640: {
             slidesPerView: 1.3,
@@ -263,6 +282,7 @@ var reviewsSlider = new Swiper('.reviewsSlider', {
         768: {
             slidesPerView: 3,
             spaceBetween: 30,
+            loop: true,
         },
         1024: {
             slidesPerView: 4,
@@ -362,6 +382,12 @@ var clientsSlider = new Swiper('.clients_slider', {
 var blogSlider = new Swiper('.blogSlider', {
     slidesPerView: 1.3,
     spaceBetween: 30,
+    scrollbar: {
+        el: '#articles .js-swiper-scrollbar',
+        draggable: true,
+        snapOnRelease: true,
+        // dragSize: "20px"
+    },
     breakpoints: {
         640: {
             slidesPerView: 1.3,
@@ -394,8 +420,13 @@ var blogSlider = new Swiper('.blogSlider', {
 var postsSlider = new Swiper('.postsSlider', {
     slidesPerView: 1.3,
     spaceBetween: 50,
-    
     initialSlide: 1,
+    scrollbar: {
+        el: '#posts .js-swiper-scrollbar',
+        draggable: true,
+        snapOnRelease: true,
+        // dragSize: "20px"
+    },
     breakpoints: {
         640: {
             slidesPerView: 1.3,
@@ -670,6 +701,12 @@ const galleryThumbs = new Swiper('.gallery-thumbs', {
 const galleryTop = new Swiper('.gallery-top', {
     spaceBetween: 10,
     slidesPerView: 1.3,
+    scrollbar: {
+        el: '.productSlider .js-swiper-scrollbar',
+        draggable: true,
+        snapOnRelease: true,
+        // dragSize: "20px"
+    },
     breakpoints: {
         768: {
             slidesPerView: 1,

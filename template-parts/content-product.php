@@ -54,6 +54,7 @@
 			<div class="swiper-button-next swiper-button-black"></div>
 			<div class="swiper-button-prev swiper-button-black"></div>
 		</div>
+		<div class="swiper-scrollbar js-swiper-scrollbar"></div>
 		<div class="swiper-container gallery-thumbs">
 			<div class="swiper-wrapper">
 					<?php while ( have_rows( 'photos_product' ) ) : the_row(); ?>

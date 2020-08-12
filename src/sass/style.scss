@@ -182,6 +182,20 @@ h3 {
 }
 
 
+.js-swiper-scrollbar {
+        height: 4px;
+        border-radius: 0;
+
+        @media (min-width: 768px) {
+            display: none;
+        }
+
+        .swiper-scrollbar-drag {
+            background: $black;
+            border-radius: 0;
+        }
+    }
+
 ul {
     &.check {
         li {
@@ -474,7 +488,7 @@ input, textarea {
                         border-bottom:4px solid #CECECE;
                         text-align:center;
                         color:$black;
-                        padding: 2px 15px 8px 15px;
+                        padding: 2px 12px 8px 12px;
                         width: auto;
                         height: auto;
                         background: none;
@@ -793,6 +807,10 @@ input, textarea {
      overflow: hidden;
      padding: 50px 0;
 
+     .js-swiper-scrollbar {
+            margin-top: 30px;
+        }
+
      .slider_pagination {
        position: relative;
        text-align: left;
@@ -904,6 +922,10 @@ input, textarea {
    #drinks {
      overflow: hidden;
      padding: 65px 0;
+
+        .js-swiper-scrollbar {
+            margin-top: 30px;
+        }
 
         .content {
             display: grid;
@@ -1022,6 +1044,10 @@ input, textarea {
    #accessories {
      overflow: hidden;
      padding: 65px 0;
+
+     .js-swiper-scrollbar {
+            margin-top: 30px;
+        }
 
         .content {
             display: grid;
@@ -1510,6 +1536,10 @@ input, textarea {
         overflow: hidden;
         margin-left: calc(50% - 1170px/2);
 
+        .js-swiper-scrollbar {
+            margin-top: 30px;
+        }
+
        .title {
             width: 100%;
             max-width: 290px;
@@ -1799,6 +1829,16 @@ input, textarea {
 
    #articles {
        padding: 125px 0;
+
+       .container {
+           &.scrollbar {
+               padding-right: 15px;
+           }
+       }
+
+        .js-swiper-scrollbar {
+            margin-top: 30px;
+        }
 
        &.single {
         .title {
@@ -2701,8 +2741,14 @@ input, textarea {
                     grid-column: 1/2;
                     grid-row: 2;
                     margin-bottom: 80px;
-                    width: calc(100% - -15px);
+                    margin-right: 0;
+                    width: 100%;
                     margin-right: -15px;
+
+                    .slider {
+                        width: calc(100% - -15px);
+                        overflow: hidden;
+                    }
                         .gallery-thumbs {
                             display: none;
                         }
@@ -3568,6 +3614,12 @@ input, textarea {
 
             .container {
                 padding-right: 0;
+
+                &.scroll-bar {
+                    padding-right: 15px;
+                    padding-left: 0;
+                    padding-top: 10px;
+                }
             }
 
             .title {

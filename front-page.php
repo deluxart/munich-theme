@@ -216,6 +216,9 @@ get_header();
 					</div>
 				</div>
 			</div>
+			<div class="container scroll-bar">
+				<div class="swiper-scrollbar js-swiper-scrollbar"></div>
+			</div>
 		</div>
 	</section>
 
@@ -265,6 +268,9 @@ get_header();
 				</div>
 			</div>
 		</div>
+		<div class="container">
+			<div class="swiper-scrollbar js-swiper-scrollbar"></div>
+		</div>
 	</section>
 
 
@@ -311,6 +317,9 @@ get_header();
 					<?php endif; ?>
 				</div>
 			</div>
+		</div>
+		<div class="container">
+			<div class="swiper-scrollbar js-swiper-scrollbar"></div>
 		</div>
 	</section>
 
@@ -527,6 +536,9 @@ get_header();
 
 			</div>
 		</div>
+		<div class="container scrollbar">
+			<div class="swiper-scrollbar js-swiper-scrollbar"></div>
+		</div>
 	</section>
 
 
@@ -548,6 +560,7 @@ get_header();
 					<?php echo do_shortcode('[reviews-list]'); ?>
 				</div>
 			</div>
+			<div class="swiper-scrollbar js-swiper-scrollbar"></div>
 	</section>
 
 
@@ -570,6 +583,9 @@ get_header();
 						<?php echo do_shortcode('[recent_posts posts="'.get_field( 'show_items' ).'"]'); ?>
 				</div>
 			</div>
+		</div>
+		<div class="container scrollbar">
+			<div class="swiper-scrollbar js-swiper-scrollbar"></div>
 		</div>
 	</section>
 
