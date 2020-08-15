@@ -4546,3 +4546,35 @@ blockquote {
         transform: translate(-50%, -50%);
     }
 }
+
+
+
+
+.video_block {
+    position: relative;
+    cursor: none;
+    overflow: hidden;
+
+    #myVideo {
+        right: 0;
+        bottom: 0;
+        min-width: 100%;
+        min-height: 100%;
+        cursor: none;
+    }
+    #maVideoBtn {
+        border: none;
+        background: url(./src/img/play_ma.svg) center no-repeat;
+        background-size: contain;
+        position:absolute; 
+        top:50%; 
+        left:50%; 
+        width:150px; 
+        height:150px;
+        transform: translate(-50%, -50%);
+        cursor: none;
+    }
+}
+
+
+

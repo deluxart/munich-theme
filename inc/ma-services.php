@@ -2,6 +2,33 @@
 add_action( 'init', 'ma_services' );
 
 function ma_services() {
+
+
+	register_taxonomy('servicescat', array('ma-services'), array(
+		'label'                 => 'Categories', // определяется параметром $labels->name
+		'labels'                => array(
+			'name'              => 'Services categories',
+			'singular_name'     => 'Categories',
+			'search_items'      => 'Search category',
+			'all_items'         => 'All categories',
+			'parent_item'       => 'Parent category',
+			'parent_item_colon' => 'Parent category:',
+			'edit_item'         => 'Edit category',
+			'update_item'       => 'Update category',
+			'add_new_item'      => 'Add category',
+			'new_item_name'     => 'Add new category',
+			'menu_name'         => 'Categories',
+		),
+		'description'           => 'Categories for services', // описание таксономии
+		'public'                => true,
+		'show_in_nav_menus'     => false, // равен аргументу public
+		'show_ui'               => true, // равен аргументу public
+		'show_tagcloud'         => false, // равен аргументу show_ui
+		'hierarchical'          => true,
+		'rewrite'               => array('slug'=>'service', 'hierarchical'=>false, 'with_front'=>false, 'feed'=>false ),
+		'show_admin_column'     => true, // Позволить или нет авто-создание колонки таксономии в таблице ассоциированного типа записи. (с версии 3.5)
+    ) );
+
 	$labels = array(
 		'name' => 'Services',
 		'singular_name' => 'Service',
@@ -29,6 +56,8 @@ function ma_services() {
 	);
 	register_post_type('ma-services', $args);
 }
+
+
 
 /**
  * Remove the slug from published post permalinks.
@@ -60,6 +89,10 @@ function custom_parse_request_tricksy($query)
     }
 }
 add_action('pre_get_posts', 'custom_parse_request_tricksy');
+
+
+
+
 
 
 

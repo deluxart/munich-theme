@@ -47,7 +47,16 @@
 
 
 	<section id="about_video">
-		<img src="http://dev.seiten.co/wp-munich-accessories-de/wp-content/uploads/2020/08/video_img.jpg" alt="">
+		<div class="container">
+		<!-- <img src="http://dev.seiten.co/wp-munich-accessories-de/wp-content/uploads/2020/08/video_img.jpg" alt=""> -->
+		<div class="video_block">
+			<!-- <video autoplay muted loop id="myVideo"> -->
+			<video loop id="myVideo">
+				<source src="http://dev.seiten.co/wp-munich-accessories-de/wp-content/uploads/2020/08/about_ma.mp4" type="video/mp4">
+			</video>
+			<button id="maVideoBtn" onclick="myFunction()"></button>
+		</div>
+		</div>
 	</section>
 
 

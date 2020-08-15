@@ -1,3 +1,30 @@
+// Get the video
+var video = document.getElementById("myVideo");
+var video_block = jQuery('.video_block');
+var btn = document.getElementById("maVideoBtn");
+function myFunction() {
+    if (video.paused) {
+        video.play();
+        // btn.innerHTML = "Pause";
+    } else {
+        video.pause();
+        // btn.innerHTML = "Play";
+    }
+}
+
+$(document).ready(function () {
+    $(video_block).mousemove(function (e) {
+        var xPos = e.pageX - $(this).position().left;
+        var yPos = e.pageY - $(this).position().top;
+        $(btn).css('left', xPos + 'px').css('top', yPos + 'px');
+    });
+}); 
+
+
+
+
+
+
 jQuery('.spoiler > .head').on('click', function(e){
     jQuery('div.spoiler').not(this).children('.cont').stop().slideUp(300);
     jQuery(this).closest('div.spoiler').children('.cont').stop().slideUp(300);
