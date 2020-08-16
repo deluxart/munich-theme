@@ -54,7 +54,7 @@ get_header();
 	<section id="about">
 		<div class="content">
 			<h3 class="mobile line"><?php the_field( 'section_title_about' ); ?></h3>
-			<div class="images">
+			<div class="images" data-ix="fade-from-left">
 				<!-- <img src="<?php echo get_template_directory_uri(); ?>/src/img/about_1.png" alt="">
 				<img src="<?php echo get_template_directory_uri(); ?>/src/img/about_2.png" alt="">
 				<img src="<?php echo get_template_directory_uri(); ?>/src/img/about_3.png" alt=""> -->
@@ -71,7 +71,7 @@ get_header();
 
 
 			</div>
-			<div class="text">
+			<div class="text" data-ix="fade-from-right">
 				<h3 class="desktop line"><?php the_field( 'section_title_about' ); ?></h3>
 				<p><?php the_field( 'content_about' ); ?></p>
 				
@@ -96,7 +96,7 @@ get_header();
 <?php if ( have_rows( 'items_services' ) ) : ?>
 	<?php while ( have_rows( 'items_services' ) ) : the_row(); ?>
 				<a href="<?php the_sub_field( 'link' ); ?>">
-					<div class="item">
+					<div class="item" data-ix="fade-from-top">
 						<h3><?php the_sub_field( 'title' ); ?></h3>
 						<div class="icon">
 							<?php if ( get_sub_field( 'icon' ) ) : ?>
@@ -136,7 +136,7 @@ get_header();
 			</div>
 			<div class="postsSlider">
 				<div class="swiper-wrapper">
-					<div class="item swiper-slide">
+					<div class="item swiper-slide" data-ix="fade-from-top">
 						<div class="image"><img src="<?php echo get_template_directory_uri(); ?>/src/img/post_1.png" alt=""></div>
 						<a href="#"><h3 class="line">Hotels</h3></a>
 						<div class="text">
@@ -149,7 +149,7 @@ get_header();
 							</ul>
 						</div>
 					</div>
-					<div class="item swiper-slide">
+					<div class="item swiper-slide" data-ix="fade-from-top">
 						<div class="image"><img src="<?php echo get_template_directory_uri(); ?>/src/img/post_2.png" alt=""></div>
 						<a href="#"><h3 class="line">Hotels</h3></a>
 						<div class="text">
@@ -162,7 +162,7 @@ get_header();
 							</ul>
 						</div>
 					</div>
-					<div class="item swiper-slide">
+					<div class="item swiper-slide" data-ix="fade-from-top">
 						<div class="image"><img src="<?php echo get_template_directory_uri(); ?>/src/img/post_3.png" alt=""></div>
 						<a href="#"><h3 class="line">Hotels</h3></a>
 						<div class="text">
@@ -175,7 +175,7 @@ get_header();
 							</ul>
 						</div>
 					</div>
-					<div class="item swiper-slide">
+					<div class="item swiper-slide" data-ix="fade-from-top">
 						<div class="image"><img src="<?php echo get_template_directory_uri(); ?>/src/img/post_1.png" alt=""></div>
 						<h3 class="line">Thermen </h3>
 						<div class="text">
@@ -188,7 +188,7 @@ get_header();
 							</ul>
 						</div>
 					</div>
-					<div class="item swiper-slide">
+					<div class="item swiper-slide" data-ix="fade-from-top">
 						<div class="image"><img src="<?php echo get_template_directory_uri(); ?>/src/img/post_2.png" alt=""></div>
 						<h3 class="line">Hotels</h3>
 						<div class="text">
@@ -201,7 +201,7 @@ get_header();
 							</ul>
 						</div>
 					</div>
-					<div class="item swiper-slide">
+					<div class="item swiper-slide" data-ix="fade-from-top">
 						<div class="image"><img src="<?php echo get_template_directory_uri(); ?>/src/img/post_3.png" alt=""></div>
 						<h3 class="line">Friseursalone</h3>
 						<div class="text">
@@ -228,7 +228,7 @@ get_header();
 
 	<section id="drinks">
 		<div class="content">
-			<div class="text">
+			<div class="text" data-ix="fade-from-left">
 				<div>
 					<div class="title main">
 						<h3 class="line"><?php the_field( 'section_title_drinks' ); ?></h3>
@@ -248,7 +248,7 @@ get_header();
 					<?php endif; ?>
 				</div>
 			</div>
-			<div class="drinksSlider">
+			<div class="drinksSlider" data-ix="fade-from-right">
 				<div class="swiper-wrapper">
 					<?php $items_drinks = get_field( 'items_drinks' ); ?>
 					<?php if ( $items_drinks ) : ?>
@@ -276,7 +276,7 @@ get_header();
 
 <section id="accessories">
 		<div class="content">
-			<div class="accSlider">
+			<div class="accSlider" data-ix="fade-from-left">
 				<div class="swiper-wrapper">
 
 
@@ -297,7 +297,7 @@ get_header();
 
 				</div>
 			</div>
-			<div class="text">
+			<div class="text" data-ix="fade-from-right">
 				<div>
 					<div class="title">
 						<h3 class="line"><?php the_field( 'section_title_accessories' ); ?></h3>
@@ -329,12 +329,12 @@ get_header();
 		<div class="content">
 <?php if ( have_rows( 'munich_textile' ) ) : ?>
 	<?php while ( have_rows( 'munich_textile' ) ) : the_row(); ?>
-			<div class="image">
+			<div class="image" data-ix="fade-from-top">
 				<?php if ( get_sub_field( 'image' ) ) : ?>
 					<img src="<?php the_sub_field( 'image' ); ?>" />
 				<?php endif ?>
 			</div>
-			<div class="text">
+			<div class="text" data-ix="fade-from-top">
 				<h3 class="line"><?php the_sub_field( 'sectipn_title' ); ?>e</h3>
 				<p><?php the_sub_field( 'description' ); ?></p>
 
@@ -351,7 +351,7 @@ get_header();
 	<?php endwhile; ?>
 <?php endif; ?>
 		</div>
-		<div class="content last">
+		<div class="content last" data-ix="fade-from-top">
 
 
 <?php if ( have_rows( 'munich_textile_drinks' ) ) : ?>
@@ -370,7 +370,7 @@ get_header();
 					<?php // no rows found ?>
 				<?php endif; ?>
 			</div>
-			<div class="image">
+			<div class="image" data-ix="fade-from-top">
 				<?php if ( get_sub_field( 'image' ) ) : ?>
 					<img src="<?php the_sub_field( 'image' ); ?>" />
 				<?php endif ?>
@@ -396,9 +396,9 @@ get_header();
 	<?php while ( have_rows( 'privat_content' ) ) : the_row(); ?>
 	<section id="privat">
 		<div class="container">
-			<h3 class="line"><?php the_sub_field( 'section_title_privat' ); ?></h3>
+			<h3 class="line" data-ix="fade-in-heading"><?php the_sub_field( 'section_title_privat' ); ?></h3>
 			<div class="content">
-				<div class="black">
+				<div class="black" data-ix="fade-from-left">
 				<p><?php the_sub_field( 'left_side_text' ); ?></p>
 				<?php if ( have_rows( 'left_side_categories' ) ) : ?>
 					<ul>
@@ -412,7 +412,7 @@ get_header();
 					</ul>
 				<?php endif; ?>
 				</div>
-				<div class="text">
+				<div class="text" data-ix="fade-from-right">
 				<p><?php the_sub_field( 'right_side_text' ); ?></p>
 				<?php if ( have_rows( 'right_side_button' ) ) : ?>
 					<?php while ( have_rows( 'right_side_button' ) ) : the_row(); ?>
@@ -465,12 +465,12 @@ get_header();
 		<div class="container">
 			<div class="content">
 				<?php while ( have_rows( 'artmunich_content' ) ) : the_row(); ?>
-					<div class="text">
-						<h3 class="line"><?php the_sub_field( 'section_title_art' ); ?></h3>
+					<div class="text" data-ix="fade-from-left">
+						<h3 class="line" data-ix="fade-in-heading"><?php the_sub_field( 'section_title_art' ); ?></h3>
 						<p><?php the_sub_field( 'text' ); ?></p>
 					</div>	
 					<?php if ( get_sub_field( 'image' ) ) : ?>
-						<div class="image">
+						<div class="image" data-ix="fade-from-right">
 							<img src="<?php the_sub_field( 'image' ); ?>" />
 						</div>
 					<?php endif ?>
@@ -506,7 +506,7 @@ get_header();
 				</div>
 			</div>
 		</div>
-		<div class="productSliderCat">
+		<div class="productSliderCat" data-ix="fade-from-top">
 			<div class="swiper-wrapper">
 
 
@@ -544,7 +544,7 @@ get_header();
 
 	<section id="reviews">
 			<div class="title">
-				<h3 class="line"><?php the_field( 'section_title_reviews' ); ?></h3>
+				<h3 class="line" data-ix="fade-in-heading"><?php the_field( 'section_title_reviews' ); ?></h3>
 				<div>
 					<div class="paginationSlider">
 						<div>
@@ -555,7 +555,7 @@ get_header();
 					</div>
 				</div>
 			</div>
-			<div class="reviewsSlider">
+			<div class="reviewsSlider" data-ix="fade-from-top">
 				<div class="swiper-wrapper">
 					<?php echo do_shortcode('[reviews-list]'); ?>
 				</div>
@@ -567,7 +567,7 @@ get_header();
 	<section id="articles">
 		<div class="container">
 			<div class="title">
-				<h3 class="line"><?php the_field( 'section_title_blog' ); ?></h3>
+				<h3 class="line" data-ix="fade-in-heading"><?php the_field( 'section_title_blog' ); ?></h3>
 				<div>
 					<div class="paginationSlider">
 						<div>
@@ -578,7 +578,7 @@ get_header();
 					</div>
 				</div>
 			</div>
-			<div class="blogSlider">
+			<div class="blogSlider" data-ix="fade-from-top">
 				<div class="swiper-wrapper">
 						<?php echo do_shortcode('[recent_posts posts="'.get_field( 'show_items' ).'"]'); ?>
 				</div>
@@ -594,10 +594,10 @@ get_header();
 				<img src="<?php echo get_template_directory_uri(); ?>/src/img/foot_section_bg.gif" alt="">
 				<div class="text">
 					<div class="container">
-						<h4 class="one"><?php the_field( 'offer_text_1' ); ?></h4>
-						<h4 class="two"><?php the_field( 'offer_text_2' ); ?></h4>
+						<h4 class="one" data-ix="fade-in-heading"><?php the_field( 'offer_text_1' ); ?></h4>
+						<h4 class="two" data-ix="fade-in-heading-2"><?php the_field( 'offer_text_2' ); ?></h4>
 						<?php if ( have_rows( 'button' ) ) : ?>
-						<div class="button">
+						<div class="button" data-ix="fade-in-heading-3">
 							<?php while ( have_rows( 'button' ) ) : the_row(); ?>
 								<button data-name="orderModal" class="btn border da-modal"><?php the_sub_field( 'title' ); ?></button>
 							<?php endwhile; ?>
