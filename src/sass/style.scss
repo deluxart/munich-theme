@@ -1303,6 +1303,10 @@ input, textarea {
        text-align: center;
        text-transform: uppercase;
        padding-bottom: 85px;
+
+       p {
+           color: $black;
+       }
      }
 
      .content {
