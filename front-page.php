@@ -5,60 +5,47 @@ Template Name: Home
 
 get_header();
 ?>
-
-
 	<section id="home_slider" class="slider">
 		<div class="home_slider">
 		<div class="swiper-wrapper">
+			<?php if ( have_rows( 'slide' ) ) : $count = 0; ?>
+				<?php while ( have_rows( 'slide' ) ) : the_row(); ?>
+				<div class="content swiper-slide" data-name="<?php the_sub_field( 'slide_list' ); ?>">
+					<div class="text">
+						<?php if (!$count) { ?>
+							<h1><?php the_sub_field( 'slide_title' ); ?></h1>
+						<?php } else { ?>
+							<h1><?php the_sub_field( 'slide_title' ); ?></h1>
+						<?php } ?>
+							<p class="description main"><?php the_sub_field( 'slide_descriptio' ); ?></p>
+						<?php if ( have_rows( 'slide_button' ) ) : ?>
+							<?php while ( have_rows( 'slide_button' ) ) : the_row(); ?>
+								<button data-name="orderModal" class="btn black border da-modal"><?php the_sub_field( 'button_title' ); ?></button>
+							<?php endwhile; ?>
+						<?php endif; ?>
+					</div>
 
-<?php if ( have_rows( 'slide' ) ) : $count = 0; ?>
-	<?php while ( have_rows( 'slide' ) ) : the_row(); ?>
-	<div class="content swiper-slide" data-name="<?php the_sub_field( 'slide_list' ); ?>">
+					<div class="image">
+						<?php if ( get_sub_field( 'slide_image' ) ) : ?>
+							<img src="<?php the_sub_field( 'slide_image' ); ?>" />
+						<?php endif ?>
+					</div>
 
-
-		<div class="text">
-			<?php if (!$count) { ?>
-				<h1><?php the_sub_field( 'slide_title' ); ?></h1>
-			<?php } else { ?>
-				<h1><?php the_sub_field( 'slide_title' ); ?></h1>
-			<?php } ?>
-				<p class="description main"><?php the_sub_field( 'slide_descriptio' ); ?></p>
-			<?php if ( have_rows( 'slide_button' ) ) : ?>
-				<?php while ( have_rows( 'slide_button' ) ) : the_row(); ?>
-					<button data-name="orderModal" class="btn black border da-modal"><?php the_sub_field( 'button_title' ); ?></button>
+				</div>
 				<?php endwhile; ?>
+			<?php else : ?>
+				<?php // no rows found ?>
 			<?php endif; ?>
-		</div>
-
-		<div class="image">
-			<?php if ( get_sub_field( 'slide_image' ) ) : ?>
-				<img src="<?php the_sub_field( 'slide_image' ); ?>" />
-			<?php endif ?>
-		</div>
-
-	</div>
-	<?php endwhile; ?>
-<?php else : ?>
-	<?php // no rows found ?>
-<?php endif; ?>
 			</div>
 			</div>
 			  <!-- Add Pagination -->
-  <div class="swiper-pagination pag-shoes"></div>
+		<div class="swiper-pagination pag-shoes"></div>
 	</section>
-
-
-
-
 
 	<section id="about">
 		<div class="content">
 			<h3 class="mobile line"><?php the_field( 'section_title_about' ); ?></h3>
 			<div class="images" data-ix="fade-from-left">
-				<!-- <img src="<?php echo get_template_directory_uri(); ?>/src/img/about_1.png" alt="">
-				<img src="<?php echo get_template_directory_uri(); ?>/src/img/about_2.png" alt="">
-				<img src="<?php echo get_template_directory_uri(); ?>/src/img/about_3.png" alt=""> -->
-
 				<?php if ( have_rows( 'images_about' ) ) : ?>
 					<?php while ( have_rows( 'images_about' ) ) : the_row(); ?>
 						<?php if ( get_sub_field( 'image' ) ) : ?>
@@ -68,8 +55,6 @@ get_header();
 				<?php else : ?>
 					<?php // no rows found ?>
 				<?php endif; ?>
-
-
 			</div>
 			<div class="text" data-ix="fade-from-right">
 				<h3 class="desktop line"><?php the_field( 'section_title_about' ); ?></h3>
@@ -84,42 +69,28 @@ get_header();
 		</div>
 	</section>
 
-
-
-
-
 	<section id="services">
 		<div class="container">
 			<div class="content">
-
-
-<?php if ( have_rows( 'items_services' ) ) : ?>
-	<?php while ( have_rows( 'items_services' ) ) : the_row(); ?>
-				<a href="<?php the_sub_field( 'link' ); ?>">
-					<div class="item" data-ix="fade-from-top">
-						<h3><?php the_sub_field( 'title' ); ?></h3>
-						<div class="icon">
-							<?php if ( get_sub_field( 'icon' ) ) : ?>
-								<img src="<?php the_sub_field( 'icon' ); ?>" />
-							<?php endif ?>
-						</div>
-					</div>
-				</a>
-	<?php endwhile; ?>
-<?php else : ?>
-	<?php // no rows found ?>
-<?php endif; ?>
+				<?php if ( have_rows( 'items_services' ) ) : ?>
+					<?php while ( have_rows( 'items_services' ) ) : the_row(); ?>
+								<a href="<?php the_sub_field( 'link' ); ?>">
+									<div class="item" data-ix="fade-from-top">
+										<h3><?php the_sub_field( 'title' ); ?></h3>
+										<div class="icon">
+											<?php if ( get_sub_field( 'icon' ) ) : ?>
+												<img src="<?php the_sub_field( 'icon' ); ?>" />
+											<?php endif ?>
+										</div>
+									</div>
+								</a>
+					<?php endwhile; ?>
+				<?php else : ?>
+					<?php // no rows found ?>
+				<?php endif; ?>
 			</div>
 		</div>
 	</section>
-
-
-
-
-
-
-
-
 
 	<section id="posts">
 		<div class="container">
@@ -222,10 +193,6 @@ get_header();
 		</div>
 	</section>
 
-
-
-
-
 	<section id="drinks">
 		<div class="content">
 			<div class="text" data-ix="fade-from-left">
@@ -278,8 +245,6 @@ get_header();
 		<div class="content">
 			<div class="accSlider" data-ix="fade-from-left">
 				<div class="swiper-wrapper">
-
-
 					<?php $items_accessories = get_field( 'items_accessories' ); ?>
 					<?php if ( $items_accessories ) : ?>
 						<?php foreach ( $items_accessories as $post_ids ) : ?>
@@ -323,72 +288,58 @@ get_header();
 		</div>
 	</section>
 
-
-
 	<section id="grid">
 		<div class="content">
-<?php if ( have_rows( 'munich_textile' ) ) : ?>
-	<?php while ( have_rows( 'munich_textile' ) ) : the_row(); ?>
-			<div class="image" data-ix="fade-from-top">
-				<?php if ( get_sub_field( 'image' ) ) : ?>
-					<img src="<?php the_sub_field( 'image' ); ?>" />
-				<?php endif ?>
-			</div>
-			<div class="text" data-ix="fade-from-top">
-				<h3 class="line"><?php the_sub_field( 'sectipn_title' ); ?>e</h3>
-				<p><?php the_sub_field( 'description' ); ?></p>
+			<?php if ( have_rows( 'munich_textile' ) ) : ?>
+				<?php while ( have_rows( 'munich_textile' ) ) : the_row(); ?>
+						<div class="image" data-ix="fade-from-top">
+							<?php if ( get_sub_field( 'image' ) ) : ?>
+								<img src="<?php the_sub_field( 'image' ); ?>" />
+							<?php endif ?>
+						</div>
+						<div class="text" data-ix="fade-from-top">
+							<h3 class="line"><?php the_sub_field( 'sectipn_title' ); ?>e</h3>
+							<p><?php the_sub_field( 'description' ); ?></p>
 
-				<?php if ( have_rows( 'list' ) ) : ?>
-				<ul class="grid-links">
-					<?php while ( have_rows( 'list' ) ) : the_row(); ?>
-						<li><a href="<?php the_sub_field( 'link' ); ?>"><?php the_sub_field( 'item' ); ?></li></a>
-					<?php endwhile; ?>
-				</ul>
-				<?php else : ?>
-					<?php // no rows found ?>
-				<?php endif; ?>
-			</div>
-	<?php endwhile; ?>
-<?php endif; ?>
+							<?php if ( have_rows( 'list' ) ) : ?>
+							<ul class="grid-links">
+								<?php while ( have_rows( 'list' ) ) : the_row(); ?>
+									<li><a href="<?php the_sub_field( 'link' ); ?>"><?php the_sub_field( 'item' ); ?></li></a>
+								<?php endwhile; ?>
+							</ul>
+							<?php else : ?>
+								<?php // no rows found ?>
+							<?php endif; ?>
+						</div>
+				<?php endwhile; ?>
+			<?php endif; ?>
 		</div>
 		<div class="content last" data-ix="fade-from-top">
+			<?php if ( have_rows( 'munich_textile_drinks' ) ) : ?>
+				<?php while ( have_rows( 'munich_textile_drinks' ) ) : the_row(); ?>
+						<div class="text">
+							<h3 class="line"><?php the_sub_field( 'sectipn_title' ); ?>e</h3>
+							<p><?php the_sub_field( 'description' ); ?></p>
 
-
-<?php if ( have_rows( 'munich_textile_drinks' ) ) : ?>
-	<?php while ( have_rows( 'munich_textile_drinks' ) ) : the_row(); ?>
-			<div class="text">
-				<h3 class="line"><?php the_sub_field( 'sectipn_title' ); ?>e</h3>
-				<p><?php the_sub_field( 'description' ); ?></p>
-
-				<?php if ( have_rows( 'list' ) ) : ?>
-				<ul class="grid-links">
-					<?php while ( have_rows( 'list' ) ) : the_row(); ?>
-						<li><a href="<?php the_sub_field( 'link' ); ?>"><?php the_sub_field( 'item' ); ?></li></a>
-					<?php endwhile; ?>
-				</ul>
-				<?php else : ?>
-					<?php // no rows found ?>
-				<?php endif; ?>
-			</div>
-			<div class="image" data-ix="fade-from-top">
-				<?php if ( get_sub_field( 'image' ) ) : ?>
-					<img src="<?php the_sub_field( 'image' ); ?>" />
-				<?php endif ?>
-			</div>
-	<?php endwhile; ?>
-<?php endif; ?>
+							<?php if ( have_rows( 'list' ) ) : ?>
+							<ul class="grid-links">
+								<?php while ( have_rows( 'list' ) ) : the_row(); ?>
+									<li><a href="<?php the_sub_field( 'link' ); ?>"><?php the_sub_field( 'item' ); ?></li></a>
+								<?php endwhile; ?>
+							</ul>
+							<?php else : ?>
+								<?php // no rows found ?>
+							<?php endif; ?>
+						</div>
+						<div class="image" data-ix="fade-from-top">
+							<?php if ( get_sub_field( 'image' ) ) : ?>
+								<img src="<?php the_sub_field( 'image' ); ?>" />
+							<?php endif ?>
+						</div>
+				<?php endwhile; ?>
+			<?php endif; ?>
 		</div>
 	</section>
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -427,39 +378,6 @@ get_header();
 	<?php endwhile; ?>
 <?php endif; ?>
 
-
-
-<!-- 
-
-	
-	<section id="privat">
-		<div class="container">
-			<h3 class="line">Privat label</h3>
-
-			<div class="content">
-				<div class="black">
-					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit dolor sit amet, consecteturl orem ipsum dolor sit amet, consectetur adipiscing elit dolor sit amet, consectetur lorem ipsum dolor sit amet, consectetur adipiscing elit dolor sit amet, consecteturl orem ipsum dolor sit amet, consectetur adipiscing  Lorem ipsum dolor sit amet, consect</p>
-					<ul>
-						<li><a href="#">categorie</a></li>
-						<li><a href="#">categorie</a></li>
-						<li><a href="#">categorie</a></li>
-					</ul>
-					<div class="mobile"><a href="#" class="btn border">JETZT ANFRAGEN</a></div>
-				</div>
-				<div class="text">
-					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit dolor sit amet, consecteturl orem ipsum dolor sit amet, consectetur adipiscing elit dolor sit amet, consectetur lorem ipsum dolor sit amet, consectetur adipiscing elit dolor sit amet, consecteturl orem ipsum dolor sit amet, consectetur adipiscing  Lorem ipsum dolor sit amet, consect</p>
-					<div class="desktop"><a href="#" class="btn">JETZT ANFRAGEN</a></div>
-					<div class="mobile"><img src="<?php echo get_template_directory_uri(); ?>/src/img/otp.png" alt=""></div>
-				</div>
-			</div>
-
-
-		</div>
-	</section> -->
-
-
-
-
 <?php if ( have_rows( 'artmunich_content' ) ) : ?>
 	<div id="artmunich">
 		<div class="container">
@@ -480,22 +398,6 @@ get_header();
 	</div>	
 <?php endif; ?>
 
-
-<!-- 	
-	<div id="artmunich">
-		<div class="container">
-			<div class="content">
-				<div class="text">
-					<h3 class="line">Art munich collection</h3>
-					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
-				</div>
-				<div class="image">
-					<img src="<?php echo get_template_directory_uri(); ?>/src/img/ArtMunich.png" alt="">
-				</div>
-			</div>
-		</div>
-	</div>	 -->
-
 	<section id="products">
 		<div class="container">
 			<div class="slider_pagination">
@@ -509,30 +411,28 @@ get_header();
 		<div class="productSliderCat" data-ix="fade-from-top">
 			<div class="swiper-wrapper">
 
-
-
-<?php if ( have_rows( 'items_products' ) ) : ?>
-	<?php while ( have_rows( 'items_products' ) ) : the_row(); ?>
-		<?php if ( have_rows( 'item' ) ) : ?>
-			<?php while ( have_rows( 'item' ) ) : the_row(); ?>
-			<div class="item swiper-slide">
-				<?php if ( get_sub_field( 'image' ) ) : ?>
-					<div class="img"><img src="<?php the_sub_field( 'image' ); ?>" /></div>
-				<?php endif ?>
-				<h3><?php the_sub_field( 'title' ); ?></h3>
-				<p><?php the_sub_field( 'description' ); ?></p>
-				<?php if ( have_rows( 'button' ) ) : ?>
-					<?php while ( have_rows( 'button' ) ) : the_row(); ?>
-						<a href="<?php the_sub_field( 'link' ); ?>" class="btn"><?php the_sub_field( 'title' ); ?></a>
+				<?php if ( have_rows( 'items_products' ) ) : ?>
+					<?php while ( have_rows( 'items_products' ) ) : the_row(); ?>
+						<?php if ( have_rows( 'item' ) ) : ?>
+							<?php while ( have_rows( 'item' ) ) : the_row(); ?>
+							<div class="item swiper-slide">
+								<?php if ( get_sub_field( 'image' ) ) : ?>
+									<div class="img"><img src="<?php the_sub_field( 'image' ); ?>" /></div>
+								<?php endif ?>
+								<h3><?php the_sub_field( 'title' ); ?></h3>
+								<p><?php the_sub_field( 'description' ); ?></p>
+								<?php if ( have_rows( 'button' ) ) : ?>
+									<?php while ( have_rows( 'button' ) ) : the_row(); ?>
+										<a href="<?php the_sub_field( 'link' ); ?>" class="btn"><?php the_sub_field( 'title' ); ?></a>
+									<?php endwhile; ?>
+								<?php endif; ?>
+								</div>
+							<?php endwhile; ?>
+						<?php endif; ?>
 					<?php endwhile; ?>
+				<?php else : ?>
+					<?php // no rows found ?>
 				<?php endif; ?>
-				</div>
-			<?php endwhile; ?>
-		<?php endif; ?>
-	<?php endwhile; ?>
-<?php else : ?>
-	<?php // no rows found ?>
-<?php endif; ?>
 
 			</div>
 		</div>

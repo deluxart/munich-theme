@@ -1126,6 +1126,7 @@ input, textarea {
             .accSlider {
               overflow: hidden;
               margin-right: -65px;
+              z-index: 1;
 
               .item {
                 border: 1px solid #F4F4F4;
