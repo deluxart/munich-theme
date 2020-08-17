@@ -18,9 +18,16 @@
 	<link rel="profile" href="https://gmpg.org/xfn/11">
 	<!-- <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/src/css/swiper.min.css"> -->
 	<?php wp_head(); ?>
+
 </head>
 
 <body <?php body_class(); ?>>
+<div class="preloader">
+	<div class="preloader_container">
+		<div class="preloader_inner">100%</div>
+		<div class="preloader_line" style="width: 100%;"></div>
+	</div>
+</div>
 <?php wp_body_open(); ?>
 
 

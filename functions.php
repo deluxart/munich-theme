@@ -209,6 +209,7 @@ function munich_scripts() {
 
 
 	wp_enqueue_script( 'my-site-plugins', get_template_directory_uri() . '/js/plugins.min.js', array(), _S_VERSION, true );
+	// wp_enqueue_script( 'my-site-cookie', get_template_directory_uri() . '/js/jquery.cookie.js', array(), _S_VERSION, true );
 	wp_enqueue_script( 'my-site-main', get_template_directory_uri() . '/js/main.min.js', array(), _S_VERSION, true );
 
 

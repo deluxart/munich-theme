@@ -23,6 +23,50 @@ $(document).ready(function () {
 
 
 
+$(document).ready(function ($) {
+    
+    if ($.cookie('noPreloader')) {
+        $('.preloader').hide();
+        $('#page').addClass('show');
+    }
+    else {
+            loader();
+            function loader(_success) {
+                var obj = document.querySelector('.preloader'),
+                    body = document.querySelector('body'),
+                    inner = document.querySelector('.preloader_inner'),
+                    page = document.querySelector('#page');
+                obj.classList.add('show');
+                body.classList.remove('loaded');
+                page.classList.remove('show');
+                var w = 0,
+                    t = setInterval(function () {
+                        w = w + 1;
+                        inner.textContent = w + '%';
+                        jQuery('.preloader_line').css({ width: w + "%" }); 
+
+                        if (w === 100) {
+                            obj.classList.remove('show');
+                            page.classList.add('show');
+                            clearInterval(t);
+                            w = 0;
+                            if (_success) {
+                                return _success();
+                            }
+                        }
+                    }, 20);
+            }
+        // and now we create 1 year cookie
+        $.cookie('noPreloader', true, { path: '/', expire: 365 });
+    }
+});
+
+
+
+
+
+
+
 
 
 jQuery('.spoiler > .head').on('click', function(e){
