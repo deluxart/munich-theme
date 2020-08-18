@@ -111,7 +111,7 @@ get_header();
 
 	<section id="about">
 		<div class="content">
-			<h3 class="mobile line"><?php the_field( 'section_title_about' ); ?></h3>
+			<div class="mobile"><h3 class="line"><?php the_field( 'section_title_about' ); ?></h3></div>
 			<div class="images">
 				<!-- <img src="<?php echo get_template_directory_uri(); ?>/src/img/about_1.png" alt="">
 				<img src="<?php echo get_template_directory_uri(); ?>/src/img/about_2.png" alt="">
@@ -145,11 +145,11 @@ get_header();
 
 	<section id="textile">
 		<div class="content">
-			<h3 class="mobile line"><?php the_field( 'section_title_textile' ); ?></h3>
+			<div class="mobile"><h3 class="line"><?php the_field( 'section_title_textile' ); ?></h3></div>
 			<div class="text">
 				<div>
 				<h3 class="desktop line"><?php the_field( 'section_title_textile' ); ?></h3>
-				<p><?php the_field( 'content_textile' ); ?></p>
+					<p><?php the_field( 'content_textile' ); ?></p>
 				</div>
 			</div>
 			<div class="image">

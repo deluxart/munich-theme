@@ -766,13 +766,26 @@ input, textarea {
             margin-left: calc(50% - 1170px/2);
             padding-left: 15px;
 
+            div {
+                h3 {
+                    &.line {
+                        @media (max-width: 992px) {
+                            display: inline-block;
+                        }
+                    }
+                }
+            }
+
             .text {
                 h3 {
                     max-width: 367px;
 
                     &.desktop {
-                        display: inline-block;
-                        margin: 0;
+                        display: none;
+                        @media (min-width: 992px) {
+                            display: inline-block;
+                            margin: 0;
+                        }
                     }
                 }
                 p {
@@ -1264,9 +1277,22 @@ input, textarea {
             display: grid;
             grid-template-columns: auto 1fr;
             grid-gap: 80px;
-            // align-items: center;
             margin-right: calc(50% - 1170px/2);
             padding-right: 15px;
+
+            h3 {
+                &.line {
+                    &:before {
+                        @media (max-width: 768px) {
+                            max-width: 100%;
+                        }
+                    }
+                }
+
+                 @media (max-width: 768px) {
+                     display: block;
+                 }
+            }
             
             .text {
                 padding-top: 10px;
@@ -1975,6 +2001,8 @@ input, textarea {
 
                         img {
                             display: inline-block;
+                            padding-left: 9px;
+                            position: relative;
                         }
                     }
                 }
