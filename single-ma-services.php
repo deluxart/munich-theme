@@ -19,7 +19,13 @@ get_header();
 			<div class="content category">
 				<div class="text">
 					<h1><?php the_sub_field( 'slide_title' ); ?></h1>
-					<p class="description"><?php the_sub_field( 'slide_descriptio' ); ?></p>
+					<p class="description desktop"><?php the_sub_field( 'slide_descriptio' ); ?></p>
+					<div class="image mobile">
+						<p class="description mobile"><?php the_sub_field( 'slide_descriptio' ); ?></p>
+					<?php if ( get_sub_field( 'slide_image' ) ) : ?>
+						<img src="<?php the_sub_field( 'slide_image' ); ?>" />
+					<?php endif ?>
+					</div>
 					<?php if ( have_rows( 'slide_list' ) ) : ?>
 						<ul class="square">
 						<?php while ( have_rows( 'slide_list' ) ) : the_row(); ?>
@@ -36,7 +42,7 @@ get_header();
 					<?php endif; ?>
 					
 				</div>
-				<div class="image">
+				<div class="image desktop">
 					<?php if ( get_sub_field( 'slide_image' ) ) : ?>
 						<img src="<?php the_sub_field( 'slide_image' ); ?>" />
 					<?php endif ?>
