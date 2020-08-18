@@ -1017,6 +1017,10 @@ input, textarea {
                 display: grid;
                 height: 100%;
 
+                p {
+                    line-height: 120%;
+                }
+
                 .img {
                     margin: 0 auto 20px auto;
                     width: 100%;
@@ -1133,6 +1137,10 @@ input, textarea {
                 background: #fff;
                 display: grid;
                 height: 100%;
+
+                p {
+                    line-height: 120%;
+                }
 
                 .img {
                     margin: 0 auto 20px auto;
@@ -1663,9 +1671,15 @@ input, textarea {
 
        h3 {
            text-align: center;
+           display: block;
+
+           @media (max-width: 768px) {
+               text-align: left;
+           }
        }
+
        .content {
-           padding-top: 65px;
+           padding-top: 60px;
            display: grid;
            grid-template-columns: 1fr 1fr;
            grid-column-gap: 20px;

@@ -427,7 +427,7 @@ get_header();
 
 	<section id="faq">
 		<div class="container">
-			<h3 class="line"><?php the_field( 'section_title_faq' ); ?></h3>
+			<h3><?php the_field( 'section_title_faq' ); ?></h3>
 			<div class="content">
 
 			<?php if ( have_rows( 'questions_answers' ) ) : ?>
