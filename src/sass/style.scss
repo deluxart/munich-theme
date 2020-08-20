@@ -494,7 +494,6 @@ input, textarea {
                         opacity: 1;
 
                         &-active {
-                            // border-color: $black;
                             position: relative;
 
                             &:before {
@@ -660,8 +659,6 @@ input, textarea {
      }
    }
 
-
-
    #unser {
      padding: 80px 0 130px 0;
      overflow: hidden;
@@ -722,7 +719,6 @@ input, textarea {
             display: grid;
             grid-template-columns: auto 1fr;
             grid-gap: 80px;
-            // align-items: center;
             margin-right: calc(50% - 1170px/2);
             padding-right: 15px;
 
@@ -737,7 +733,6 @@ input, textarea {
             }
 
             .text {
-                // max-width: 386px;
                 p {
                     margin: 56px 0 47px 0;
                     line-height: 150%;
