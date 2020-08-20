@@ -725,6 +725,9 @@ function classAnimate() {
 }
 var swiper1 = new Swiper('.home_slider', {
     spaceBetween: 30,
+    fadeEffect: {
+        crossFade: true
+    },
     lazy: {
         loadPrevNext: true,
     },
