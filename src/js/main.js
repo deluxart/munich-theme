@@ -339,6 +339,7 @@ var reviewsSlider = new Swiper('.reviewsSlider', {
     slidesPerView: 1.3,
     spaceBetween: 30,
     // slidesPerGroup: 3,
+    loop: true,
     scrollbar: {
         el: '#reviews .js-swiper-scrollbar',
         draggable: true,
