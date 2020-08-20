@@ -310,10 +310,10 @@ return $mimes;
 add_filter( 'upload_mimes', 'my_custom_mime_types' );
 
 // Remove all empty html tags for cf7 form's
-add_filter('wpcf7_form_elements', function($content) {
-	$content = preg_replace('/<(span).*?class="\s*(?:.*\s)?wpcf7-form-control-wrap(?:\s[^"]+)?\s*"[^\>]*>(.*)<\/\1>/i', '\2', $content);
-	return $content;
-});
+// add_filter('wpcf7_form_elements', function($content) {
+// 	$content = preg_replace('/<(span).*?class="\s*(?:.*\s)?wpcf7-form-control-wrap(?:\s[^"]+)?\s*"[^\>]*>(.*)<\/\1>/i', '\2', $content);
+// 	return $content;
+// });
 
 add_filter('wpcf7_autop_or_not', '__return_false');
 

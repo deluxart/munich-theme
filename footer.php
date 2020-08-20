@@ -87,9 +87,6 @@
 		</div>
 	</footer>
 </div><!-- #page -->
-
-<?php wp_footer(); ?>
-
 <div id="orderModal" class="daModal da-modal-popup">
     <div class="content-modal universal">
 		<div class="form">
@@ -104,8 +101,7 @@
     </div>
 </div>
 <div class="da-modal-open-bg"></div>
-
-
+<?php wp_footer(); ?>
 
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
 

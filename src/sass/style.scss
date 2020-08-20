@@ -142,6 +142,51 @@ img {
 
 .wpcf7 form.invalid .wpcf7-response-output, .wpcf7 form.unaccepted .wpcf7-response-output, .wpcf7 form .wpcf7-response-output {
     margin: 0;
+    font-size: 14px;
+}
+
+input.wpcf7-not-valid {
+    border-color: #ff7a7a;
+}
+
+.form-prod, .form {
+    .field {
+        position: relative;
+
+        span {
+            &.label {
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                padding: 0 10px;
+                font-weight: 300;
+                transition: 0.3s all;
+                pointer-events: none;
+            }
+        }
+
+        &.active {
+            span {
+                &.label {
+                    top: 0%;
+                    transform: translateY(-60%);
+                    font-size: 12px;
+                }
+            }
+        }
+    }
+}
+
+.wpcf7-form-control-wrap {
+    position: initial;
+
+    .wpcf7-not-valid-tip {
+        position: absolute;
+        bottom: 0;
+        padding: 5px 0 0 10px;
+        font-size: 12px;
+        transform: translateY(100%);
+    }
 }
 
 h1 {
@@ -1483,11 +1528,13 @@ input, textarea {
              margin: 50px 0 70px 0;
 
              & > span {
-                display: flex;
-                justify-content: space-between;
-
                 & > span {
-                    flex-basis: auto;
+                    display: flex;
+                    justify-content: space-between;
+
+                    & > span {
+                        flex-basis: auto;
+                    }
                 }
              }
 

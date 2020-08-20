@@ -21,6 +21,15 @@ $(document).ready(function () {
 }); 
 
 
+$("input, textarea").focus(function () {
+    $(this).closest('.field').addClass('active');
+}).blur(function () {
+    if (!$(this).val().trim().length) {
+        $(this).closest('.field').removeClass('active');
+    }
+});
+
+
 
 
 $(document).ready(function ($) {
