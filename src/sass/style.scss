@@ -2343,14 +2343,34 @@ input, textarea {
                 position: sticky;
                 top: 79px;
 
+                @media (max-width: 768px) {
+                    top: 64px;
+                }
+
                 ul {
                     display: flex;
                     justify-content: space-between;
+
+                    @media (max-width: 768px) {
+                        white-space: nowrap;
+                        overflow-x: scroll;
+                        -ms-overflow-style: none;
+                        scrollbar-width: none;
+
+                        &::-webkit-scrollbar {
+                            width: 0;
+                            height: 0;
+                            background: transparent;
+                        }
+                    }
 
                     li {
                         flex-basis: auto;
                         padding: 20px 0;
                         // flex-grow: 1;
+                        @media (max-width: 768px) {
+                            padding: 20px 10px;
+                        }
                         a {
                             font-weight: bold;
                             font-size: 15px;
