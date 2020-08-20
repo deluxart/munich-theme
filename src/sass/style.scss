@@ -153,6 +153,11 @@ input.wpcf7-not-valid {
     .field {
         position: relative;
 
+        input, textarea {
+            width: 100%;
+            text-align: left;
+        }
+
         span {
             &.label {
                 position: absolute;
@@ -162,6 +167,7 @@ input.wpcf7-not-valid {
                 font-weight: 300;
                 transition: 0.3s all;
                 pointer-events: none;
+                left: 0;
             }
         }
 
