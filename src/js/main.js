@@ -188,7 +188,7 @@ $(window).scroll(function () {
 
 
 
-const sliderProductss = jQuery('.productSliderCat').length
+const sliderProductss = jQuery('.productSliderCat').length;
 if (sliderProductss >= 1) {
     var swiperProducts = new Swiper('.productSliderCat', {
         slidesPerView: 1.3,
@@ -231,7 +231,7 @@ if (sliderProductss >= 1) {
 }
 
 
-const sliderDrinks = jQuery('.drinksSlider').length
+const sliderDrinks = jQuery('.drinksSlider').length;
 if (sliderDrinks >= 1) {
     var swiperDrinks = new Swiper('.drinksSlider', {
         slidesPerView: 1.3,
@@ -271,7 +271,7 @@ if (sliderDrinks >= 1) {
 }
 
 
-const sliderAcc = jQuery('.accSlider').length
+const sliderAcc = jQuery('.accSlider').length;
 if (sliderAcc >= 1) {
     var swiperaccSlider = new Swiper('.accSlider', {
         slidesPerView: 1.3,
@@ -312,7 +312,7 @@ if (sliderAcc >= 1) {
 
 
 
-const sliderproductAfter = jQuery('.prodAfterSlider').length
+const sliderproductAfter = jQuery('.prodAfterSlider').length;
 if (sliderproductAfter >= 1) {
     var productAfter = new Swiper('.prodAfterSlider', {
         slidesPerView: 1.2,
@@ -338,7 +338,7 @@ if (sliderproductAfter >= 1) {
     });
 }
 
-const sliderReviews = jQuery('.reviewsSlider').length
+const sliderReviews = jQuery('.reviewsSlider').length;
 if (sliderReviews >= 1) {
     var reviewsSlider = new Swiper('.reviewsSlider', {
         slidesPerView: 1.3,
@@ -352,26 +352,26 @@ if (sliderReviews >= 1) {
         breakpoints: {
             640: {
                 slidesPerView: 1.3,
-                spaceBetween: 30,
+                spaceBetween: 30
             },
             768: {
                 slidesPerView: 3,
                 spaceBetween: 30,
-                loop: true,
+                loop: true
             },
             1024: {
                 slidesPerView: 4,
-                spaceBetween: 60,
+                spaceBetween: 60
             },
         },
         pagination: {
             el: '#reviews .pagination',
             clickable: true,
-            type: 'fraction',
+            type: 'fraction'
         },
         navigation: {
             nextEl: '#reviews .button-next',
-            prevEl: '#reviews .button-prev',
+            prevEl: '#reviews .button-prev'
         },
     });
 }
@@ -406,7 +406,7 @@ if (sliderReviews >= 1) {
 
 
 
-const sliderClients = jQuery('.clients_slider').length
+const sliderClients = jQuery('.clients_slider').length;
 if (sliderClients >= 1) {
     var clientsSlider = new Swiper('.clients_slider', {
         slidesPerView: 1.5,
@@ -442,7 +442,7 @@ if (sliderClients >= 1) {
 }
 
 
-const sliderBlog = jQuery('.blogSlider').length
+const sliderBlog = jQuery('.blogSlider').length;
 if (sliderBlog >= 1) {
     var blogSlider = new Swiper('.blogSlider', {
         slidesPerView: 1.3,
@@ -482,7 +482,7 @@ if (sliderBlog >= 1) {
 }
 
 
-const sliderPosts = jQuery('.postsSlider').length
+const sliderPosts = jQuery('.postsSlider').length;
 if (sliderPosts >= 1) {
     var postsSlider = new Swiper('.postsSlider', {
         slidesPerView: 1.3,

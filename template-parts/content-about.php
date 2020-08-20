@@ -174,6 +174,7 @@
 					<?php echo do_shortcode('[reviews-list]'); ?>
 				</div>
 			</div>
+			<div class="swiper-scrollbar js-swiper-scrollbar"></div>
 	</section>
 
 
