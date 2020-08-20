@@ -3964,6 +3964,14 @@ input, textarea {
                 align-items: center;
                 padding: 110px 0 110px 160px;
 
+                @media (min-width: 1200px) {
+                    .image {
+                        img {
+                            width: 510px;
+                        }
+                    }
+                }
+
                 h4 {
                     font-weight: bold;
                     font-size: 25px;
