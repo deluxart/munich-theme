@@ -159,7 +159,8 @@ get_header();
 			</div>
 		</div>
 	</section>
-
+	
+<?php if ( have_rows( 'items_products' ) ) : ?>
 
 	<section id="products">
 		<div class="container">
@@ -174,7 +175,7 @@ get_header();
 		<div class="productSliderCat">
 			<div class="swiper-wrapper">
 
-<?php if ( have_rows( 'items_products' ) ) : ?>
+
 	<?php while ( have_rows( 'items_products' ) ) : the_row(); ?>
 		<?php if ( have_rows( 'item' ) ) : ?>
 			<?php while ( have_rows( 'item' ) ) : the_row(); ?>
@@ -193,9 +194,7 @@ get_header();
 			<?php endwhile; ?>
 		<?php endif; ?>
 	<?php endwhile; ?>
-<?php else : ?>
-	<?php // no rows found ?>
-<?php endif; ?>
+
 
 			</div>
 		</div>
@@ -203,7 +202,9 @@ get_header();
 			<div class="swiper-scrollbar js-swiper-scrollbar"></div>
 		</div>
 	</section>
-
+<?php else : ?>
+	<?php // no rows found ?>
+<?php endif; ?>
 
 	<section id="drinks">
 		<div class="content">
