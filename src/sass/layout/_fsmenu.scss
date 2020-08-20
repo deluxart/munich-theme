@@ -106,9 +106,9 @@ $color-dark: #161616;
 
 			.fs-contacts {
 				opacity: 0;
-				transition: opacity .2s ease, transform .3s ease;
+				transition: opacity .2s ease,transform .0s ease;
 				transform: translate(0%, -100%);
-				transition-delay: .3s;
+				transition-delay: .0s;
 				padding-left: 150px;
 
 				@media (max-width: 992px) {

@@ -150,6 +150,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
         display: inline-block;
         border: 0;
         position: relative;
+        -webkit-appearance: none;
         cursor: pointer;
         
           &:after {
