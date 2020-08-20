@@ -61,8 +61,8 @@
 		<div class="foot_single">
 			<div class="author"><?php echo get_the_author(); ?></div>
 			<ul class="share">
-				<li><a href="#"><img src="<?php echo get_template_directory_uri(); ?>/src/img/facebook.svg" alt=""></a></li>
 				<li><a href="#"><img src="<?php echo get_template_directory_uri(); ?>/src/img/instagram.svg" alt=""></a></li>
+				<li><a href="#"><img src="<?php echo get_template_directory_uri(); ?>/src/img/facebook.svg" alt=""></a></li>
 			</ul>
 		</div>
 	</div><!-- .entry-content -->
