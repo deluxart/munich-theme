@@ -1009,17 +1009,18 @@ input, textarea {
                     }
                 }
 
-                &.main {
-                    .paginationSlider {
-                        top: 44px;
-                    }
-                }
+                // &.main {
+                //     .paginationSlider {
+                //         top: 44px;
+                //     }
+                // }
 
                 .paginationSlider {
                   position: absolute;
-                  top: 6px;
+                //   top: 6px;
                   right: 0;
                   display: inline-block;
+                  bottom: 34px;
 
                   .swiper-pagination-fraction {
                     color: #bebebe;
@@ -1137,9 +1138,10 @@ input, textarea {
 
                 .paginationSlider {
                   position: absolute;
-                  top: 8px;
+                //   top: 8px;
                   right: 0;
                   display: inline-block;
+                  bottom: 34px;
 
                   .swiper-pagination-fraction {
                     color: #bebebe;
@@ -3995,6 +3997,20 @@ input, textarea {
                 align-items: center;
                 padding: 110px 0 110px 160px;
 
+                @media (max-width: 992px) {
+                    grid-template-columns: 1fr;
+                    padding: 35px 16px;
+
+                    h4 {
+                        text-align: left;
+                        max-width: 220px;
+                    }
+
+                    .image {
+                        display: none;
+                    }
+                }
+
                 @media (min-width: 1200px) {
                     .image {
                         img {
@@ -4042,8 +4058,8 @@ input, textarea {
         button {
             &.closeModal {
                 position: absolute;
-                width: 14px;
-                height: 14px;
+                width: 24px;
+                height: 24px;
                 background: 0 0;
                 border: 0;
                 top: 14px;
@@ -4059,8 +4075,8 @@ input, textarea {
 
                 svg {
                     display: block;
-                    width: 14px; 
-                    height: 14px;
+                    width: 24px; 
+                    height: 24px;
 
                     path {
                         fill: #000;
@@ -4835,4 +4851,10 @@ blockquote {
   visibility:visible !important;
   opacity:1 !important;
   transition:all 0.5s ease;
+}
+
+@media screen and (max-width: 600px) {
+    #wpadminbar {
+        position: fixed;
+    }
 }
