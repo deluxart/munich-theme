@@ -1249,9 +1249,17 @@ input, textarea {
 
                    ul {
                        margin-top: 56px;
+                       @media (max-width: 992px) {
+                           justify-content: space-between;
+                            flex-basis: auto;
+                       }
                        & > li {
                            display: inline;
                            padding-right: 27px;
+
+                            @media (max-width: 992px) {
+                                flex-basis: auto;
+                            }
 
                            a {
                                color: $black;
