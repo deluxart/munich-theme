@@ -27,7 +27,7 @@ get_header();
 
 					<div class="image">
 						<?php if ( get_sub_field( 'slide_image' ) ) : ?>
-							<img src="<?php the_sub_field( 'slide_image' ); ?>" />
+							<img src="<?php the_sub_field( 'slide_image' ); ?>" class="home" />
 						<?php endif ?>
 					</div>
 
@@ -74,8 +74,8 @@ get_header();
 			<div class="content">
 				<?php if ( have_rows( 'items_services' ) ) : ?>
 					<?php while ( have_rows( 'items_services' ) ) : the_row(); ?>
-								<a href="<?php the_sub_field( 'link' ); ?>">
-									<div class="item" data-ix="fade-from-top">
+								<a href="<?php the_sub_field( 'link' ); ?>" data-ix="fade-from-top">
+									<div class="item">
 										<h3><?php the_sub_field( 'title' ); ?></h3>
 										<div class="icon">
 											<?php if ( get_sub_field( 'icon' ) ) : ?>

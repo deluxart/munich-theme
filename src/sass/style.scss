@@ -3111,7 +3111,9 @@ input, textarea {
 
                    img {
                        max-width: 100%;
-                       opacity: 0.4;
+                       &:not(.home) {
+                           opacity: 0.4;
+                       }
                    }
                }
            }
