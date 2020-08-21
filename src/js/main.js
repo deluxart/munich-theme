@@ -288,7 +288,7 @@ if (sliderDrinks >= 1) {
         },
         breakpoints: {
             640: {
-                slidesPerView: 1.3,
+                slidesPerView: 1.4,
                 spaceBetween: 30,
             },
             768: {
@@ -328,7 +328,7 @@ if (sliderAcc >= 1) {
         },
         breakpoints: {
             640: {
-                slidesPerView: 1.3,
+                slidesPerView: 1.4,
                 spaceBetween: 30,
             },
             768: {
