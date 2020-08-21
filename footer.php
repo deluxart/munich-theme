@@ -66,7 +66,9 @@
 			</div>
 		</div>
 		<div class="foot">
-			<div class="mobile copyright">© MUNICH ACCESSORIES</div>
+			<div class="mobile copyright">
+				<div class="container">© MUNICH ACCESSORIES</div>
+			</div>
 			<div class="container">
  				<?php
                     $menuParameters = array(
