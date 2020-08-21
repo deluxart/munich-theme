@@ -497,9 +497,9 @@ get_header();
 						<h4 class="one" data-ix="fade-in-heading"><?php the_field( 'offer_text_1' ); ?></h4>
 						<h4 class="two" data-ix="fade-in-heading-2"><?php the_field( 'offer_text_2' ); ?></h4>
 						<?php if ( have_rows( 'button' ) ) : ?>
-						<div class="button" data-ix="fade-in-heading-3">
+						<div class="button">
 							<?php while ( have_rows( 'button' ) ) : the_row(); ?>
-								<button data-name="orderModal" class="btn border da-modal"><?php the_sub_field( 'title' ); ?></button>
+								<button data-name="orderModal" data-ix="fade-in-heading-3" class="btn border da-modal"><?php the_sub_field( 'title' ); ?></button>
 							<?php endwhile; ?>
 						</div>
 						<?php endif; ?>

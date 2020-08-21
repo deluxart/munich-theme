@@ -3879,10 +3879,32 @@ input, textarea {
                 }
 
                 .foot {
+                    padding: 0;
+                    border: 0;
+                    .copyright {
+                        &.mobile {
+                            border-bottom: 1px solid #e1e1e1;
+                            padding-right: 15px;
+                            padding-left: 15px;
+                            padding-bottom: 13px;
+                            font-size: 10px;
+                            color: #a7a7a7;
+                            font-weight: 300;
+                            text-transform: uppercase;
+                        }
+                    }
                     ul {
+                        padding-top: 12px;
+                        display: flex;
+                        justify-content: space-between;
+                        flex-basis: auto;
                         & > li {
                             padding: 0;
                             display: block;
+
+                            &.desktop {
+                                display: none;
+                            }
                         }
                     }
                 }
