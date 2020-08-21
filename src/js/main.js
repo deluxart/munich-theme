@@ -21,6 +21,40 @@ $(document).ready(function () {
 }); 
 
 
+var $video = $("#video_click"), 
+    mousedown = false;
+
+$video.click(function () {
+    if (this.paused) {
+        this.play();
+        return false;
+    }
+    jQuery('.video_play').fadeOut();
+    return true;
+});
+
+$video.on('mousedown', function () {
+    mousedown = true;
+});
+
+$(window).on('mouseup', function () {
+    mousedown = false;
+});
+
+$video.on('play', function () {
+    $video.attr('controls', '');
+    jQuery('.video_play').fadeOut();
+});
+
+$video.on('pause', function () {
+    if (!mousedown) {
+        $video.removeAttr('controls');
+        jQuery('.video_play').fadeIn();
+    }
+});
+
+
+
 $("input, textarea").focus(function () {
     $(this).closest('.field').addClass('active');
 }).blur(function () {

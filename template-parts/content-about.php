@@ -49,12 +49,19 @@
 	<section id="about_video">
 		<div class="container">
 		<!-- <img src="http://dev.seiten.co/wp-munich-accessories-de/wp-content/uploads/2020/08/video_img.jpg" alt=""> -->
-		<div class="video_block">
+		<div class="video_block desktop">
 			<!-- <video autoplay muted loop id="myVideo"> -->
 			<video loop id="myVideo">
 				<source src="http://dev.seiten.co/wp-munich-accessories-de/wp-content/uploads/2020/08/about_ma.mp4" type="video/mp4">
 			</video>
 			<button id="maVideoBtn" onclick="myFunction()"></button>
+		</div>
+		<div class="video_section mobile">
+			<!-- <video autoplay muted loop id="myVideo"> -->
+			<video loop id="video_click">
+				<source src="http://dev.seiten.co/wp-munich-accessories-de/wp-content/uploads/2020/08/about_ma.mp4" type="video/mp4">
+			</video>
+			<button class="video_play"></button>
 		</div>
 		</div>
 	</section>
@@ -180,26 +187,4 @@
 
 	</div><!-- .entry-content -->
 
-	<?php if ( get_edit_post_link() ) : ?>
-		<footer class="entry-footer">
-			<?php
-			edit_post_link(
-				sprintf(
-					wp_kses(
-						/* translators: %s: Name of current post. Only visible to screen readers */
-						__( 'Edit <span class="screen-reader-text">%s</span>', 'my-site' ),
-						array(
-							'span' => array(
-								'class' => array(),
-							),
-						)
-					),
-					wp_kses_post( get_the_title() )
-				),
-				'<span class="edit-link">',
-				'</span>'
-			);
-			?>
-		</footer><!-- .entry-footer -->
-	<?php endif; ?>
 </article><!-- #post-<?php the_ID(); ?> -->

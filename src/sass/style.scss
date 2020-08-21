@@ -4200,12 +4200,16 @@ blockquote {
 
 
 .about-page {
+    overflow: hidden;
         h2 {
             text-transform: none;
             margin-bottom: 25px;
         }
     #aboutus {
         padding-bottom: 250px;
+        @media (max-width: 992px) {
+            padding-bottom: 150px;
+        }
         .content {
             display: grid;
             grid-template-columns: auto 1fr;
@@ -4238,8 +4242,34 @@ blockquote {
     #about_video {
         padding: 190px 0 250px 0;
 
+        @media (max-width: 992px) {
+            padding: 150px 0 100px 0;
+        }
+
         img {
             margin: 0 auto;
+        }
+
+        .video_section {
+            position: relative;
+            video {
+                display: block;
+                max-width: 100%;
+            }
+
+            .video_play {
+                position: absolute;
+                width: 63px;
+                height: 63px;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                background: url(./src/img/play_mobile.svg) center no-repeat;
+                background-size: contain;
+                border: 0;
+                cursor: pointer;
+                pointer-events: none;
+            }
         }
     }
 
@@ -4276,6 +4306,9 @@ blockquote {
                margin-right: 70px;
                 display: block;
                 margin: 0;
+                @media (max-width: 992px) {
+                    display: inline-block;
+                }
 
                &.line {
                    &:before {
@@ -4289,6 +4322,11 @@ blockquote {
                 position: relative;
                 right: 0;
                 top: 9px;
+
+                @media (max-width: 992px) {
+                    display: none;
+                }
+
                 & > div {
                     display: grid;
                     grid-template-columns: 1fr auto auto;
@@ -4360,6 +4398,10 @@ blockquote {
     #team {
         padding: 120px 0 250px;
         overflow: hidden;
+
+        @media (max-width: 992px) {
+            padding-bottom: 150px;
+        }
         .team-content {
             .swiper-wrapper {
                 display: grid;
