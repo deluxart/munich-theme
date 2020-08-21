@@ -730,6 +730,7 @@ function classAnimate() {
 }
 var swiper1 = new Swiper('.home_slider', {
     spaceBetween: 30,
+    speed: 800,
     lazy: {
         loadPrevNext: true,
     },
@@ -737,25 +738,6 @@ var swiper1 = new Swiper('.home_slider', {
         delay: 3500,
         disableOnInteraction: false,
     },
-    // pagination: {
-    //     el: '.pag-shoes',
-    //     type: 'custom',
-    //     paginationClickable: true,
-    //     renderCustom: function (swiper, current, total) {
-    //         var text = "<span class='pContainer'>";
-    //         for (let i = 1; i <= total; i++) {
-    //             //alert(total);
-    //             if (current == i) {
-    //                 text += "<span class='active'>" + names[i - 1] + "</span>";
-    //             }
-    //             else {
-    //                 text += "<span>" + names[i - 1] + "</span>";
-    //             }
-    //         }
-    //         text += "</span>";
-    //         return text;
-    //     }
-    // },
     paginationClickable: true,
     pagination: {
         el: '.pag-shoes',
