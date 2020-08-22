@@ -4062,12 +4062,17 @@ input, textarea {
                 height: 24px;
                 background: 0 0;
                 border: 0;
-                top: 14px;
+                top: 50px;
                 padding: 0; 
-                right: 15px;
+                right: 50px;
                 opacity: .4;
                 transition: .3s all;
                 cursor: pointer;
+
+                @media (max-width: 992px) {
+                    top: 43px;
+                    right: 16px;
+                }
 
                 &:hover {
                     opacity: .7;
