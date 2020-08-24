@@ -109,8 +109,9 @@ get_header();
 				<div class="swiper-wrapper">
 
 				<?php if ( have_rows( 'items_posts' ) ) : ?>
-				<div class="item swiper-slide" data-ix="fade-from-top">
+				
 					<?php while ( have_rows( 'items_posts' ) ) : the_row(); ?>
+					<div class="item swiper-slide" data-ix="fade-from-top">
 						<?php if ( get_sub_field( 'image_posts' ) ) : ?>
 							<div class="image"><img src="<?php the_sub_field( 'image_posts' ); ?>" /></div>
 						<?php endif ?>
@@ -133,8 +134,9 @@ get_header();
 						<?php else : ?>
 							<?php // no rows found ?>
 						<?php endif; ?>
+						</div>
 					<?php endwhile; ?>
-				</div>
+				
 				<?php else : ?>
 					<?php // no rows found ?>
 				<?php endif; ?>
