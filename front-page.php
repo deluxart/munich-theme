@@ -107,72 +107,39 @@ get_header();
 			</div>
 			<div class="postsSlider">
 				<div class="swiper-wrapper">
-					<div class="item swiper-slide" data-ix="fade-from-top">
-						<div class="image"><img src="<?php echo get_template_directory_uri(); ?>/src/img/post_1.png" alt=""></div>
-						<a href="#"><h3 class="line">Hotels</h3></a>
+
+				<?php if ( have_rows( 'items_posts' ) ) : ?>
+				<div class="item swiper-slide" data-ix="fade-from-top">
+					<?php while ( have_rows( 'items_posts' ) ) : the_row(); ?>
+						<?php if ( get_sub_field( 'image_posts' ) ) : ?>
+							<div class="image"><img src="<?php the_sub_field( 'image_posts' ); ?>" /></div>
+						<?php endif ?>
+						<?php if ( have_rows( 'title_post' ) ) : ?>
+							<?php while ( have_rows( 'title_post' ) ) : the_row(); ?>
+								<a href="<?php the_sub_field( 'link_for_title' ); ?>"><h3 class="line"><?php the_sub_field( 'title' ); ?></h3></a>
+							<?php endwhile; ?>
+						<?php endif; ?>
 						<div class="text">
-							<p>And here is lorem ipsum forever, lorem ipsum forever, lorem ipsum forever, lorem ipsum forever, lorem ipsum forever.</p>
+							<p><?php the_sub_field( 'item_description_post' ); ?></p>
 						</div>
-						<div class="cats">
-							<ul>
-								<li><a href="#">PIKEE</a></li>
-								<li><a href="#">BADEVORLEGER</a></li>
-							</ul>
-						</div>
-					</div>
-					<div class="item swiper-slide" data-ix="fade-from-top">
-						<div class="image"><img src="<?php echo get_template_directory_uri(); ?>/src/img/post_2.png" alt=""></div>
-						<a href="#"><h3 class="line">Hotels</h3></a>
-						<div class="text">
-							<p>And here is lorem ipsum forever, lorem ipsum forever, lorem ipsum forever, lorem ipsum forever, lorem ipsum forever.</p>
-						</div>
-						<div class="cats">
-							<ul>
-								<li><a href="#">PIKEE</a></li>
-								<li><a href="#">BADEVORLEGER</a></li>
-							</ul>
-						</div>
-					</div>
-					<div class="item swiper-slide" data-ix="fade-from-top">
-						<div class="image"><img src="<?php echo get_template_directory_uri(); ?>/src/img/post_3.png" alt=""></div>
-						<a href="#"><h3 class="line">Hotels</h3></a>
-						<div class="text">
-							<p>And here is lorem ipsum forever, lorem ipsum forever, lorem ipsum forever, lorem ipsum forever, lorem ipsum forever.</p>
-						</div>
-						<div class="cats">
-							<ul>
-								<li><a href="#">PIKEE</a></li>
-								<li><a href="#">BADEVORLEGER</a></li>
-							</ul>
-						</div>
-					</div>
-					<div class="item swiper-slide" data-ix="fade-from-top">
-						<div class="image"><img src="<?php echo get_template_directory_uri(); ?>/src/img/post_1.png" alt=""></div>
-						<h3 class="line">Thermen </h3>
-						<div class="text">
-							<p>And here is lorem ipsum forever, lorem ipsum forever, lorem ipsum forever, lorem ipsum forever, lorem ipsum forever.</p>
-						</div>
-						<div class="cats">
-							<ul>
-								<li><a href="#">PIKEE</a></li>
-								<li><a href="#">BADEVORLEGER</a></li>
-							</ul>
-						</div>
-					</div>
-					<div class="item swiper-slide" data-ix="fade-from-top">
-						<div class="image"><img src="<?php echo get_template_directory_uri(); ?>/src/img/post_2.png" alt=""></div>
-						<h3 class="line">Hotels</h3>
-						<div class="text">
-							<p>And here is lorem ipsum forever, lorem ipsum forever, lorem ipsum forever, lorem ipsum forever, lorem ipsum forever.</p>
-						</div>
-						<div class="cats">
-							<ul>
-								<li><a href="#">PIKEE</a></li>
-								<li><a href="#">BADEVORLEGER</a></li>
-							</ul>
-						</div>
-					</div>
-					<div class="item swiper-slide" data-ix="fade-from-top">
+						<?php if ( have_rows( 'tags_posts' ) ) : ?>
+							<div class="cats">
+								<ul>
+									<?php while ( have_rows( 'tags_posts' ) ) : the_row(); ?>
+										<li><a href="<?php the_sub_field( 'link_for_tag' ); ?>"><?php the_sub_field( 'tag_title' ); ?></a></li>
+									<?php endwhile; ?>
+								</ul>
+							</div>
+						<?php else : ?>
+							<?php // no rows found ?>
+						<?php endif; ?>
+					<?php endwhile; ?>
+				</div>
+				<?php else : ?>
+					<?php // no rows found ?>
+				<?php endif; ?>
+
+					<!-- <div class="item swiper-slide" data-ix="fade-from-top">
 						<div class="image"><img src="<?php echo get_template_directory_uri(); ?>/src/img/post_3.png" alt=""></div>
 						<h3 class="line">Friseursalone</h3>
 						<div class="text">
@@ -184,7 +151,7 @@ get_header();
 								<li><a href="#">BADEVORLEGER</a></li>
 							</ul>
 						</div>
-					</div>
+					</div> -->
 				</div>
 			</div>
 			<div class="container scroll-bar">

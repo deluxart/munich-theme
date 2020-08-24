@@ -1641,9 +1641,19 @@ input, textarea {
                 display: block;
                 margin: 0;
 
+                @media (max-width: 992px) {
+                    display: inline-block;
+
+                    
+                }
+
                &.line {
                    &:before {
                        width: 100%;
+
+                        @media (max-width: 992px) {
+                            width: calc(100% - -50px);
+                        }
                    }
                }
            }
