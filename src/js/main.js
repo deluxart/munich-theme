@@ -277,7 +277,7 @@ if (sliderProductss >= 1) {
 const sliderDrinks = jQuery('.drinksSlider').length;
 if (sliderDrinks >= 1) {
     var swiperDrinks = new Swiper('.drinksSlider', {
-        slidesPerView: 1.3,
+        slidesPerView: 1.5,
         spaceBetween: 30,
         // slidesPerGroup: 3,
         scrollbar: {
@@ -288,7 +288,7 @@ if (sliderDrinks >= 1) {
         },
         breakpoints: {
             640: {
-                slidesPerView: 1.4,
+                slidesPerView: 1.7,
                 spaceBetween: 30,
             },
             768: {
@@ -317,7 +317,7 @@ if (sliderDrinks >= 1) {
 const sliderAcc = jQuery('.accSlider').length;
 if (sliderAcc >= 1) {
     var swiperaccSlider = new Swiper('.accSlider', {
-        slidesPerView: 1.3,
+        slidesPerView: 1.5,
         spaceBetween: 30,
         // slidesPerGroup: 3,
         scrollbar: {
@@ -328,7 +328,7 @@ if (sliderAcc >= 1) {
         },
         breakpoints: {
             640: {
-                slidesPerView: 1.4,
+                slidesPerView: 1.7,
                 spaceBetween: 30,
             },
             768: {
