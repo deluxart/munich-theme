@@ -362,6 +362,11 @@ get_header();
 					<?php endwhile; ?>
 					</ul>
 				<?php endif; ?>
+				<?php if ( have_rows( 'right_side_button' ) ) : ?>
+					<?php while ( have_rows( 'right_side_button' ) ) : the_row(); ?>
+						<div class="mobile"><button data-name="orderModal" class="btn border da-modal"><?php the_sub_field( 'title' ); ?></button></div>
+					<?php endwhile; ?>
+				<?php endif; ?>
 				</div>
 				<div class="text" data-ix="fade-from-right">
 				<p><?php the_sub_field( 'right_side_text' ); ?></p>
