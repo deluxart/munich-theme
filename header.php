@@ -74,14 +74,41 @@
 					'dropdown'=>1,
 					'display_names_as' => 'slug'
 					)); ?></div>
+
+
+<?php if ( have_rows( 'contacts_fs', 'option' ) ) : ?>
+	<?php while ( have_rows( 'contacts_fs', 'option' ) ) : the_row(); ?>
+
+
 			<div class="fs-contacts">
 				<ul>
-					<li><span>adress</span>Südliche Münchner Str. <br/>60 82031 Grünwald <br/>Germany</li>
-					<li><span>email</span><a href="mailto:info@munich-accessories.de">info@munich-accessories.de</a></li>
-					<li><span>fax</span><a href="fax:+49089232418956">+49 (0) 89/2324189-56</a></li>
-					<li><span>instagram</span><a href="#">@htfgjgfhfgh</a></li>
+					<?php if ( have_rows( 'address' ) ) : ?>
+						<?php while ( have_rows( 'address' ) ) : the_row(); ?>
+							<li><span><?php the_sub_field( 'label_title' ); ?></span><?php the_sub_field( 'address' ); ?></li>
+						<?php endwhile; ?>
+					<?php endif; ?>
+					<?php if ( have_rows( 'email' ) ) : ?>
+						<?php while ( have_rows( 'email' ) ) : the_row(); ?>
+							<li><span><?php the_sub_field( 'label_title' ); ?></span><a href="mailto:<?php the_sub_field( 'email' ); ?>"><?php the_sub_field( 'email' ); ?></a></li>
+						<?php endwhile; ?>
+					<?php endif; ?>
+					<?php if ( have_rows( 'fax' ) ) : ?>
+						<?php while ( have_rows( 'fax' ) ) : the_row(); ?>
+							<li><span><?php the_sub_field( 'label_title' ); ?></span><a href="fax:<?php the_sub_field( 'fax' ); ?>"><?php the_sub_field( 'fax' ); ?></a></li>
+						<?php endwhile; ?>
+					<?php endif; ?>
+					<?php if ( have_rows( 'instagram' ) ) : ?>
+						<?php while ( have_rows( 'instagram' ) ) : the_row(); ?>
+							<li><span><?php the_sub_field( 'label_title' ); ?></span><a href="<?php the_sub_field( 'instagram_link' ); ?>"><?php the_sub_field( 'instagram_login' ); ?></a></li>
+						<?php endwhile; ?>
+					<?php endif; ?>
 				</ul>
 			</div>
+
+	<?php endwhile; ?>
+<?php endif; ?>
+
+
 			</div>
 		</div>
 	</div>
@@ -94,7 +121,14 @@
 	<header id="header">
 			<div class="content">
 				<div class="logo"><a href="<?php echo esc_url( home_url( '/' ) ); ?>"><img src="<?php echo get_template_directory_uri(); ?>/src/img/logo.png" alt=""></a></div>
-				<div class="phone"><a href="tel:+49089232418950">+49 (0) 89/2324189-50</a></div>
+				<div class="phone">
+				<!-- <a href="tel:+49089232418950">+49 (0) 89/2324189-50</a> -->
+				<?php if ( have_rows( 'header_phone_number', 'option' ) ) : ?>
+					<?php while ( have_rows( 'header_phone_number', 'option' ) ) : the_row(); ?>
+						<a href="tel:<?php the_sub_field( 'phone_link' ); ?>"><?php the_sub_field( 'phone_number' ); ?></a>
+					<?php endwhile; ?>
+				<?php endif; ?>
+				</div>
 				<div class="lang-selector"><?php pll_the_languages(array(
 					'dropdown'=>2,
 					'display_names_as' => 'slug'
@@ -106,7 +140,7 @@
 						<span class="menu-icon__line"></span>
 						<span class="menu-icon__line menu-icon__line-right"></span>
 					</div>
-						<span>Menu</span>
+						<span><?php the_field( 'menu_label_header', 'option' ); ?></span>
 					</div>
 				</div>
 			</div>

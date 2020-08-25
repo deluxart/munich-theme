@@ -23,7 +23,12 @@ get_header();
 
 if (is_blog()) {
 
-
+				 if(function_exists('bcn_display')) { 
+					echo '<div class="breadcrumbs"><ul>';
+						bcn_display(); 
+					echo '</ul></div>';
+					}
+				
 		if ( have_posts() ) :
 			if ( is_home() && ! is_front_page() ) :
 				?>
@@ -75,7 +80,11 @@ if (is_blog()) {
 <?php if (is_blog()) { ?>
 <section id="gray_circle_text">
 	<div class="container">
-		<a href="#" class="btn border">zum Produkte</a>
+		<?php if ( have_rows( 'zum_produkte_button' ) ) : ?>
+			<?php while ( have_rows( 'zum_produkte_button' ) ) : the_row(); ?>
+				<a href="<?php the_sub_field( 'button_link' ); ?>" class="btn border"><?php the_sub_field( 'button_title' ); ?></a>
+			<?php endwhile; ?>
+		<?php endif; ?>
 	</div>
 </section>
 <? } ?>

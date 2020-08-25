@@ -4769,6 +4769,11 @@ blockquote {
     position: relative;
     border-bottom: 1px solid #E1E1E1;
 
+    @media (max-width: 768px) {
+        height: 396px;
+        background-size: 300px;
+    }
+
     .btn {
         position: absolute;
         top: 50%;

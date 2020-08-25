@@ -71,7 +71,15 @@ get_header();
 <?php if (is_singular('post')) { ?>
 <section id="gray_circle_text">
 	<div class="container">
-		<a href="#" class="btn border">zum Produkte</a>
+
+
+<?php if ( have_rows( 'zum_produkte_button' ) ) : ?>
+	<?php while ( have_rows( 'zum_produkte_button' ) ) : the_row(); ?>
+		<a href="<?php the_sub_field( 'button_link' ); ?>" class="btn border"><?php the_sub_field( 'button_title' ); ?></a>
+	<?php endwhile; ?>
+<?php endif; ?>
+
+		
 	</div>
 </section>
 <? } ?>

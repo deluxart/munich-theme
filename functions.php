@@ -382,8 +382,8 @@ if( function_exists('acf_add_options_page') ) {
 	));
 	
 	acf_add_options_sub_page(array(
-		'page_title' 	=> 'Footer settings',
-		'menu_title'	=> 'Footer',
+		'page_title' 	=> 'Blog settings',
+		'menu_title'	=> 'Blog',
 		'parent_slug'	=> 'theme-general-settings',
 	));
 }
