@@ -3140,6 +3140,7 @@ input, textarea {
                .content {
                    grid-template-columns: 1fr auto;
                    padding: 11px 0;
+                   grid-gap: 30px;
                    .phone, .lang-selector {
                        display: none;
                    }
