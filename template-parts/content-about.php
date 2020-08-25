@@ -51,16 +51,23 @@
 		<!-- <img src="http://dev.seiten.co/wp-munich-accessories-de/wp-content/uploads/2020/08/video_img.jpg" alt=""> -->
 		<div class="video_block desktop">
 			<!-- <video autoplay muted loop id="myVideo"> -->
-			<video loop id="myVideo">
-				<source src="http://dev.seiten.co/wp-munich-accessories-de/wp-content/uploads/2020/08/about_ma.mp4" type="video/mp4">
+
+			<video loop id="myVideo" <?php if ( get_field( 'poster_for_video' ) ) : ?> poster="<?php the_field( 'poster_for_video' ); ?>"<?php endif ?>>
+				<?php if ( get_field( 'video_link' ) ) : ?>
+					<source src="<?php the_field( 'video_link' ); ?>" type="video/mp4">
+				<?php endif ?>
 			</video>
+			
 			<button id="maVideoBtn" onclick="myFunction()"></button>
 		</div>
 		<div class="video_section mobile">
-			<!-- <video autoplay muted loop id="myVideo"> -->
-			<video loop id="video_click">
-				<source src="http://dev.seiten.co/wp-munich-accessories-de/wp-content/uploads/2020/08/about_ma.mp4" type="video/mp4">
+			
+			<video loop id="video_click" <?php if ( get_field( 'poster_for_video' ) ) : ?> poster="<?php the_field( 'poster_for_video' ); ?>"<?php endif ?>>
+				<?php if ( get_field( 'video_link' ) ) : ?>
+					<source src="<?php the_field( 'video_link' ); ?>" type="video/mp4">
+				<?php endif ?>
 			</video>
+			
 			<button class="video_play"></button>
 		</div>
 		</div>

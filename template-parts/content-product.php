@@ -71,16 +71,6 @@
 <?php endif; ?>
 
 		<div class="productCont">
-			<!-- <div class="pageNav">
-				<ul>
-					<li><a href="#information">Information</a></li>
-					<li><a href="#fabric">Fabric</a></li>
-					<li><a href="#colors">Colors</a></li>
-					<li><a href="#care">Care</a></li>
-				</ul>
-			</div> -->
-
-
 	<div class="pageNav">
 		<ul>
 		<?php if ( have_rows( 'content_tabs_product' ) ) : ?>

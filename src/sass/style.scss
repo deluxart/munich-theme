@@ -2396,6 +2396,7 @@ input, textarea {
         &Cont {
             grid-column: 1/2;
             grid-row: 2/3;
+            position: relative;
             
             .pageNav {
                 border-top: 1px solid #E1E1E1;
@@ -4862,7 +4863,7 @@ blockquote {
   visibility:visible !important;
   opacity:1 !important;
   transition:all 0.5s ease;
-  overflow: hidden;
+//   overflow: hidden;
 }
 
 @media screen and (max-width: 600px) {
