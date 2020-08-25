@@ -21,6 +21,17 @@ $(document).ready(function () {
 }); 
 
 
+$('.checkbox-custom input:checkbox').change(function () {
+    if ($(this).is(":checked")) {
+        $('.checkbox-custom label').addClass("active");
+    } else {
+        $('.checkbox-custom label').removeClass("active");
+    }
+});
+
+
+
+
 var $video = $("#video_click"), 
     mousedown = false;
 
