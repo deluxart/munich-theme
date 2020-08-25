@@ -164,6 +164,9 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
         position: relative;
         -webkit-appearance: none;
         cursor: pointer;
+        padding: 0;
+        background: transparent;
+        border: 0;
         
           &:after {
             content: '';
@@ -174,6 +177,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
             height: 27px;
             background: #fff;
             border: 1px solid #161616;
+            top: 0;
         }
 
         &:before {
@@ -198,6 +202,8 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
           top: 0px;
           opacity: 1;
           left: 0px;
+          top: 0;
+          left: 0;
           border: 1px solid #161616;
         }
       }
