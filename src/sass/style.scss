@@ -1083,6 +1083,10 @@ input, textarea {
                 & > div {
                   padding: 17px 27px;
                   height: 100%;
+
+                  @media (max-width: 768px) {
+                      padding: 27px;
+                  }
                 }
               }
 
@@ -1205,6 +1209,10 @@ input, textarea {
                 & > div {
                   padding: 17px 27px;
                   height: 100%;
+
+                  @media (max-width: 768px) {
+                      padding: 27px;
+                  }
                 }
               }
 
