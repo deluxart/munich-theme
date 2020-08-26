@@ -4579,6 +4579,12 @@ blockquote {
             display: grid;
             // grid-template-rows: auto 1fr auto;
             grid-gap: 25px;
+
+            a {
+                &.btn {
+                    padding: 14px 62px;
+                }
+            }
         }
     }
 
