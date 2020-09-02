@@ -888,7 +888,7 @@ input, textarea {
          position: relative;
          text-align: center;
          padding: 20px;
-         overflow: hidden;
+        //  overflow: hidden;
 
          .img {
            position: relative;
@@ -1062,6 +1062,7 @@ input, textarea {
                 background: #fff;
                 display: grid;
                 height: 100%;
+                cursor: pointer;
 
                 p {
                     line-height: 120%;
@@ -1188,6 +1189,7 @@ input, textarea {
                 background: #fff;
                 display: grid;
                 height: 100%;
+                cursor: pointer;
 
                 p {
                     line-height: 120%;

@@ -1,4 +1,4 @@
-<div class="item swiper-slide">
+<div class="item swiper-slide" onclick="location.href='<?php the_permalink() ?>';">
 	<div>
 		<div class="img"><?php the_post_thumbnail( 'square-large' ); ?></div>
 		<a href="<?php the_permalink() ?>"><h4 class="line"><?php the_title(); ?></h4></a>
